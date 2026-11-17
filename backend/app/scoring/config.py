@@ -53,4 +53,6 @@ def load_styles() -> dict[str, dict]:
 
 @lru_cache
 def load_ranks() -> dict:
-    return yaml.safe_load((data_dir() / "ranks.yaml").read_text(encoding="utf-8"))
+    ranks = yaml.safe_load((data_dir() / "ranks.yaml").read_text(encoding="utf-8"))
+    ranks["grades"] = sorted(ranks["grades"], key=lambda g: g["min"])
+    return ranks

@@ -1,9 +1,44 @@
-# Parent Grade ladder. PROVISIONAL: grade names and spacing still need verifying.
-# Note: in-game letter ranks grade the career RATING (stats + skills), not sparks,
-# so this app labels its result "Parent Grade" and maps our own 0-100 score onto the ladder.
-# Thresholds are evenly spaced unless you raise/lower "curve" (<1 = harder top grades).
+# Parent Grade thresholds. PROVISIONAL: edit the numbers freely.
+# Scores are NOT capped; a parent's score maps to the highest grade whose min it reaches.
+# In-game letter ranks grade the career rating (stats + skills), not sparks,
+# so this app calls the result "Parent Grade".
 status: provisional
-curve: 1.0
-grades: [G, G+, F, F+, E, E+, D, D+, C, C+, B, B+, A, A+, S, S+, SS, SS+,
-         UG, UG1, UG2, UG3, UG4, UG5, UG6, UG7, UG8, UG9,
-         UF, UF1, UF2, UF3, UF4, UF5, UF6, UF7, UF8, UF9]
+grades:
+  - {grade: G, min: 0}
+  - {grade: G+, min: 5}
+  - {grade: F, min: 10}
+  - {grade: F+, min: 15}
+  - {grade: E, min: 20}
+  - {grade: E+, min: 25}
+  - {grade: D, min: 30}
+  - {grade: D+, min: 35}
+  - {grade: C, min: 40}
+  - {grade: C+, min: 45}
+  - {grade: B, min: 50}
+  - {grade: B+, min: 55}
+  - {grade: A, min: 60}
+  - {grade: A+, min: 65}
+  - {grade: S, min: 70}
+  - {grade: S+, min: 75}
+  - {grade: SS, min: 80}
+  - {grade: SS+, min: 85}
+  - {grade: UG, min: 90}
+  - {grade: UG1, min: 95}
+  - {grade: UG2, min: 100}
+  - {grade: UG3, min: 105}
+  - {grade: UG4, min: 110}
+  - {grade: UG5, min: 115}
+  - {grade: UG6, min: 120}
+  - {grade: UG7, min: 125}
+  - {grade: UG8, min: 130}
+  - {grade: UG9, min: 135}
+  - {grade: UF, min: 140}
+  - {grade: UF1, min: 145}
+  - {grade: UF2, min: 150}
+  - {grade: UF3, min: 155}
+  - {grade: UF4, min: 160}
+  - {grade: UF5, min: 165}
+  - {grade: UF6, min: 170}
+  - {grade: UF7, min: 175}
+  - {grade: UF8, min: 180}
+  - {grade: UF9, min: 185}

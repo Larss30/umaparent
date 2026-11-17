@@ -2,7 +2,7 @@ import copy
 
 from .config import load_profiles, load_ranks, load_styles, norm
 from .models import KINDS, Parent, Spark
-from .ranks import grade_for
+from .ranks import grade_for, next_grade
 
 GENERIC_ID = "generic"
 STYLE_PINKS = ("front runner", "pace chaser", "late surger", "end closer")
@@ -84,18 +84,27 @@ def score_parent(parent: Parent, profile: dict, ranks: dict | None = None) -> di
                     {"block": block.role, "kind": s.kind, "name": s.name,
                      "stars": s.stars, "points": round(points, 2)}
                 )
-    sub = {k: min(100.0, 100.0 * raw[k] / profile["targets"][k]) for k in KINDS}
-    weights = profile["category_weights"]
-    total = sum(weights[k] * sub[k] for k in KINDS) / sum(weights.values())
+    sub = {k: 100.0 * raw[k] / profile["targets"][k] for k in KINDS}   # uncapped
+    cw = profile["category_weights"]
+    weights = {k: cw[k] for k in KINDS}
+    if parent.affinity is not None and "affinity" in cw:
+        sub["affinity"] = 100.0 * parent.affinity / profile["targets"]["affinity"]
+        weights["affinity"] = cw["affinity"]
+    total = sum(weights[k] * sub[k] for k in sub) / sum(weights.values())
     contributions.sort(key=lambda c: -c["points"])
-    return {
+    result = {
         "profile": profile["id"],
         "label": profile["label"],
         "score": round(total, 1),
         "grade": grade_for(total, ranks),
+        "next_grade": next_grade(total, ranks),
         "categories": {k: round(v, 1) for k, v in sub.items()},
         "top_contributors": contributions[:8],
     }
+    if "affinity" in sub:
+        result["affinity"] = {"value": parent.affinity, "target": parent.affinity_target,
+                              "source": "manual"}
+    return result
 
 
 def score_all(parent: Parent, style_id: str | None = None) -> dict:

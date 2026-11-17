@@ -22,6 +22,8 @@ class ParentIn(BaseModel):
     name: str
     outfit: str | None = None
     style: str | None = None
+    affinity: int | None = Field(default=None, ge=0, le=1000)
+    affinity_target: str | None = None
     blocks: list[BlockIn] = Field(max_length=3)
 
     def to_domain(self) -> Parent:
@@ -29,6 +31,8 @@ class ParentIn(BaseModel):
             name=self.name,
             outfit=self.outfit,
             style=self.style,
+            affinity=self.affinity,
+            affinity_target=self.affinity_target,
             blocks=[
                 SparkBlock(role=b.role, character=b.character,
                            sparks=[Spark(**s.model_dump()) for s in b.sparks])

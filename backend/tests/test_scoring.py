@@ -1,7 +1,7 @@
 from app.scoring.config import load_profiles, load_ranks
 from app.scoring.engine import score_all, score_parent
 from app.scoring.models import Parent, Spark, SparkBlock
-from app.scoring.ranks import grade_for
+from app.scoring.ranks import grade_for, next_grade
 
 ARIES = load_profiles()["aries-cup"]
 
@@ -40,21 +40,43 @@ def test_own_sparks_worth_more_than_grandparent_sparks():
         score_parent(gp, ARIES)["categories"]["blue"]
 
 
-def test_scores_bounded_and_more_sparks_never_lower_score():
+def test_more_sparks_never_lower_score():
     base = parent(block("self", Spark("blue", "Speed", 1)))
     more = parent(block("self", Spark("blue", "Speed", 1), Spark("blue", "Stamina", 3)))
-    for _ in range(1):
-        s1, s2 = score_parent(base, ARIES)["score"], score_parent(more, ARIES)["score"]
-    assert 0 <= s1 <= s2 <= 100
+    assert 0 <= score_parent(base, ARIES)["score"] <= score_parent(more, ARIES)["score"]
 
 
-def test_grade_ladder_is_monotonic_and_covers_extremes():
+def test_scores_are_not_capped_at_100():
+    sparks = [Spark(k, n, 3, "skill" if k == "white" else None)
+              for k, n in (("blue", "Speed"), ("pink", "Turf"),
+                           ("green", "X"), ("white", "Right-Handed ○"))] * 5
+    assert score_parent(parent(block("self", *sparks)), ARIES)["score"] > 100
+
+
+def test_grade_ladder_is_monotonic_with_thresholds():
     ranks = load_ranks()
-    order = {g: i for i, g in enumerate(ranks["grades"])}
-    seen = [order[grade_for(s, ranks)] for s in range(0, 101)]
+    names = [g["grade"] for g in ranks["grades"]]
+    order = {g: i for i, g in enumerate(names)}
+    seen = [order[grade_for(s / 2, ranks)] for s in range(0, 800)]
     assert seen == sorted(seen)
-    assert grade_for(0, ranks) == ranks["grades"][0]
-    assert grade_for(100, ranks) == ranks["grades"][-1]
+    assert grade_for(-5, ranks) == names[0]
+    assert grade_for(10**6, ranks) == names[-1]
+
+
+def test_next_grade_reports_gap_and_none_at_top():
+    ranks = load_ranks()
+    nxt = next_grade(0, ranks)
+    assert nxt["grade"] == ranks["grades"][1]["grade"] and nxt["needed"] > 0
+    assert next_grade(10**6, ranks) is None
+
+
+def test_affinity_is_optional_and_raises_score():
+    base = parent(block("self", Spark("blue", "Speed", 2)))
+    with_aff = Parent("t", base.blocks, affinity=200, affinity_target="Oguri Cap")
+    r0, r1 = score_parent(base, ARIES), score_parent(with_aff, ARIES)
+    assert "affinity" not in r0 and "affinity" not in r0["categories"]
+    assert r1["affinity"] == {"value": 200, "target": "Oguri Cap", "source": "manual"}
+    assert r1["score"] > r0["score"]
 
 
 def test_score_all_returns_overall_and_events():

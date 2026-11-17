@@ -33,3 +33,8 @@ def test_style_endpoint_and_scoring():
     assert r.status_code == 200 and r.json()["style"]["milestones"]
     body["style"] = "nope"
     assert client.post("/api/score", json=body).status_code == 400
+
+
+def test_index_page_served():
+    r = client.get("/")
+    assert r.status_code == 200 and "UmaParent" in r.text

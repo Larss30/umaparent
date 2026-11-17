@@ -1,0 +1,392 @@
+{
+  "name": "Inari One",
+  "outfit": "Edomurasaki",
+  "style": "pace-chaser",
+  "blocks": [
+    {
+      "role": "self",
+      "character": "Inari One",
+      "sparks": [
+        {
+          "kind": "blue",
+          "name": "Guts",
+          "stars": 1
+        },
+        {
+          "kind": "pink",
+          "name": "Dirt",
+          "stars": 2
+        },
+        {
+          "kind": "green",
+          "name": "Now We're Cruisin'!",
+          "stars": 2
+        },
+        {
+          "kind": "white",
+          "name": "Satsuki Sho",
+          "stars": 1,
+          "category": "race"
+        },
+        {
+          "kind": "white",
+          "name": "Takarazuka Kinen",
+          "stars": 2,
+          "category": "race"
+        },
+        {
+          "kind": "white",
+          "name": "Kikuka Sho",
+          "stars": 2,
+          "category": "race"
+        },
+        {
+          "kind": "white",
+          "name": "Queen Elizabeth II Cup",
+          "stars": 1,
+          "category": "race"
+        },
+        {
+          "kind": "white",
+          "name": "Japan C.",
+          "stars": 2,
+          "category": "race"
+        },
+        {
+          "kind": "white",
+          "name": "Arima Kinen",
+          "stars": 1,
+          "category": "race"
+        },
+        {
+          "kind": "white",
+          "name": "J.D. Derby",
+          "stars": 2,
+          "category": "race"
+        },
+        {
+          "kind": "white",
+          "name": "Tokyo Daishoten",
+          "stars": 2,
+          "category": "race"
+        },
+        {
+          "kind": "white",
+          "name": "Maverick ○",
+          "stars": 1,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Ramp Up",
+          "stars": 2,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Nimble Navigator",
+          "stars": 2,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Medium Corners ○",
+          "stars": 1,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Tail Held High",
+          "stars": 1,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Playtime's Over!",
+          "stars": 2,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Risky Business",
+          "stars": 2,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Full Throttle",
+          "stars": 3,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "My True Strength",
+          "stars": 2,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Racing Spirit: Stamina",
+          "stars": 2,
+          "category": "scenario"
+        },
+        {
+          "kind": "white",
+          "name": "Racing Spirit: Power",
+          "stars": 2,
+          "category": "scenario"
+        },
+        {
+          "kind": "white",
+          "name": "Ignited Spirit: Speed +",
+          "stars": 1,
+          "category": "scenario"
+        },
+        {
+          "kind": "white",
+          "name": "Unity Cup",
+          "stars": 1,
+          "category": "scenario"
+        }
+      ]
+    },
+    {
+      "role": "grandparent_1",
+      "sparks": [
+        {
+          "kind": "blue",
+          "name": "Speed",
+          "stars": 2
+        },
+        {
+          "kind": "pink",
+          "name": "Turf",
+          "stars": 2
+        },
+        {
+          "kind": "green",
+          "name": "KEEP IT REAL.",
+          "stars": 2
+        },
+        {
+          "kind": "white",
+          "name": "Osaka Hai",
+          "stars": 1,
+          "category": "race"
+        },
+        {
+          "kind": "white",
+          "name": "Satsuki Sho",
+          "stars": 1,
+          "category": "race"
+        },
+        {
+          "kind": "white",
+          "name": "Mile Ch.",
+          "stars": 2,
+          "category": "race"
+        },
+        {
+          "kind": "white",
+          "name": "Arima Kinen",
+          "stars": 2,
+          "category": "race"
+        },
+        {
+          "kind": "white",
+          "name": "Left-Handed ○",
+          "stars": 1,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Maverick ○",
+          "stars": 1,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Ramp Up",
+          "stars": 1,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Nimble Navigator",
+          "stars": 2,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Medium Straightaways ○",
+          "stars": 1,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Uma Stan",
+          "stars": 2,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Tail Held High",
+          "stars": 2,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Slipstream",
+          "stars": 2,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Playtime's Over!",
+          "stars": 2,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Risky Business",
+          "stars": 2,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Racing Spirit: Stamina",
+          "stars": 2,
+          "category": "scenario"
+        },
+        {
+          "kind": "white",
+          "name": "Racing Spirit: Power",
+          "stars": 1,
+          "category": "scenario"
+        },
+        {
+          "kind": "white",
+          "name": "Ignited Spirit: Power +",
+          "stars": 2,
+          "category": "scenario"
+        }
+      ]
+    },
+    {
+      "role": "grandparent_2",
+      "sparks": [
+        {
+          "kind": "blue",
+          "name": "Power",
+          "stars": 2
+        },
+        {
+          "kind": "pink",
+          "name": "Pace Chaser",
+          "stars": 1
+        },
+        {
+          "kind": "green",
+          "name": "Victoria por plancha ☆",
+          "stars": 2
+        },
+        {
+          "kind": "white",
+          "name": "Victoria Mile",
+          "stars": 2,
+          "category": "race"
+        },
+        {
+          "kind": "white",
+          "name": "Mile Ch.",
+          "stars": 2,
+          "category": "race"
+        },
+        {
+          "kind": "white",
+          "name": "Champions C.",
+          "stars": 2,
+          "category": "race"
+        },
+        {
+          "kind": "white",
+          "name": "Asahi Hai F.S.",
+          "stars": 2,
+          "category": "race"
+        },
+        {
+          "kind": "white",
+          "name": "Ramp Up",
+          "stars": 2,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Pace Chaser Corners ○",
+          "stars": 3,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Uma Stan",
+          "stars": 2,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Playtime's Over!",
+          "stars": 2,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Risky Business",
+          "stars": 2,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Full Throttle",
+          "stars": 1,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "On the Attack",
+          "stars": 2,
+          "category": "skill"
+        },
+        {
+          "kind": "white",
+          "name": "Ignited Spirit SPD",
+          "stars": 2,
+          "category": "scenario"
+        },
+        {
+          "kind": "white",
+          "name": "Racing Spirit: Stamina",
+          "stars": 2,
+          "category": "scenario"
+        },
+        {
+          "kind": "white",
+          "name": "Racing Spirit: Power",
+          "stars": 1,
+          "category": "scenario"
+        },
+        {
+          "kind": "white",
+          "name": "Ignited Spirit: Wit +",
+          "stars": 2,
+          "category": "scenario"
+        },
+        {
+          "kind": "white",
+          "name": "Unity Cup",
+          "stars": 2,
+          "category": "scenario"
+        }
+      ]
+    }
+  ]
+}
