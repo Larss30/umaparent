@@ -22,3 +22,14 @@ def test_score_endpoint():
     r = client.post("/api/score", json=body)
     assert r.status_code == 200
     assert "overall" in r.json() and r.json()["events"]
+
+
+def test_style_endpoint_and_scoring():
+    assert any(s["id"] == "pace-chaser" for s in client.get("/api/styles").json())
+    body = {"name": "x", "style": "pace-chaser",
+            "blocks": [{"role": "self", "sparks": [
+                {"kind": "white", "name": "Uma Stan", "stars": 2, "category": "skill"}]}]}
+    r = client.post("/api/score", json=body)
+    assert r.status_code == 200 and r.json()["style"]["milestones"]
+    body["style"] = "nope"
+    assert client.post("/api/score", json=body).status_code == 400

@@ -6,7 +6,8 @@ import yaml
 
 
 def norm(name: str) -> str:
-    """Normalise a spark/skill name for lookups (case + whitespace only)."""
+    """Normalise a spark/skill name for lookups: case, spacing, "!" and curly quotes."""
+    name = name.replace("\u2019", "'").replace("!", "")
     return " ".join(name.casefold().split())
 
 
@@ -31,6 +32,23 @@ def load_profiles() -> dict[str, dict]:
         p["white"]["races"] = _norm_keys(p["white"].get("races"))
         profiles[p["id"]] = p
     return profiles
+
+
+@lru_cache
+def load_styles() -> dict[str, dict]:
+    styles = {}
+    for f in sorted((data_dir() / "styles").glob("*.yaml")):
+        if f.name.startswith("_"):
+            continue
+        s = yaml.safe_load(f.read_text(encoding="utf-8"))
+        weights: dict[str, float] = {}
+        for tier in s["tiers"]:
+            for skill in tier["skills"]:
+                key = norm(skill)
+                weights[key] = max(weights.get(key, 0.0), tier["weight"])
+        s["_weights"] = weights
+        styles[s["id"]] = s
+    return styles
 
 
 @lru_cache

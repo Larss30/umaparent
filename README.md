@@ -22,6 +22,7 @@ with affinity from G1 wins. Screenshot upload + manual entry share one editable 
 
 ## Planned data model
 users, parents (owner, character, outfit, stats, aptitudes),
+styles live in data/styles/*.yaml (parent.style picks one)
 spark_blocks (parent_id, role = self | grandparent_1 | grandparent_2, character),
 sparks (block_id, type = blue|pink|green|white, name, stars),
 g1_wins (parent_id, race, year_class, half_month).
