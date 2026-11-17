@@ -25,3 +25,7 @@ def health_db():
         return {"db": "ok"}
     except Exception:
         return JSONResponse(status_code=503, content={"db": "unreachable"})
+
+@app.get("/version")
+def version():
+    return {"version": "0.1.0"}
