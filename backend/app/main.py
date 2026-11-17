@@ -1,11 +1,11 @@
 import os
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
 from sqlalchemy import create_engine, text
 
 from .schemas import ParentIn
-from .scoring.config import load_profiles
+from .scoring.config import load_profiles, load_styles
 from .scoring.engine import GENERIC_ID, score_all
 
 DATABASE_URL = os.getenv(
@@ -40,6 +40,14 @@ def profiles():
     ]
 
 
+@app.get("/api/styles")
+def styles():
+    return [{"id": s["id"], "label": s["label"]} for s in load_styles().values()]
+
+
 @app.post("/api/score")
 def score(parent: ParentIn):
-    return score_all(parent.to_domain())
+    try:
+        return score_all(parent.to_domain())
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))

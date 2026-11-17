@@ -25,3 +25,4 @@ class Parent:
     name: str
     blocks: list[SparkBlock] = field(default_factory=list)
     outfit: str | None = None
+    style: str | None = None   # id of a file in data/styles, e.g. "pace-chaser"
