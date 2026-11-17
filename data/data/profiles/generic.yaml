@@ -1,0 +1,23 @@
+# Balanced profile used for the "overall" parent score. DRAFT weights.
+id: generic
+label: Overall
+status: draft
+# 'targets' = raw points worth 100 in that category. Scores can go ABOVE 100.
+# affinity is only used when the parent has an affinity value; target 150 is a guess.
+category_weights: {blue: 0.25, pink: 0.20, green: 0.10, white: 0.45, affinity: 0.15}
+block_weights: {self: 1.0, grandparent_1: 0.5, grandparent_2: 0.5}
+targets: {blue: 6.0, pink: 3.0, green: 2.0, white: 8.0, affinity: 150.0}
+blue: {speed: 1.0, stamina: 1.0, power: 1.0, guts: 1.0, wit: 1.0}
+pink:
+  turf: 0.5
+  dirt: 0.5
+  sprint: 0.4
+  mile: 0.4
+  medium: 0.4
+  long: 0.4
+  front runner: 0.4
+  pace chaser: 0.4
+  late surger: 0.4
+  end closer: 0.4
+green: {default: 0.5, unique: {}}
+white: {skill_default: 0.15, race_default: 0.05, scenario_default: 0.1, skills: {}, races: {}}
