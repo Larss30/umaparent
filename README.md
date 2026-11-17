@@ -8,6 +8,7 @@ with affinity from G1 wins. Screenshot upload + manual entry share one editable 
     docker compose up --build
     curl localhost:8000/health
     curl localhost:8000/health/db
+    open http://localhost:8000  (the web UI)
 
 ## Test / lint
     cd backend && pip install -r requirements-dev.txt && ruff check . && pytest

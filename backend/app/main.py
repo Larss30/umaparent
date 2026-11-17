@@ -1,7 +1,9 @@
 import os
+from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
 from sqlalchemy import create_engine, text
 
 from .schemas import ParentIn
@@ -14,6 +16,14 @@ DATABASE_URL = os.getenv(
 
 app = FastAPI(title="UmaParent API (unofficial fan tool)")
 engine = create_engine(DATABASE_URL, pool_pre_ping=True)
+
+STATIC = Path(__file__).parent / "static"
+app.mount("/static", StaticFiles(directory=STATIC), name="static")
+
+
+@app.get("/", include_in_schema=False)
+def index():
+    return FileResponse(STATIC / "index.html")
 
 
 @app.get("/health")

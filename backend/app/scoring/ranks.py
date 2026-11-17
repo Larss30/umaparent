@@ -1,11 +1,14 @@
 def grade_for(score: float, ranks: dict) -> str:
-    """Map a 0-100 score onto the grade ladder (evenly spaced, optional curve)."""
-    grades = ranks["grades"]
-    curve = ranks.get("curve", 1.0)
-    n = len(grades)
-    score = max(0.0, min(100.0, score))
-    best = grades[0]
-    for i, g in enumerate(grades):
-        if 100.0 * (i / n) ** curve <= score:
-            best = g
+    """Highest grade whose threshold the score reaches. Scores are not capped."""
+    best = ranks["grades"][0]["grade"]
+    for g in ranks["grades"]:
+        if score >= g["min"]:
+            best = g["grade"]
     return best
+
+
+def next_grade(score: float, ranks: dict) -> dict | None:
+    for g in ranks["grades"]:
+        if g["min"] > score:
+            return {"grade": g["grade"], "at": g["min"], "needed": round(g["min"] - score, 1)}
+    return None

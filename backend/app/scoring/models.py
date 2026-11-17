@@ -26,3 +26,5 @@ class Parent:
     blocks: list[SparkBlock] = field(default_factory=list)
     outfit: str | None = None
     style: str | None = None   # id of a file in data/styles, e.g. "pace-chaser"
+    affinity: int | None = None          # manual affinity score (Phase 4 can compute it)
+    affinity_target: str | None = None   # trainee the affinity is for

@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UmaParent – parent spark scorer</title>
+<style>
+:root{
+  --turf:#17806d; --turf-deep:#0f5f51; --stripe:#1b8a76;
+  --paper:#eef5f1; --card:#ffffff; --ink:#1d2a33; --muted:#5b6b75; --line:#d5e2db;
+  --blue:#3a97e0; --pink:#e5639b; --green:#7bbf3f; --white:#98a7b1;
+  --gold:#e0a82e; --gold-deep:#b9821a; --danger:#b3261e;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#10191a; --card:#18262a; --ink:#e6eef0; --muted:#9fb1b8; --line:#2a3d42;
+    --turf:#1f9a84; --turf-deep:#157060; --stripe:#23a58e; color-scheme: dark;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font:15px/1.5 ui-rounded,"SF Pro Rounded","Nunito","Segoe UI",system-ui,sans-serif}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+header{background:repeating-linear-gradient(115deg,var(--turf) 0 34px,var(--stripe) 34px 68px);color:#fff;padding:22px 20px 20px}
+header h1{margin:0;font-size:1.7rem;letter-spacing:.2px}
+header p{margin:2px 0 0;opacity:.9;max-width:60ch}
+main{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:20px;max-width:1180px;margin:0 auto;padding:20px}
+@media (max-width:900px){main{grid-template-columns:1fr}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
+h2{margin:0 0 12px;font-size:1.15rem}
+h3{margin:0;font-size:1rem}
+h4{margin:14px 0 6px;font-size:.9rem;color:var(--muted);font-weight:600}
+.muted{color:var(--muted);font-size:.88rem}
+
+.basics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 12px;margin-bottom:16px}
+.basics label{display:flex;flex-direction:column;gap:3px;font-size:.85rem;color:var(--muted)}
+.basics .wide{grid-column:1/-1}
+input,select{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:8px 10px;min-width:0;width:100%}
+.hint{grid-column:1/-1;margin:-4px 0 0}
+
+.tree{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tree .self{grid-column:1/-1}
+@media (max-width:620px){.tree{grid-template-columns:1fr}}
+.block{border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--paper)}
+.block.self{border-width:2px;border-color:var(--turf)}
+.block .char{margin:8px 0}
+.srow{display:grid;grid-template-columns:14px minmax(0,1fr) auto;align-items:center;gap:8px;margin:6px 0}
+.dot{width:14px;height:14px;border-radius:50%}
+.dot.blue{background:var(--blue)}.dot.pink{background:var(--pink)}.dot.green{background:var(--green)}.dot.white{background:var(--white)}
+.wrow{display:grid;grid-template-columns:minmax(0,1fr) 92px auto 28px;gap:6px;align-items:center;margin:6px 0}
+@media (max-width:620px){.wrow{grid-template-columns:minmax(0,1fr) 84px auto 28px}}
+.stars{display:inline-flex}
+.stars button{background:none;border:0;padding:0 1px;font-size:1.25rem;line-height:1;color:var(--line);cursor:pointer}
+.stars button.on{color:var(--gold)}
+.ghost{background:none;border:1px dashed var(--muted);border-radius:10px;padding:6px 10px;cursor:pointer;color:var(--muted)}
+.x{background:none;border:0;cursor:pointer;color:var(--muted);font-size:1.1rem}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.primary{background:var(--turf);color:#fff;border:0;border-radius:12px;padding:10px 18px;font-weight:700;cursor:pointer}
+.primary:hover{background:var(--turf-deep)}
+.secondary{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 16px;cursor:pointer}
+
+.results{position:sticky;top:12px;align-self:start}
+@media (max-width:900px){.results{position:static}}
+.empty{color:var(--muted)}
+.error{color:var(--danger);font-weight:600}
+.hero{display:flex;gap:18px;align-items:center;margin-bottom:14px}
+.rosette{position:relative;flex:none;width:112px;height:112px;border-radius:50%;
+  background:radial-gradient(circle at 50% 38%,#fff 0 58%,#fbefc9 60% 100%);
+  border:7px solid var(--gold);box-shadow:0 0 0 3px var(--gold-deep) inset;display:grid;place-items:center;color:#5a3d05}
+.rosette b{font-size:1.9rem;line-height:1}
+.rosette::before,.rosette::after{content:"";position:absolute;bottom:-26px;width:26px;height:34px;background:var(--gold-deep);z-index:-1}
+.rosette::before{left:22px;clip-path:polygon(0 0,100% 0,100% 100%,50% 78%,0 100%)}
+.rosette::after{right:22px;clip-path:polygon(0 0,100% 0,100% 100%,50% 78%,0 100%)}
+.big{font-size:2.3rem;font-weight:800;line-height:1}
+.event{border-top:1px solid var(--line);padding:12px 0}
+.ehead{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.pill{background:var(--gold);color:#4a3203;border-radius:999px;padding:1px 10px;font-weight:800;font-size:.85rem}
+.bar{display:grid;grid-template-columns:86px 1fr 52px;gap:8px;align-items:center;margin:5px 0;font-size:.85rem}
+.track{height:10px;border-radius:99px;background:var(--paper);overflow:hidden;border:1px solid var(--line)}
+.fill{height:100%;border-radius:99px}
+.fill.blue{background:var(--blue)}.fill.pink{background:var(--pink)}.fill.green{background:var(--green)}.fill.white{background:var(--white)}.fill.affinity{background:var(--gold)}
+.fill.over{box-shadow:0 0 0 2px var(--gold) inset}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0}
+.chip{border-radius:999px;padding:2px 10px;font-size:.82rem;border:1px solid var(--line);background:var(--paper)}
+.chip.have{border-color:var(--turf);background:color-mix(in srgb,var(--turf) 14%,var(--card))}
+.chip.miss{border-style:dashed;color:var(--muted)}
+.ms{font-weight:700}
+details{margin-top:6px;font-size:.85rem;color:var(--muted)}
+footer{max-width:1180px;margin:0 auto;padding:0 20px 28px;color:var(--muted);font-size:.82rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>UmaParent</h1>
+  <p>Score a parent and its grandparents from their sparks, for each Champions Meeting and your running style.</p>
+</header>
+
+<main>
+  <section class="panel" aria-labelledby="ptitle">
+    <h2 id="ptitle">Parent</h2>
+    <div class="basics">
+      <label>Name<input id="name" placeholder="Inari One"></label>
+      <label>Outfit<input id="outfit" placeholder="Edomurasaki"></label>
+      <label>Running style<select id="style"><option value="">Any style</option></select></label>
+      <label>Affinity score<input id="aff" type="number" min="0" max="1000" placeholder="Optional"></label>
+      <label class="wide">Affinity is for trainee<input id="afftarget" placeholder="Optional, e.g. Oguri Cap"></label>
+      <p class="muted hint">Type the affinity number you see in game. Automatic calculation from G1 wins comes later.</p>
+    </div>
+    <div class="tree" id="tree"></div>
+    <div class="actions">
+      <button class="primary" id="go" type="button">Score parent</button>
+      <button class="secondary" id="sample" type="button">Load sample parent</button>
+      <button class="secondary" id="clear" type="button">Clear</button>
+    </div>
+  </section>
+
+  <section class="panel results" aria-live="polite" aria-labelledby="rtitle">
+    <h2 id="rtitle">Scores</h2>
+    <div id="out"><p class="empty">Enter sparks and press Score parent, or load the sample parent to see how it works.</p></div>
+  </section>
+</main>
+<footer>Unofficial fan tool. Not affiliated with or endorsed by Cygames. Weights are drafts you can tune in the data files.</footer>
+
+<script>
+const $ = s => document.querySelector(s);
+const el = (t, c, txt) => { const e = document.createElement(t); if (c) e.className = c; if (txt != null) e.textContent = txt; return e; };
+const BLUES = ['Speed','Stamina','Power','Guts','Wit'];
+const PINKS = ['Turf','Dirt','Sprint','Mile','Medium','Long','Front Runner','Pace Chaser','Late Surger','End Closer'];
+const ROLES = [['self','Parent'],['grandparent_1','Grandparent 1'],['grandparent_2','Grandparent 2']];
+const ROLE_SHORT = {self:'Parent', grandparent_1:'GP 1', grandparent_2:'GP 2'};
+const CAT_LABEL = {blue:'Stats', pink:'Aptitude', green:'Unique', white:'Skills', affinity:'Affinity'};
+
+function Stars(v = 0){
+  const s = el('span','stars'); s.v = v;
+  s.draw = () => { s.replaceChildren(); for (let i = 1; i <= 3; i++){
+    const b = el('button', i <= s.v ? 'on' : '', '\u2605'); b.type = 'button';
+    b.setAttribute('aria-label', i + (i === 1 ? ' star' : ' stars'));
+    b.onclick = () => { s.v = (s.v === i ? 0 : i); s.draw(); }; s.append(b); } };
+  s.draw(); return s;
+}
+function pickRow(kind, options){
+  const row = el('div','srow'), sel = el('select'), stars = Stars();
+  sel.setAttribute('aria-label', kind + ' spark');
+  sel.append(new Option('\u2013 ' + kind + ' spark \u2013', ''));
+  options.forEach(o => sel.append(new Option(o, o)));
+  row.append(el('span','dot ' + kind), sel, stars);
+  return {row, sel, stars};
+}
+function greenRow(){
+  const row = el('div','srow'), inp = el('input'), stars = Stars();
+  inp.placeholder = 'Unique skill (green)'; inp.setAttribute('aria-label','green spark');
+  row.append(el('span','dot green'), inp, stars);
+  return {row, inp, stars};
+}
+function whiteRow(name = '', cat = 'skill', st = 1){
+  const w = el('div','wrow'), n = el('input'), c = el('select'), s = Stars(st), x = el('button','x','\u00d7');
+  n.placeholder = 'Skill or race name'; n.value = name; n.setAttribute('aria-label','white spark name');
+  [['skill','Skill'],['race','Race'],['scenario','Scenario']].forEach(([v,t]) => c.append(new Option(t, v)));
+  c.value = cat; c.setAttribute('aria-label','white spark type');
+  x.type = 'button'; x.setAttribute('aria-label','Remove spark'); x.onclick = () => w.remove();
+  w.f = {n, c, s}; w.append(n, c, s, x); return w;
+}
+function buildBlock(role, title){
+  const b = el('section','block ' + role); b.dataset.role = role;
+  const ch = el('input','char'); ch.placeholder = 'Character (optional)'; ch.setAttribute('aria-label', title + ' character');
+  b.blue = pickRow('blue', BLUES); b.pink = pickRow('pink', PINKS); b.green = greenRow();
+  b.whites = el('div'); const add = el('button','ghost','Add white spark'); add.type = 'button';
+  add.onclick = () => b.whites.append(whiteRow());
+  b.append(el('h3', null, title), ch, b.blue.row, b.pink.row, b.green.row, el('h4', null, 'White sparks'), b.whites, add);
+  return b;
+}
+ROLES.forEach(([r, t]) => $('#tree').append(buildBlock(r, t)));
+
+function clearBlock(b){
+  b.querySelector('.char').value = '';
+  b.blue.sel.value = ''; b.pink.sel.value = ''; b.green.inp.value = '';
+  [b.blue.stars, b.pink.stars, b.green.stars].forEach(s => { s.v = 0; s.draw(); });
+  b.whites.replaceChildren();
+}
+function clearAll(){
+  ['name','outfit','aff','afftarget'].forEach(i => $('#' + i).value = '');
+  $('#style').value = ''; document.querySelectorAll('.block').forEach(clearBlock);
+}
+function setPick(row, sparks, kind){
+  const s = sparks.find(x => x.kind === kind); if (!s) return;
+  if (row.sel){ row.sel.value = s.name; } else { row.inp.value = s.name; }
+  row.stars.v = s.stars; row.stars.draw();
+}
+function fill(d){
+  clearAll();
+  $('#name').value = d.name || ''; $('#outfit').value = d.outfit || ''; $('#style').value = d.style || '';
+  $('#aff').value = d.affinity ?? ''; $('#afftarget').value = d.affinity_target || '';
+  d.blocks.forEach(blk => {
+    const b = document.querySelector('.block.' + blk.role); if (!b) return;
+    b.querySelector('.char').value = blk.character || '';
+    setPick(b.blue, blk.sparks, 'blue'); setPick(b.pink, blk.sparks, 'pink'); setPick(b.green, blk.sparks, 'green');
+    blk.sparks.filter(s => s.kind === 'white').forEach(s => b.whites.append(whiteRow(s.name, s.category || 'skill', s.stars)));
+  });
+}
+function collect(){
+  const blocks = [...document.querySelectorAll('.block')].map(b => {
+    const sparks = [];
+    [['blue', b.blue], ['pink', b.pink]].forEach(([k, r]) => { if (r.sel.value && r.stars.v) sparks.push({kind:k, name:r.sel.value, stars:r.stars.v}); });
+    if (b.green.inp.value.trim() && b.green.stars.v) sparks.push({kind:'green', name:b.green.inp.value.trim(), stars:b.green.stars.v});
+    b.whites.querySelectorAll('.wrow').forEach(w => { const {n, c, s} = w.f;
+      if (n.value.trim() && s.v) sparks.push({kind:'white', name:n.value.trim(), stars:s.v, category:c.value}); });
+    return {role:b.dataset.role, character:b.querySelector('.char').value.trim() || null, sparks};
+  });
+  const aff = $('#aff').value;
+  return {name:$('#name').value.trim() || 'Untitled parent', outfit:$('#outfit').value.trim() || null,
+    style:$('#style').value || null, affinity: aff === '' ? null : Number(aff),
+    affinity_target:$('#afftarget').value.trim() || null, blocks};
+}
+
+function bars(cats){
+  const wrap = el('div');
+  Object.entries(cats).forEach(([k, v]) => {
+    const r = el('div','bar'), t = el('div','track'), f = el('div','fill ' + k + (v > 100 ? ' over' : ''));
+    f.style.width = Math.min(100, Math.max(0, v)) + '%'; t.append(f);
+    r.append(el('span', null, CAT_LABEL[k]), t, el('span','num', v.toFixed(1))); wrap.append(r);
+  });
+  return wrap;
+}
+function nextLine(r){
+  return r.next_grade ? 'Next grade ' + r.next_grade.grade + ' at ' + r.next_grade.at + ' (' + r.next_grade.needed + ' to go)' : 'Top grade reached';
+}
+function eventCard(r){
+  const d = el('div','event'), h = el('div','ehead');
+  const t = el('h3', null, r.label); const right = el('span'); right.append(el('span','pill', r.grade), ' ', el('b', null, r.score.toFixed(1)));
+  h.append(t, right); d.append(h, bars(r.categories), el('div','muted', nextLine(r)));
+  if (r.top_contributors.length){
+    const det = el('details'); det.append(el('summary', null, 'Top contributing sparks'));
+    r.top_contributors.forEach(c => det.append(el('div', null, ROLE_SHORT[c.block] + ' \u00b7 ' + c.name + ' ' + '\u2605'.repeat(c.stars) + '  +' + c.points)));
+    d.append(det);
+  }
+  return d;
+}
+function checklist(st){
+  const box = el('div','event'); box.append(el('h3', null, st.label + ' skill checklist'));
+  const ms = el('div','chips'); st.milestones.forEach(m => ms.append(el('span','chip ms', m.label + ' ' + m.have + '/' + m.of)));
+  box.append(ms);
+  st.tiers.forEach(t => {
+    box.append(el('h4', null, t.label)); const c = el('div','chips');
+    t.have.forEach(h => c.append(el('span','chip have', h.name + ' ' + Object.entries(h.blocks).map(([k, v]) => ROLE_SHORT[k] + ' ' + v + '\u2605').join(', '))));
+    t.missing.forEach(m => c.append(el('span','chip miss', m)));
+    box.append(c);
+  });
+  return box;
+}
+function render(res){
+  const out = $('#out'); out.replaceChildren();
+  const o = res.overall, hero = el('div','hero'), ro = el('div','rosette'); ro.append(el('b', null, o.grade));
+  const side = el('div'); side.append(el('div','big', o.score.toFixed(1)), el('div','muted', o.label), el('div','muted', nextLine(o)));
+  hero.append(ro, side); out.append(hero, bars(o.categories));
+  if (o.affinity) out.append(el('p','muted', 'Affinity ' + o.affinity.value + (o.affinity.target ? ' with ' + o.affinity.target : '') + ' (entered manually)'));
+  res.events.forEach(e => out.append(eventCard(e)));
+  if (res.style) out.append(checklist(res.style));
+}
+function showError(msg){ const out = $('#out'); out.replaceChildren(el('p','error', msg)); }
+async function score(){
+  try {
+    const r = await fetch('/api/score', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(collect())});
+    if (!r.ok) { const e = await r.json().catch(() => ({})); throw new Error(typeof e.detail === 'string' ? e.detail : 'Check your inputs: every spark needs a name and at least one star.'); }
+    render(await r.json());
+  } catch (e) { showError(e.message || 'Could not reach the scoring service. Try again in a moment.'); }
+}
+$('#go').onclick = score;
+$('#clear').onclick = () => { clearAll(); $('#out').innerHTML = '<p class="empty">Enter sparks and press Score parent.</p>'; };
+$('#sample').onclick = async () => {
+  try { fill(await (await fetch('/static/inari-one.json')).json()); score(); }
+  catch (e) { showError('Could not load the sample parent.'); }
+};
+fetch('/api/styles').then(r => r.json()).then(list => list.forEach(s => $('#style').append(new Option(s.label, s.id)))).catch(() => {});
+</script>
+</body>
+</html>
