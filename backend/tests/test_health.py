@@ -11,4 +11,4 @@ def test_health():
     assert r.json() == {"status": "ok"}
 
 def test_version():
-    assert client.get("/version").json() == {"version": "9.9.9"}
+    assert client.get("/version").json() == {"version": "0.1.0"}
