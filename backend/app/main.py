@@ -4,6 +4,10 @@ from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from sqlalchemy import create_engine, text
 
+from .schemas import ParentIn
+from .scoring.config import load_profiles
+from .scoring.engine import GENERIC_ID, score_all
+
 DATABASE_URL = os.getenv(
     "DATABASE_URL", "postgresql+psycopg://uma:uma@localhost:5432/umaparent"
 )
@@ -26,6 +30,16 @@ def health_db():
     except Exception:
         return JSONResponse(status_code=503, content={"db": "unreachable"})
 
-@app.get("/version")
-def version():
-    return {"version": "0.1.0"}
+
+@app.get("/api/profiles")
+def profiles():
+    return [
+        {"id": p["id"], "label": p["label"], "status": p.get("status")}
+        for pid, p in load_profiles().items()
+        if pid != GENERIC_ID
+    ]
+
+
+@app.post("/api/score")
+def score(parent: ParentIn):
+    return score_all(parent.to_domain())

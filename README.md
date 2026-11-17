@@ -13,8 +13,8 @@ with affinity from G1 wins. Screenshot upload + manual entry share one editable 
     cd backend && pip install -r requirements-dev.txt && ruff check . && pytest
 
 ## Roadmap
-1. Scaffold, Docker Compose, CI  <- you are here
-2. Data model, scoring engine, YAML profiles, rank ladder
+1. Scaffold, Docker Compose, CI  (done)
+2. Scoring engine, YAML profiles, rank ladder  <- you are here
 3. Frontend, anonymous sessions, login, saved parents
 4. Affinity + G1 race-slot picker
 5. Screenshot pipeline (classify, parse, dedupe, merge)

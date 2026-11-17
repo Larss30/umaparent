@@ -1,0 +1,48 @@
+# Champions Meeting: Aries Cup. DRAFT: weights are a starting point for you to tune.
+# Race conditions per a GosuGamers report: Nakayama, Turf, 2000m (Medium), Right/Inner,
+# Spring, Sunny, Firm. Skill names below still need checking against the in-game Global names.
+# TODO: confirm numbering. uma.guide lists this race as CM12 (Global); you called it CM23.
+id: aries-cup
+label: Aries Cup
+number: null
+status: draft
+race:
+  course: Nakayama
+  surface: turf
+  distance_m: 2000
+  category: medium
+  direction: right
+  inner: true
+  season: spring
+  weather: sunny
+  ground: firm
+category_weights: {blue: 0.25, pink: 0.20, green: 0.10, white: 0.45}
+block_weights: {self: 1.0, grandparent_1: 0.5, grandparent_2: 0.5}
+targets: {blue: 6.0, pink: 6.0, green: 2.0, white: 12.0}
+blue: {speed: 1.0, stamina: 1.0, power: 0.7, wit: 0.5, guts: 0.3}
+pink:
+  turf: 1.0
+  dirt: 0.0
+  medium: 1.0
+  sprint: 0.0
+  mile: 0.0
+  long: 0.0
+  front runner: 0.4   # style pinks only help if you run that style; tune per team
+  pace chaser: 0.4
+  late surger: 0.4
+  end closer: 0.4
+green: {default: 0.5, unique: {}}
+white:
+  skill_default: 0.15
+  race_default: 0.05
+  scenario_default: 0.1
+  skills:
+    "Right-Handed ○": 1.0
+    "Left-Handed ○": 0.0       # wrong direction for this race
+    "Firm Conditions ○": 0.8
+    "Sunny Days ○": 0.6
+    "Spring Runner ○": 0.6
+    "Nakayama Racecourse ○": 0.8
+    "Medium Corners ○": 1.0
+    "Medium Straightaways ○": 1.0
+  races: {}

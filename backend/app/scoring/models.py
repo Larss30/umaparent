@@ -1,0 +1,27 @@
+from dataclasses import dataclass, field
+
+KINDS = ("blue", "pink", "green", "white")
+ROLES = ("self", "grandparent_1", "grandparent_2")
+WHITE_CATEGORIES = ("skill", "race", "scenario")
+
+
+@dataclass
+class Spark:
+    kind: str          # blue | pink | green | white
+    name: str
+    stars: int         # 1-3
+    category: str | None = None  # white only: skill | race | scenario
+
+
+@dataclass
+class SparkBlock:
+    role: str          # self | grandparent_1 | grandparent_2
+    sparks: list[Spark] = field(default_factory=list)
+    character: str | None = None
+
+
+@dataclass
+class Parent:
+    name: str
+    blocks: list[SparkBlock] = field(default_factory=list)
+    outfit: str | None = None

@@ -1,0 +1,9 @@
+# Parent Grade ladder. PROVISIONAL: grade names and spacing still need verifying.
+# Note: in-game letter ranks grade the career RATING (stats + skills), not sparks,
+# so this app labels its result "Parent Grade" and maps our own 0-100 score onto the ladder.
+# Thresholds are evenly spaced unless you raise/lower "curve" (<1 = harder top grades).
+status: provisional
+curve: 1.0
+grades: [G, G+, F, F+, E, E+, D, D+, C, C+, B, B+, A, A+, S, S+, SS, SS+,
+         UG, UG1, UG2, UG3, UG4, UG5, UG6, UG7, UG8, UG9,
+         UF, UF1, UF2, UF3, UF4, UF5, UF6, UF7, UF8, UF9]

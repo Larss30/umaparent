@@ -1,5 +1,4 @@
-Config lives here (added in Phase 2):
-- profiles/   one YAML per CM / LOH (track, distance, style, stat + skill weights)
-- ranks.yaml  Parent Grade ladder and thresholds
-- races.yaml  G1 race calendar (year class + half-month slot)
-- affinity/   compatibility tables
+Editable config (YAML, loaded at startup):
+- profiles/  one file per CM/LOH; copy aries-cup.yaml to add a new event
+- ranks.yaml Parent Grade ladder
+Still to come: races.yaml (G1 calendar) and affinity/ tables (Phase 4).
