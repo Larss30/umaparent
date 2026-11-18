@@ -1,7 +1,8 @@
-# Champions Meeting: Aries Cup. DRAFT: weights are a starting point for you to tune.
-# Race conditions per a GosuGamers report: Nakayama, Turf, 2000m (Medium), Right/Inner,
-# Spring, Sunny, Firm. Skill names below still need checking against the in-game Global names.
+# Champions Meeting: Aries Cup. DRAFT. Race conditions per a GosuGamers report: Nakayama, Turf,
+# 2000m (Medium), Right/Inner, Spring, Sunny, Firm. Skill names still need checking in Global.
 # TODO: confirm numbering. uma.guide lists this race as CM12 (Global); you called it CM23.
+# 'tiers' = event-specific skills. They are added to the running style's tiers, and where both
+# list a skill the EVENT's tier wins. Tier weights live in data/tiers.yaml.
 id: aries-cup
 label: Aries Cup
 number: null
@@ -16,8 +17,11 @@ race:
   season: spring
   weather: sunny
   ground: firm
-# 'targets' = raw points worth 100 in that category. Scores can go ABOVE 100.
-# affinity is only used when the parent has an affinity value; target 150 is a guess.
+tiers:
+  S: ["Right-Handed ○", "Medium Corners ○", "Medium Straightaways ○"]
+  A: ["Firm Conditions ○", "Nakayama Racecourse ○"]
+  B: ["Sunny Days ○", "Spring Runner ○"]
+  Z: ["Left-Handed ○"]      # wrong direction for this race
 category_weights: {blue: 0.25, pink: 0.20, green: 0.10, white: 0.45, affinity: 0.15}
 block_weights: {self: 1.0, grandparent_1: 0.5, grandparent_2: 0.5}
 targets: {blue: 6.0, pink: 6.0, green: 2.0, white: 12.0, affinity: 150.0}
@@ -34,17 +38,4 @@ pink:
   late surger: 0.4
   end closer: 0.4
 green: {default: 0.5, unique: {}}
-white:
-  skill_default: 0.15
-  race_default: 0.05
-  scenario_default: 0.1
-  skills:
-    "Right-Handed ○": 1.0
-    "Left-Handed ○": 0.0       # wrong direction for this race
-    "Firm Conditions ○": 0.8
-    "Sunny Days ○": 0.6
-    "Spring Runner ○": 0.6
-    "Nakayama Racecourse ○": 0.8
-    "Medium Corners ○": 1.0
-    "Medium Straightaways ○": 1.0
-  races: {}
+white: {skill_default: 0.15, race_default: 0.05, scenario_default: 0.1, skills: {}, races: {}}

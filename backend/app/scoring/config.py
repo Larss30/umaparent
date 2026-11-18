@@ -1,3 +1,4 @@
+import json
 import os
 from functools import lru_cache
 from pathlib import Path
@@ -21,15 +22,40 @@ def _norm_keys(d: dict | None) -> dict:
 
 
 @lru_cache
+def load_tiers() -> dict[str, dict]:
+    t = yaml.safe_load((data_dir() / "tiers.yaml").read_text(encoding="utf-8"))
+    return {x["id"]: x for x in t["tiers"]}
+
+
+@lru_cache
+def load_skills() -> list[dict]:
+    f = data_dir() / "skills.json"
+    return json.loads(f.read_text(encoding="utf-8")) if f.exists() else []
+
+
+def tier_weights(tiers: dict | None) -> tuple[dict, dict]:
+    """{letter: [skill names]} -> ({norm name: weight}, {norm name: display name})."""
+    table, weights, names = load_tiers(), {}, {}
+    for letter, skills in (tiers or {}).items():
+        for s in skills or []:
+            weights[norm(s)] = table[letter]["weight"]
+            names[norm(s)] = s
+    return weights, names
+
+
+@lru_cache
 def load_profiles() -> dict[str, dict]:
     profiles = {}
     for f in sorted((data_dir() / "profiles").glob("*.yaml")):
         p = yaml.safe_load(f.read_text(encoding="utf-8"))
+        p["base_id"] = p["id"]
         p["blue"] = _norm_keys(p.get("blue"))
         p["pink"] = _norm_keys(p.get("pink"))
         p["green"]["unique"] = _norm_keys(p["green"].get("unique"))
-        p["white"]["_names"] = {norm(k): k for k in (p["white"].get("skills") or {})}
-        p["white"]["skills"] = _norm_keys(p["white"].get("skills"))
+        explicit = p["white"].get("skills") or {}
+        tw, tn = tier_weights(p.get("tiers"))
+        p["white"]["_names"] = {**{norm(k): k for k in explicit}, **tn}
+        p["white"]["skills"] = {**_norm_keys(explicit), **tw}
         p["white"]["races"] = _norm_keys(p["white"].get("races"))
         profiles[p["id"]] = p
     return profiles
@@ -42,13 +68,7 @@ def load_styles() -> dict[str, dict]:
         if f.name.startswith("_"):
             continue
         s = yaml.safe_load(f.read_text(encoding="utf-8"))
-        weights: dict[str, float] = {}
-        for tier in s["tiers"]:
-            for skill in tier["skills"]:
-                key = norm(skill)
-                weights[key] = max(weights.get(key, 0.0), tier["weight"])
-        s["_weights"] = weights
-        s["_names"] = {norm(sk): sk for t in s["tiers"] for sk in t["skills"]}
+        s["_weights"], s["_names"] = tier_weights(s["tiers"])
         styles[s["id"]] = s
     return styles
 

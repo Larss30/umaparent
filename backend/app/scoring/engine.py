@@ -1,6 +1,6 @@
 import copy
 
-from .config import load_profiles, load_ranks, load_styles, norm
+from .config import load_profiles, load_ranks, load_styles, load_tiers, norm
 from .models import KINDS, Parent, Spark
 from .ranks import grade_for, next_grade
 
@@ -39,18 +39,64 @@ def apply_style(profile: dict, style: dict) -> dict:
         p["pink"][k] = 0.0
     p["pink"][norm(style["aptitude"])] = 1.0
     for k, w in style["_weights"].items():
-        p["white"]["skills"][k] = max(p["white"]["skills"].get(k, 0.0), w)
+        p["white"]["skills"].setdefault(k, w)      # the event's own tier wins over the style's
     if "white_target" in style:
         p["targets"]["white"] = style["white_target"]
     return p
 
 
 def apply_custom(profile: dict, custom: dict) -> dict:
-    """Return a NEW profile where the user's own weights replace white-spark weights."""
+    """Return a NEW profile with the user's own skill weights (None removes a weight)."""
     p = copy.deepcopy(profile)
     for name, w in custom.items():
-        p["white"]["skills"][norm(name)] = float(w)
+        k = norm(name)
+        if w is None:
+            p["white"]["skills"].pop(k, None)
+            p["green"]["unique"].pop(k, None)
+        else:
+            p["white"]["skills"][k] = float(w)
+            p["green"]["unique"][k] = float(w)
     return p
+
+
+def apply_overrides(profile: dict, parent: Parent) -> dict:
+    p = profile
+    if parent.custom_blue or parent.custom_pink or parent.custom_green_default is not None:
+        p = copy.deepcopy(p)
+        for k, w in (parent.custom_blue or {}).items():
+            p["blue"][norm(k)] = float(w)
+        for k, w in (parent.custom_pink or {}).items():
+            p["pink"][norm(k)] = float(w)
+        if parent.custom_green_default is not None:
+            p["green"]["default"] = float(parent.custom_green_default)
+    if parent.custom_weights:
+        p = apply_custom(p, parent.custom_weights)
+    ctx = (parent.context_weights or {}).get(profile["base_id"])
+    return apply_custom(p, ctx) if ctx else p
+
+
+def checklists(style_id: str | None = None) -> dict:
+    """Per-context tiered checklists: style skills + that event's own skills (event wins)."""
+    style = None
+    if style_id:
+        style = load_styles().get(style_id)
+        if style is None:
+            raise ValueError(f"Unknown running style: {style_id}")
+    order = list(load_tiers())
+    profiles = load_profiles()
+    out = {}
+    for pid in [GENERIC_ID] + [i for i in profiles if i != GENERIC_ID]:
+        p = profiles[pid]
+        entries: dict[str, tuple[str, str]] = {}
+        for source in ([style["tiers"]] if style else []) + [p.get("tiers") or {}]:
+            for letter, skills in source.items():
+                for s in skills or []:
+                    entries[norm(s)] = (letter, s)
+        grouped: dict[str, list[str]] = {t: [] for t in order}
+        for letter, name in entries.values():
+            grouped[letter].append(name)
+        out[pid] = {"label": p["label"], "tiers": grouped}
+    return out
 
 
 def important_sparks(parent: Parent, profiles: list[dict]) -> list[str]:
@@ -81,32 +127,6 @@ def default_skill_weights(style_id: str | None = None) -> list[dict]:
         names.update(style["_names"])
     rows = [{"name": names.get(k, k), "weight": w} for k, w in best.items() if w > 0]
     return sorted(rows, key=lambda r: (-r["weight"], r["name"]))
-
-
-def style_checklist(parent: Parent, style: dict) -> dict:
-    found: dict[str, dict[str, int]] = {}
-    for b in parent.blocks:
-        for s in b.sparks:
-            if s.kind == "white":
-                d = found.setdefault(norm(s.name), {})
-                d[b.role] = max(d.get(b.role, 0), s.stars)
-    tiers, milestones = [], []
-    cum_have = cum_of = 0
-    for t in style["tiers"]:
-        have, missing = [], []
-        for name in t["skills"]:
-            blocks = found.get(norm(name))
-            if blocks:
-                have.append({"name": name, "blocks": blocks})
-            else:
-                missing.append(name)
-        tiers.append({"id": t["id"], "label": t["label"], "have": have, "missing": missing})
-        if t.get("milestone"):
-            cum_have += len(have)
-            cum_of += len(t["skills"])
-            milestones.append({"label": t["label"], "have": cum_have, "of": cum_of})
-    return {"style": style["id"], "label": style["label"],
-            "milestones": milestones, "tiers": tiers}
 
 
 def score_parent(parent: Parent, profile: dict, ranks: dict | None = None) -> dict:
@@ -157,8 +177,7 @@ def score_all(parent: Parent, style_id: str | None = None) -> dict:
             raise ValueError(f"Unknown running style: {style_id}")
 
     def prepared(p: dict) -> dict:
-        q = apply_style(p, style) if style else p
-        return apply_custom(q, parent.custom_weights) if parent.custom_weights else q
+        return apply_overrides(apply_style(p, style) if style else p, parent)
 
     overall_p = prepared(profiles[GENERIC_ID])
     event_ps = [prepared(p) for pid, p in profiles.items() if pid != GENERIC_ID]
@@ -166,6 +185,4 @@ def score_all(parent: Parent, style_id: str | None = None) -> dict:
     events = [score_parent(parent, p, ranks) for p in event_ps]
     out = {"overall": overall, "events": events,
            "important": important_sparks(parent, [overall_p, *event_ps])}
-    if style:
-        out["style"] = style_checklist(parent, style)
     return out

@@ -1,35 +1,14 @@
-# Running style: Pace Chaser. DRAFT tier weights; tune freely.
-# Tiers 1-3 are cumulative milestones (3/3, 6/6, 8/8). Secondary and nice-to-have are extras.
-# Skill names must match the in-game Global names; a few still need verifying
-# (Head-on, Groundwork, Latch On, Pace Chaser Straightaways/Corners).
+# Running style: Pace Chaser. DRAFT. These skills count in EVERY event for this style
+# (the Overall profile uses them as its "globally good" list). Tier weights: data/tiers.yaml.
+# Names still to verify in Global: Head-on, Groundwork, Latch On, Pace Chaser Straightaways/Corners.
 id: pace-chaser
 label: Pace Chaser
-aptitude: Pace Chaser        # name of the pink spark that matters for this style
-white_target: 14             # raw white points that count as 100 for this style
+status: draft
+aptitude: Pace Chaser        # the pink spark that matters for this style
+white_target: 14
 tiers:
-  - id: core
-    label: Core three
-    weight: 1.0
-    milestone: true
-    skills: ["Nimble Navigator", "Uma Stan", "Racing Spirit: Stamina"]
-  - id: good
-    label: Really good
-    weight: 0.8
-    milestone: true
-    skills: ["Tail Held High", "Playtime's Over!", "Slipstream"]
-  - id: third
-    label: Third tier
-    weight: 0.6
-    milestone: true
-    skills: ["Risky Business", "Ramp Up"]
-  - id: secondary
-    label: Secondary
-    weight: 0.4
-    milestone: false
-    skills: ["Head-on", "Groundwork"]
-  - id: nice
-    label: Nice to have
-    weight: 0.2
-    milestone: false
-    skills: ["Pace Chaser Straightaways ○", "Pace Chaser Corners ○", "On the Attack",
-             "Latch On", "Racing Spirit: Power"]
+  S: ["Nimble Navigator", "Uma Stan", "Racing Spirit: Stamina"]
+  A: ["Tail Held High", "Playtime's Over!", "Slipstream"]
+  B: ["Risky Business", "Ramp Up"]
+  C: ["Head-on", "Groundwork"]
+  D: ["Pace Chaser Straightaways ○", "Pace Chaser Corners ○", "On the Attack", "Latch On", "Racing Spirit: Power"]

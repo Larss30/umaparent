@@ -53,3 +53,27 @@ def test_default_skill_weights_keep_display_names():
     assert rows["Nimble Navigator"] == 1.0 and "Right-Handed \u25cb" in rows
     with pytest.raises(ValueError):
         default_skill_weights("nope")
+
+
+def test_context_weights_only_change_that_event():
+    base = parent(Spark("white", "Obscure Skill", 2, "skill"))
+    tuned = parent(Spark("white", "Obscure Skill", 2, "skill"),
+                   context_weights={"aries-cup": {"Obscure Skill": 1.0}})
+    a, b = score_all(base), score_all(tuned)
+    assert b["events"][0]["categories"]["white"] > a["events"][0]["categories"]["white"]
+    assert b["overall"]["categories"]["white"] == a["overall"]["categories"]["white"]
+
+
+def test_null_context_weight_removes_the_event_weight():
+    p = parent(Spark("white", "Medium Corners \u25cb", 3, "skill"))
+    q = parent(Spark("white", "Medium Corners \u25cb", 3, "skill"),
+               context_weights={"aries-cup": {"Medium Corners \u25cb": None}})
+    assert score_all(q)["events"][0]["categories"]["white"] < score_all(p)["events"][0]["categories"]["white"]
+
+
+def test_custom_blue_pink_and_green_default():
+    base = parent(Spark("blue", "Guts", 3), Spark("pink", "Dirt", 3), Spark("green", "Some Unique", 2))
+    tuned = parent(*base.blocks[0].sparks, custom_blue={"Guts": 1.0}, custom_pink={"Dirt": 1.0},
+                   custom_green_default=1.0)
+    a, b = score_all(base)["events"][0]["categories"], score_all(tuned)["events"][0]["categories"]
+    assert b["blue"] > a["blue"] and b["pink"] > a["pink"] and b["green"] > a["green"]

@@ -1,29 +1,8 @@
-# UmaParent (unofficial fan tool)
-
-Scores Umamusume parents from inspiration sparks, per Champions Meeting / League of Heroes,
-with affinity from G1 wins. Screenshot upload + manual entry share one editable review form.
-
-## Run locally
-    cp .env.example .env      # set a real password
-    docker compose up --build
-    curl localhost:8000/health
-    curl localhost:8000/health/db
-    open http://localhost:8000  (the web UI)
-
-## Test / lint
-    cd backend && pip install -r requirements-dev.txt && ruff check . && pytest
-
-## Roadmap
-1. Scaffold, Docker Compose, CI  (done)
-2. Scoring engine, YAML profiles, rank ladder  <- you are here
-3. Frontend, anonymous sessions, login, saved parents
-4. Affinity + G1 race-slot picker
-5. Screenshot pipeline (classify, parse, dedupe, merge)
-6. Deploy behind Cloudflare (Turnstile, rate limits), monitoring, backups
-
-## Planned data model
-users, parents (owner, character, outfit, stats, aptitudes),
-styles live in data/styles/*.yaml (parent.style picks one)
-spark_blocks (parent_id, role = self | grandparent_1 | grandparent_2, character),
-sparks (block_id, type = blue|pink|green|white, name, stars),
-g1_wins (parent_id, race, year_class, half_month).
+Editable config (YAML, loaded at startup):
+- profiles/  one file per CM/LOH; copy aries-cup.yaml to add a new event
+- ranks.yaml Parent Grade ladder
+Still to come: races.yaml (G1 calendar) and affinity/ tables (Phase 4).
+- styles/    one file per running style (tiered skill lists); _template.yaml to copy
+- tiers.yaml   tier letters S..F plus Z (weight 0) and their default weights
+- skills.json  searchable skill list: {"id": <game skill id or null>, "name", "type": skill|race|scenario|unique}.
+               IDs are null until imported from a verified Global source; the app uses them once present.

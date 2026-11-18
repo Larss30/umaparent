@@ -2,8 +2,8 @@ import copy
 
 import pytest
 
-from app.scoring.config import load_profiles, load_styles
-from app.scoring.engine import apply_style, score_all, score_parent, style_checklist
+from app.scoring.config import load_profiles, load_styles, norm
+from app.scoring.engine import apply_style, checklists, score_all, score_parent
 from app.scoring.models import Parent, Spark, SparkBlock
 
 PROFILE = load_profiles()["aries-cup"]
@@ -58,24 +58,43 @@ def test_apply_style_does_not_mutate_base_profile():
     assert PROFILE == before
 
 
-def test_checklist_milestones_are_cumulative():
-    p = parent(white("Nimble Navigator"), white("Uma Stan"),
-               white("Racing Spirit: Stamina", category="scenario"), white("Tail Held High"))
-    m = style_checklist(p, PACE)["milestones"]
-    assert [(x["have"], x["of"]) for x in m] == [(3, 3), (4, 6), (4, 8)]
+def test_event_checklist_adds_event_skills_to_style_skills():
+    cl = checklists("pace-chaser")
+    assert "Right-Handed \u25cb" in cl["aries-cup"]["tiers"]["S"]
+    assert "Right-Handed \u25cb" not in cl["generic"]["tiers"]["S"]
+    assert "Nimble Navigator" in cl["generic"]["tiers"]["S"]
+    assert "Nimble Navigator" in cl["aries-cup"]["tiers"]["S"]
+    assert "Left-Handed \u25cb" in cl["aries-cup"]["tiers"]["Z"]
 
 
-def test_checklist_reports_missing_and_blocks():
-    p = Parent("t", [SparkBlock("grandparent_1", [white("Slipstream", 3)])])
-    good = style_checklist(p, PACE)["tiers"][1]
-    assert good["have"] == [{"name": "Slipstream", "blocks": {"grandparent_1": 3}}]
-    assert "Tail Held High" in good["missing"]
+def test_each_style_has_its_own_global_skills():
+    assert "Groundwork" in checklists("front-runner")["generic"]["tiers"]["S"]
+    assert "Uma Stan" in checklists("late-surger")["generic"]["tiers"]["S"]
+    assert "Groundwork" not in checklists("late-surger")["generic"]["tiers"]["S"]
 
 
-def test_score_all_with_style_adds_checklist_and_label():
+def test_checklists_without_style_only_have_event_skills():
+    cl = checklists(None)
+    assert not any(cl["generic"]["tiers"].values())
+    assert "Medium Corners \u25cb" in cl["aries-cup"]["tiers"]["S"]
+
+
+def test_tier_letters_set_the_weights():
+    skills = load_profiles()["aries-cup"]["white"]["skills"]
+    assert skills[norm("Right-Handed \u25cb")] == 1.0
+    assert skills[norm("Left-Handed \u25cb")] == 0.0
+
+
+def test_event_tier_wins_over_style_tier():
+    style = {"id": "x", "label": "X", "aptitude": "Pace Chaser",
+             "_weights": {norm("Left-Handed \u25cb"): 1.0}}
+    p = apply_style(PROFILE, style)
+    assert p["white"]["skills"][norm("Left-Handed \u25cb")] == 0.0
+
+
+def test_score_all_with_style_adds_label():
     out = score_all(parent(white("Uma Stan"), style="pace-chaser"))
     assert "Pace Chaser" in out["events"][0]["label"]
-    assert out["style"]["style"] == "pace-chaser"
 
 
 def test_unknown_style_raises():

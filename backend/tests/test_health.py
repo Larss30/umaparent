@@ -24,13 +24,19 @@ def test_score_endpoint():
     assert "overall" in r.json() and r.json()["events"]
 
 
-def test_style_endpoint_and_scoring():
+def test_styles_checklists_tiers_and_skills_endpoints():
     assert any(s["id"] == "pace-chaser" for s in client.get("/api/styles").json())
+    cl = client.get("/api/checklists?style=pace-chaser").json()
+    assert "Nimble Navigator" in cl["generic"]["tiers"]["S"]
+    assert client.get("/api/checklists?style=nope").status_code == 400
+    assert [t["id"] for t in client.get("/api/tiers").json()][-1] == "Z"
+    assert any(s["name"] == "Nimble Navigator" for s in client.get("/api/skills").json())
     body = {"name": "x", "style": "pace-chaser",
+            "context_weights": {"aries-cup": {"Uma Stan": 1.0, "Old Skill": None}},
+            "custom_blue": {"Guts": 1.0},
             "blocks": [{"role": "self", "sparks": [
-                {"kind": "white", "name": "Uma Stan", "stars": 2, "category": "skill"}]}]}
-    r = client.post("/api/score", json=body)
-    assert r.status_code == 200 and r.json()["style"]["milestones"]
+                {"kind": "white", "name": "Uma Stan", "stars": 2, "category": "skill", "skill_id": 1}]}]}
+    assert client.post("/api/score", json=body).status_code == 200
     body["style"] = "nope"
     assert client.post("/api/score", json=body).status_code == 400
 
