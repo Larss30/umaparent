@@ -28,6 +28,7 @@ def load_profiles() -> dict[str, dict]:
         p["blue"] = _norm_keys(p.get("blue"))
         p["pink"] = _norm_keys(p.get("pink"))
         p["green"]["unique"] = _norm_keys(p["green"].get("unique"))
+        p["white"]["_names"] = {norm(k): k for k in (p["white"].get("skills") or {})}
         p["white"]["skills"] = _norm_keys(p["white"].get("skills"))
         p["white"]["races"] = _norm_keys(p["white"].get("races"))
         profiles[p["id"]] = p
@@ -47,6 +48,7 @@ def load_styles() -> dict[str, dict]:
                 key = norm(skill)
                 weights[key] = max(weights.get(key, 0.0), tier["weight"])
         s["_weights"] = weights
+        s["_names"] = {norm(sk): sk for t in s["tiers"] for sk in t["skills"]}
         styles[s["id"]] = s
     return styles
 

@@ -28,3 +28,4 @@ class Parent:
     style: str | None = None   # id of a file in data/styles, e.g. "pace-chaser"
     affinity: int | None = None          # manual affinity score (Phase 4 can compute it)
     affinity_target: str | None = None   # trainee the affinity is for
+    custom_weights: dict[str, float] | None = None   # user's own white-spark weights

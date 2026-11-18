@@ -5,6 +5,7 @@ from .models import KINDS, Parent, Spark
 from .ranks import grade_for, next_grade
 
 GENERIC_ID = "generic"
+HIGHLIGHT_MIN = 0.5   # a white spark weighted at least this is flagged important
 STYLE_PINKS = ("front runner", "pace chaser", "late surger", "end closer")
 
 
@@ -42,6 +43,44 @@ def apply_style(profile: dict, style: dict) -> dict:
     if "white_target" in style:
         p["targets"]["white"] = style["white_target"]
     return p
+
+
+def apply_custom(profile: dict, custom: dict) -> dict:
+    """Return a NEW profile where the user's own weights replace white-spark weights."""
+    p = copy.deepcopy(profile)
+    for name, w in custom.items():
+        p["white"]["skills"][norm(name)] = float(w)
+    return p
+
+
+def important_sparks(parent: Parent, profiles: list[dict]) -> list[str]:
+    found: dict[str, str] = {}
+    for b in parent.blocks:
+        for s in b.sparks:
+            if s.kind == "white" and norm(s.name) not in found:
+                if max(spark_weight(p, s) for p in profiles) >= HIGHLIGHT_MIN:
+                    found[norm(s.name)] = s.name
+    return sorted(found.values())
+
+
+def default_skill_weights(style_id: str | None = None) -> list[dict]:
+    """Default white-skill weights (best across events), for seeding the tier list."""
+    style = None
+    if style_id:
+        style = load_styles().get(style_id)
+        if style is None:
+            raise ValueError(f"Unknown running style: {style_id}")
+    best: dict[str, float] = {}
+    names: dict[str, str] = {}
+    for p in load_profiles().values():
+        q = apply_style(p, style) if style else p
+        names.update(p["white"].get("_names", {}))
+        for k, w in q["white"]["skills"].items():
+            best[k] = max(best.get(k, 0.0), w)
+    if style:
+        names.update(style["_names"])
+    rows = [{"name": names.get(k, k), "weight": w} for k, w in best.items() if w > 0]
+    return sorted(rows, key=lambda r: (-r["weight"], r["name"]))
 
 
 def style_checklist(parent: Parent, style: dict) -> dict:
@@ -118,12 +157,15 @@ def score_all(parent: Parent, style_id: str | None = None) -> dict:
             raise ValueError(f"Unknown running style: {style_id}")
 
     def prepared(p: dict) -> dict:
-        return apply_style(p, style) if style else p
+        q = apply_style(p, style) if style else p
+        return apply_custom(q, parent.custom_weights) if parent.custom_weights else q
 
-    overall = score_parent(parent, prepared(profiles[GENERIC_ID]), ranks)
-    events = [score_parent(parent, prepared(p), ranks)
-              for pid, p in profiles.items() if pid != GENERIC_ID]
-    out = {"overall": overall, "events": events}
+    overall_p = prepared(profiles[GENERIC_ID])
+    event_ps = [prepared(p) for pid, p in profiles.items() if pid != GENERIC_ID]
+    overall = score_parent(parent, overall_p, ranks)
+    events = [score_parent(parent, p, ranks) for p in event_ps]
+    out = {"overall": overall, "events": events,
+           "important": important_sparks(parent, [overall_p, *event_ps])}
     if style:
         out["style"] = style_checklist(parent, style)
     return out
