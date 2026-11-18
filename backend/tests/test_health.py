@@ -38,3 +38,16 @@ def test_style_endpoint_and_scoring():
 def test_index_page_served():
     r = client.get("/")
     assert r.status_code == 200 and "UmaParent" in r.text
+
+
+def test_custom_weights_and_skill_weights_endpoints():
+    body = {"name": "x", "custom_weights": {"Obscure Skill": 1.0},
+            "blocks": [{"role": "self", "sparks": [
+                {"kind": "white", "name": "Obscure Skill", "stars": 1, "category": "skill"}]}]}
+    r = client.post("/api/score", json=body)
+    assert r.status_code == 200 and "Obscure Skill" in r.json()["important"]
+    body["custom_weights"] = {"Obscure Skill": 99}
+    assert client.post("/api/score", json=body).status_code == 422
+    rows = client.get("/api/skill-weights?style=pace-chaser").json()
+    assert any(x["name"] == "Nimble Navigator" for x in rows)
+    assert client.get("/api/skill-weights?style=nope").status_code == 400

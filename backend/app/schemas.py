@@ -1,6 +1,6 @@
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 from .scoring.models import Parent, Spark, SparkBlock
 
@@ -25,6 +25,14 @@ class ParentIn(BaseModel):
     affinity: int | None = Field(default=None, ge=0, le=1000)
     affinity_target: str | None = None
     blocks: list[BlockIn] = Field(max_length=3)
+    custom_weights: dict[str, float] | None = Field(default=None, max_length=400)
+
+    @field_validator("custom_weights")
+    @classmethod
+    def _weights_in_range(cls, v):
+        if v and any(not (0 <= w <= 5) or len(k) > 80 for k, w in v.items()):
+            raise ValueError("custom weights must be 0-5 and names under 80 characters")
+        return v
 
     def to_domain(self) -> Parent:
         return Parent(
@@ -33,6 +41,7 @@ class ParentIn(BaseModel):
             style=self.style,
             affinity=self.affinity,
             affinity_target=self.affinity_target,
+            custom_weights=self.custom_weights,
             blocks=[
                 SparkBlock(role=b.role, character=b.character,
                            sparks=[Spark(**s.model_dump()) for s in b.sparks])

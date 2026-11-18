@@ -9,61 +9,83 @@
   --turf:#17806d; --turf-deep:#0f5f51; --stripe:#1b8a76;
   --paper:#eef5f1; --card:#ffffff; --ink:#1d2a33; --muted:#5b6b75; --line:#d5e2db;
   --blue:#3a97e0; --pink:#e5639b; --green:#7bbf3f; --white:#98a7b1;
-  --gold:#e0a82e; --gold-deep:#b9821a; --danger:#b3261e;
+  --gold:#e0a82e; --gold-deep:#b9821a; --gold-tint:#fbf1d6; --danger:#b3261e;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --paper:#10191a; --card:#18262a; --ink:#e6eef0; --muted:#9fb1b8; --line:#2a3d42;
-    --turf:#1f9a84; --turf-deep:#157060; --stripe:#23a58e; color-scheme: dark;
+    --turf:#1f9a84; --turf-deep:#157060; --stripe:#23a58e; --gold-tint:#3a3217; color-scheme: dark;
   }
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html,body{margin:0}
 body{background:var(--paper);color:var(--ink);font:15px/1.5 ui-rounded,"SF Pro Rounded","Nunito","Segoe UI",system-ui,sans-serif}
 button,input,select{font:inherit;color:inherit}
 :focus-visible{outline:3px solid var(--gold);outline-offset:2px}
-
 header{background:repeating-linear-gradient(115deg,var(--turf) 0 34px,var(--stripe) 34px 68px);color:#fff;padding:22px 20px 20px}
-header h1{margin:0;font-size:1.7rem;letter-spacing:.2px}
+header h1{margin:0;font-size:1.7rem}
 header p{margin:2px 0 0;opacity:.9;max-width:60ch}
-main{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:20px;max-width:1180px;margin:0 auto;padding:20px}
-@media (max-width:900px){main{grid-template-columns:1fr}}
+main{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:20px;max-width:1240px;margin:0 auto;padding:20px}
+@media (max-width:960px){main{grid-template-columns:1fr}}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
 h2{margin:0 0 12px;font-size:1.15rem}
 h3{margin:0;font-size:1rem}
-h4{margin:14px 0 6px;font-size:.9rem;color:var(--muted);font-weight:600}
-.muted{color:var(--muted);font-size:.88rem}
-
-.basics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 12px;margin-bottom:16px}
+h4{margin:0;font-size:.85rem;color:var(--muted);font-weight:600}
+.muted{color:var(--muted);font-size:.85rem;margin:6px 0}
+.basics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 12px;margin-bottom:14px}
 .basics label{display:flex;flex-direction:column;gap:3px;font-size:.85rem;color:var(--muted)}
-.basics .wide{grid-column:1/-1}
-input,select{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:8px 10px;min-width:0;width:100%}
-.hint{grid-column:1/-1;margin:-4px 0 0}
+.basics .wide,.basics .hint{grid-column:1/-1}
+.basics .hint{margin:-4px 0 0}
+input,select{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:7px 9px;min-width:0;width:100%}
+input[type=checkbox]{width:auto}
 
-.tree{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.tree .self{grid-column:1/-1}
-@media (max-width:620px){.tree{grid-template-columns:1fr}}
-.block{border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--paper)}
-.block.self{border-width:2px;border-color:var(--turf)}
-.block .char{margin:8px 0}
-.srow{display:grid;grid-template-columns:14px minmax(0,1fr) auto;align-items:center;gap:8px;margin:6px 0}
-.dot{width:14px;height:14px;border-radius:50%}
-.dot.blue{background:var(--blue)}.dot.pink{background:var(--pink)}.dot.green{background:var(--green)}.dot.white{background:var(--white)}
-.wrow{display:grid;grid-template-columns:minmax(0,1fr) 92px auto 28px;gap:6px;align-items:center;margin:6px 0}
-@media (max-width:620px){.wrow{grid-template-columns:minmax(0,1fr) 84px auto 28px}}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;border-bottom:2px solid var(--line);margin-bottom:10px}
+.tabs button{background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:8px 12px;cursor:pointer;color:var(--muted);font-weight:600}
+.tabs button[aria-selected=true]{color:var(--turf);border-color:var(--turf)}
+.core{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:8px 0 12px}
+@media (max-width:720px){.core{grid-template-columns:1fr}}
+.srow{display:grid;grid-template-columns:12px minmax(0,1fr) auto;align-items:center;gap:6px}
+.dot{width:12px;height:12px;border-radius:50%}
+.dot.blue{background:var(--blue)}.dot.pink{background:var(--pink)}.dot.green{background:var(--green)}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+@media (max-width:720px){.cols{grid-template-columns:1fr}}
+.col{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:8px}
+.chead{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.list{max-height:360px;overflow:auto}
+.wrow{display:grid;grid-template-columns:minmax(0,1fr) auto 22px 22px;gap:3px;align-items:center;margin:3px 0;padding:2px 3px 2px 5px;border-left:4px solid transparent;border-radius:8px}
+.wrow input{padding:3px 6px;font-size:.82rem;border-radius:7px}
+.wrow.hot{border-left-color:var(--gold);background:var(--gold-tint)}
 .stars{display:inline-flex}
-.stars button{background:none;border:0;padding:0 1px;font-size:1.25rem;line-height:1;color:var(--line);cursor:pointer}
+.stars button{background:none;border:0;padding:0 1px;font-size:1.1rem;line-height:1;color:var(--line);cursor:pointer}
 .stars button.on{color:var(--gold)}
-.ghost{background:none;border:1px dashed var(--muted);border-radius:10px;padding:6px 10px;cursor:pointer;color:var(--muted)}
-.x{background:none;border:0;cursor:pointer;color:var(--muted);font-size:1.1rem}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.icon{background:none;border:0;cursor:pointer;color:var(--muted);font-size:.95rem;padding:0}
+.wrow.pin .pinbtn{color:var(--gold-deep)}
+.ghost{background:none;border:1px dashed var(--muted);border-radius:8px;padding:1px 8px;cursor:pointer;color:var(--muted);font-size:.8rem}
+
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;align-items:center}
 .primary{background:var(--turf);color:#fff;border:0;border-radius:12px;padding:10px 18px;font-weight:700;cursor:pointer}
 .primary:hover{background:var(--turf-deep)}
-.secondary{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 16px;cursor:pointer}
+.secondary{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 14px;cursor:pointer}
+.secondary.sm{padding:4px 10px;font-size:.85rem}
+#plist{width:auto;max-width:200px}
+.err{color:var(--danger);font-weight:600}
+
+.tierbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.inl{display:inline-flex;gap:6px;align-items:center}
+.tier{display:grid;grid-template-columns:76px minmax(0,1fr);gap:8px;margin:6px 0}
+.tlab{display:flex;flex-direction:column;align-items:center;gap:3px;background:var(--gold);color:#4a3203;border-radius:10px;padding:6px 4px}
+.tlab b{font-size:1.3rem;line-height:1}
+.tlab input{padding:2px 4px;font-size:.8rem;text-align:center;background:#fff;color:#222}
+.zone{min-height:48px;border:1px dashed var(--line);border-radius:10px;padding:6px;display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start}
+.zone.over{background:var(--gold-tint);border-color:var(--gold)}
+.card{display:inline-flex;gap:6px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:2px 4px 2px 10px;cursor:grab;font-size:.82rem}
+.card select{width:auto;padding:0 2px;font-size:.75rem;border-radius:8px}
+.addrow{display:flex;gap:6px;margin-top:8px}
 
 .results{position:sticky;top:12px;align-self:start}
-@media (max-width:900px){.results{position:static}}
+@media (max-width:960px){.results{position:static}}
 .empty{color:var(--muted)}
 .error{color:var(--danger);font-weight:600}
 .hero{display:flex;gap:18px;align-items:center;margin-bottom:14px}
@@ -71,14 +93,13 @@ input,select{background:var(--paper);border:1px solid var(--line);border-radius:
   background:radial-gradient(circle at 50% 38%,#fff 0 58%,#fbefc9 60% 100%);
   border:7px solid var(--gold);box-shadow:0 0 0 3px var(--gold-deep) inset;display:grid;place-items:center;color:#5a3d05}
 .rosette b{font-size:1.9rem;line-height:1}
-.rosette::before,.rosette::after{content:"";position:absolute;bottom:-26px;width:26px;height:34px;background:var(--gold-deep);z-index:-1}
-.rosette::before{left:22px;clip-path:polygon(0 0,100% 0,100% 100%,50% 78%,0 100%)}
-.rosette::after{right:22px;clip-path:polygon(0 0,100% 0,100% 100%,50% 78%,0 100%)}
+.rosette::before,.rosette::after{content:"";position:absolute;bottom:-26px;width:26px;height:34px;background:var(--gold-deep);z-index:-1;clip-path:polygon(0 0,100% 0,100% 100%,50% 78%,0 100%)}
+.rosette::before{left:22px}.rosette::after{right:22px}
 .big{font-size:2.3rem;font-weight:800;line-height:1}
 .event{border-top:1px solid var(--line);padding:12px 0}
 .ehead{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
 .pill{background:var(--gold);color:#4a3203;border-radius:999px;padding:1px 10px;font-weight:800;font-size:.85rem}
-.bar{display:grid;grid-template-columns:86px 1fr 52px;gap:8px;align-items:center;margin:5px 0;font-size:.85rem}
+.bar{display:grid;grid-template-columns:76px 1fr 52px;gap:8px;align-items:center;margin:5px 0;font-size:.85rem}
 .track{height:10px;border-radius:99px;background:var(--paper);overflow:hidden;border:1px solid var(--line)}
 .fill{height:100%;border-radius:99px}
 .fill.blue{background:var(--blue)}.fill.pink{background:var(--pink)}.fill.green{background:var(--green)}.fill.white{background:var(--white)}.fill.affinity{background:var(--gold)}
@@ -90,7 +111,7 @@ input,select{background:var(--paper);border:1px solid var(--line);border-radius:
 .chip.miss{border-style:dashed;color:var(--muted)}
 .ms{font-weight:700}
 details{margin-top:6px;font-size:.85rem;color:var(--muted)}
-footer{max-width:1180px;margin:0 auto;padding:0 20px 28px;color:var(--muted);font-size:.82rem}
+footer{max-width:1240px;margin:0 auto;padding:0 20px 28px;color:var(--muted);font-size:.82rem}
 </style>
 </head>
 <body>
@@ -108,32 +129,51 @@ footer{max-width:1180px;margin:0 auto;padding:0 20px 28px;color:var(--muted);fon
       <label>Running style<select id="style"><option value="">Any style</option></select></label>
       <label>Affinity score<input id="aff" type="number" min="0" max="1000" placeholder="Optional"></label>
       <label class="wide">Affinity is for trainee<input id="afftarget" placeholder="Optional, e.g. Oguri Cap"></label>
-      <p class="muted hint">Type the affinity number you see in game. Automatic calculation from G1 wins comes later.</p>
+      <p class="muted hint">Type the affinity number you see in game. Calculating it from G1 wins comes later.</p>
     </div>
-    <div class="tree" id="tree"></div>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <p class="muted" id="legend">A gold edge marks a white spark that matters for your style, the events, or your own tiers. Use the &#9873; button to pin one yourself.</p>
+    <div id="panes"></div>
     <div class="actions">
       <button class="primary" id="go" type="button">Score parent</button>
-      <button class="secondary" id="sample" type="button">Load sample parent</button>
+      <button class="secondary" id="sample" type="button">Load sample</button>
+      <button class="secondary" id="imp" type="button">Import JSON</button>
+      <button class="secondary" id="exp" type="button">Export JSON</button>
       <button class="secondary" id="clear" type="button">Clear</button>
+      <select id="plist" hidden aria-label="Imported parents"></select>
+      <input type="file" id="file" accept=".json,application/json" hidden>
     </div>
+    <p class="muted" id="msg" role="status"></p>
   </section>
 
   <section class="panel results" aria-live="polite" aria-labelledby="rtitle">
     <h2 id="rtitle">Scores</h2>
-    <div id="out"><p class="empty">Enter sparks and press Score parent, or load the sample parent to see how it works.</p></div>
+    <div id="out"><p class="empty">Enter sparks and press Score parent, or load the sample to see how it works.</p></div>
   </section>
 </main>
-<footer>Unofficial fan tool. Not affiliated with or endorsed by Cygames. Weights are drafts you can tune in the data files.</footer>
+<footer>Unofficial fan tool. Not affiliated with or endorsed by Cygames. Weights are drafts you can tune in the data files or in the Skill tiers tab.</footer>
 
 <script>
 const $ = s => document.querySelector(s);
 const el = (t, c, txt) => { const e = document.createElement(t); if (c) e.className = c; if (txt != null) e.textContent = txt; return e; };
+const norm = s => s.replace(/\u2019/g, "'").replace(/!/g, '').toLowerCase().split(/\s+/).filter(Boolean).join(' ');
 const BLUES = ['Speed','Stamina','Power','Guts','Wit'];
 const PINKS = ['Turf','Dirt','Sprint','Mile','Medium','Long','Front Runner','Pace Chaser','Late Surger','End Closer'];
 const ROLES = [['self','Parent'],['grandparent_1','Grandparent 1'],['grandparent_2','Grandparent 2']];
 const ROLE_SHORT = {self:'Parent', grandparent_1:'GP 1', grandparent_2:'GP 2'};
+const COLS = [['skill','Skills'],['race','Races'],['scenario','Scenario']];
 const CAT_LABEL = {blue:'Stats', pink:'Aptitude', green:'Unique', white:'Skills', affinity:'Affinity'};
+const TIERS = ['S','A','B','C','D'];
+const HOT_MIN = 0.5;
+const store = { get(k){ try { return JSON.parse(localStorage.getItem(k)); } catch(e){ return null; } },
+                set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} } };
+let T = store.get('uma-tiers');
+if (!T || !T.w || !T.cards) T = {w:{S:1, A:.8, B:.5, C:.25, D:.1}, cards:{}, use:true};
+let important = new Set(), imported = [];
+const saveT = () => store.set('uma-tiers', T);
+function say(msg, bad){ const m = $('#msg'); m.textContent = msg; m.className = 'muted' + (bad ? ' err' : ''); }
 
+/* ---------- parent form ---------- */
 function Stars(v = 0){
   const s = el('span','stars'); s.v = v;
   s.draw = () => { s.replaceChildren(); for (let i = 1; i <= 3; i++){
@@ -144,50 +184,76 @@ function Stars(v = 0){
 }
 function pickRow(kind, options){
   const row = el('div','srow'), sel = el('select'), stars = Stars();
-  sel.setAttribute('aria-label', kind + ' spark');
-  sel.append(new Option('\u2013 ' + kind + ' spark \u2013', ''));
+  sel.setAttribute('aria-label', kind + ' spark'); sel.append(new Option(kind + ' spark', ''));
   options.forEach(o => sel.append(new Option(o, o)));
-  row.append(el('span','dot ' + kind), sel, stars);
-  return {row, sel, stars};
+  row.append(el('span','dot ' + kind), sel, stars); return {row, sel, stars};
 }
 function greenRow(){
   const row = el('div','srow'), inp = el('input'), stars = Stars();
-  inp.placeholder = 'Unique skill (green)'; inp.setAttribute('aria-label','green spark');
-  row.append(el('span','dot green'), inp, stars);
-  return {row, inp, stars};
+  inp.placeholder = 'Unique skill'; inp.setAttribute('aria-label','green spark');
+  row.append(el('span','dot green'), inp, stars); return {row, inp, stars};
 }
-function whiteRow(name = '', cat = 'skill', st = 1){
-  const w = el('div','wrow'), n = el('input'), c = el('select'), s = Stars(st), x = el('button','x','\u00d7');
-  n.placeholder = 'Skill or race name'; n.value = name; n.setAttribute('aria-label','white spark name');
-  [['skill','Skill'],['race','Race'],['scenario','Scenario']].forEach(([v,t]) => c.append(new Option(t, v)));
-  c.value = cat; c.setAttribute('aria-label','white spark type');
-  x.type = 'button'; x.setAttribute('aria-label','Remove spark'); x.onclick = () => w.remove();
-  w.f = {n, c, s}; w.append(n, c, s, x); return w;
+function wrow(name = '', st = 1, pin = false){
+  const w = el('div','wrow'), n = el('input'), s = Stars(st), p = el('button','icon pinbtn','\u2691'), x = el('button','icon','\u00d7');
+  n.placeholder = 'Name'; n.value = name; n.setAttribute('aria-label','white spark name');
+  p.type = 'button'; x.type = 'button'; p.title = 'Pin as important'; x.title = 'Remove';
+  p.setAttribute('aria-label','Pin as important'); x.setAttribute('aria-label','Remove spark');
+  w.pin = pin; w.classList.toggle('pin', pin);
+  p.onclick = () => { w.pin = !w.pin; w.classList.toggle('pin', w.pin); };
+  x.onclick = () => { w.remove(); changed(); };
+  w.f = {n, s}; w.append(n, s, p, x); return w;
 }
-function buildBlock(role, title){
-  const b = el('section','block ' + role); b.dataset.role = role;
-  const ch = el('input','char'); ch.placeholder = 'Character (optional)'; ch.setAttribute('aria-label', title + ' character');
+function buildBlock(role){
+  const b = el('section'); b.className = 'block'; b.dataset.role = role;
+  const ch = el('input','char'); ch.placeholder = 'Character (optional)'; ch.setAttribute('aria-label','character');
   b.blue = pickRow('blue', BLUES); b.pink = pickRow('pink', PINKS); b.green = greenRow();
-  b.whites = el('div'); const add = el('button','ghost','Add white spark'); add.type = 'button';
-  add.onclick = () => b.whites.append(whiteRow());
-  b.append(el('h3', null, title), ch, b.blue.row, b.pink.row, b.green.row, el('h4', null, 'White sparks'), b.whites, add);
-  return b;
+  const core = el('div','core'); core.append(b.blue.row, b.pink.row, b.green.row);
+  const cols = el('div','cols'); b.lists = {};
+  COLS.forEach(([cat, title]) => {
+    const c = el('div','col'), h = el('div','chead'), add = el('button','ghost','+ Add'), l = el('div','list');
+    add.type = 'button'; add.onclick = () => { const r = wrow(); l.append(r); r.f.n.focus(); changed(); };
+    h.append(el('h4', null, title), add); c.append(h, l); cols.append(c); b.lists[cat] = l;
+  });
+  b.append(ch, core, cols); return b;
 }
-ROLES.forEach(([r, t]) => $('#tree').append(buildBlock(r, t)));
+const PANES = [...ROLES.map(([id, title]) => ({id, title})), {id:'tiers', title:'Skill tiers'}];
+PANES.forEach(p => {
+  p.tab = el('button', null, p.title); p.tab.type = 'button'; p.tab.setAttribute('role','tab');
+  p.tab.onclick = () => show(p.id);
+  p.pane = p.id === 'tiers' ? el('div') : buildBlock(p.id);
+  $('#tabs').append(p.tab); $('#panes').append(p.pane);
+});
+function show(id){
+  PANES.forEach(p => { p.pane.hidden = p.id !== id; p.tab.setAttribute('aria-selected', p.id === id); });
+  $('#legend').hidden = id === 'tiers'; if (id === 'tiers') renderTiers();
+}
+function changed(){
+  PANES.forEach(p => { if (p.id === 'tiers') return;
+    const n = Object.values(p.pane.lists).reduce((a, l) => a + [...l.querySelectorAll('.wrow')].filter(w => w.f.n.value.trim()).length, 0);
+    p.tab.textContent = p.title + (n ? ' (' + n + ')' : ''); });
+  refreshHot();
+}
+function refreshHot(){
+  document.querySelectorAll('.wrow').forEach(w => {
+    const k = norm(w.f.n.value), c = T.use && T.cards[k];
+    w.classList.toggle('hot', !!k && (c ? T.w[c.tier] >= HOT_MIN : important.has(k)));
+  });
+}
+$('#panes').addEventListener('input', changed);
+$('#panes').addEventListener('click', changed);
 
-function clearBlock(b){
-  b.querySelector('.char').value = '';
-  b.blue.sel.value = ''; b.pink.sel.value = ''; b.green.inp.value = '';
-  [b.blue.stars, b.pink.stars, b.green.stars].forEach(s => { s.v = 0; s.draw(); });
-  b.whites.replaceChildren();
-}
 function clearAll(){
-  ['name','outfit','aff','afftarget'].forEach(i => $('#' + i).value = '');
-  $('#style').value = ''; document.querySelectorAll('.block').forEach(clearBlock);
+  ['name','outfit','aff','afftarget'].forEach(i => $('#' + i).value = ''); $('#style').value = '';
+  document.querySelectorAll('.block').forEach(b => {
+    b.querySelector('.char').value = ''; b.blue.sel.value = ''; b.pink.sel.value = ''; b.green.inp.value = '';
+    [b.blue.stars, b.pink.stars, b.green.stars].forEach(s => { s.v = 0; s.draw(); });
+    Object.values(b.lists).forEach(l => l.replaceChildren());
+  });
+  important = new Set(); changed();
 }
 function setPick(row, sparks, kind){
   const s = sparks.find(x => x.kind === kind); if (!s) return;
-  if (row.sel){ row.sel.value = s.name; } else { row.inp.value = s.name; }
+  if (row.sel) row.sel.value = s.name; else row.inp.value = s.name;
   row.stars.v = s.stars; row.stars.draw();
 }
 function fill(d){
@@ -195,27 +261,124 @@ function fill(d){
   $('#name').value = d.name || ''; $('#outfit').value = d.outfit || ''; $('#style').value = d.style || '';
   $('#aff').value = d.affinity ?? ''; $('#afftarget').value = d.affinity_target || '';
   d.blocks.forEach(blk => {
-    const b = document.querySelector('.block.' + blk.role); if (!b) return;
+    const b = document.querySelector('.block[data-role="' + blk.role + '"]'); if (!b) return;
     b.querySelector('.char').value = blk.character || '';
     setPick(b.blue, blk.sparks, 'blue'); setPick(b.pink, blk.sparks, 'pink'); setPick(b.green, blk.sparks, 'green');
-    blk.sparks.filter(s => s.kind === 'white').forEach(s => b.whites.append(whiteRow(s.name, s.category || 'skill', s.stars)));
+    blk.sparks.filter(s => s.kind === 'white').forEach(s => b.lists[b.lists[s.category] ? s.category : 'skill'].append(wrow(s.name, s.stars, !!s.pinned)));
   });
+  changed();
 }
-function collect(){
+function collect(exp){
   const blocks = [...document.querySelectorAll('.block')].map(b => {
     const sparks = [];
     [['blue', b.blue], ['pink', b.pink]].forEach(([k, r]) => { if (r.sel.value && r.stars.v) sparks.push({kind:k, name:r.sel.value, stars:r.stars.v}); });
     if (b.green.inp.value.trim() && b.green.stars.v) sparks.push({kind:'green', name:b.green.inp.value.trim(), stars:b.green.stars.v});
-    b.whites.querySelectorAll('.wrow').forEach(w => { const {n, c, s} = w.f;
-      if (n.value.trim() && s.v) sparks.push({kind:'white', name:n.value.trim(), stars:s.v, category:c.value}); });
+    COLS.forEach(([cat]) => b.lists[cat].querySelectorAll('.wrow').forEach(w => {
+      if (w.f.n.value.trim() && w.f.s.v){ const sp = {kind:'white', name:w.f.n.value.trim(), stars:w.f.s.v, category:cat}; if (exp && w.pin) sp.pinned = true; sparks.push(sp); } }));
     return {role:b.dataset.role, character:b.querySelector('.char').value.trim() || null, sparks};
   });
   const aff = $('#aff').value;
-  return {name:$('#name').value.trim() || 'Untitled parent', outfit:$('#outfit').value.trim() || null,
+  const d = {name:$('#name').value.trim() || 'Untitled parent', outfit:$('#outfit').value.trim() || null,
     style:$('#style').value || null, affinity: aff === '' ? null : Number(aff),
     affinity_target:$('#afftarget').value.trim() || null, blocks};
+  if (!exp && T.use){ const cw = {}; Object.values(T.cards).forEach(c => { cw[c.name] = T.w[c.tier]; }); if (Object.keys(cw).length) d.custom_weights = cw; }
+  return d;
 }
 
+/* ---------- import / export ---------- */
+function validParent(d){
+  if (!d || !Array.isArray(d.blocks)) return 'The file needs a "blocks" list.';
+  for (const b of d.blocks){
+    if (!ROLES.some(r => r[0] === b.role) || !Array.isArray(b.sparks)) return 'Each block needs a role (self, grandparent_1, grandparent_2) and a sparks list.';
+    for (const s of b.sparks)
+      if (!['blue','pink','green','white'].includes(s.kind) || typeof s.name !== 'string' || !(s.stars >= 1 && s.stars <= 3))
+        return 'Spark "' + (s.name || '?') + '" needs a kind, a name, and 1 to 3 stars.';
+  }
+  return null;
+}
+$('#imp').onclick = () => $('#file').click();
+$('#file').onchange = async e => {
+  const f = e.target.files[0]; e.target.value = ''; if (!f) return;
+  if (f.size > 1e6) return say('That file is over 1 MB. Export one parent at a time.', true);
+  let data; try { data = JSON.parse(await f.text()); } catch(_) { return say('That file is not valid JSON.', true); }
+  const list = Array.isArray(data) ? data : (data && Array.isArray(data.parents) ? data.parents : [data]);
+  const bad = list.map(validParent).find(Boolean); if (bad) return say(bad, true);
+  imported = list; const pl = $('#plist'); pl.replaceChildren();
+  list.forEach((p, i) => pl.append(new Option(p.name || 'Parent ' + (i + 1), i))); pl.hidden = list.length < 2;
+  fill(list[0]); say('Imported ' + list.length + (list.length > 1 ? ' parents. Pick one from the list.' : ' parent.'));
+};
+$('#plist').onchange = e => fill(imported[+e.target.value]);
+$('#exp').onclick = () => {
+  const d = collect(true), a = el('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(d, null, 2)], {type:'application/json'}));
+  a.download = d.name.replace(/[^\w-]+/g, '-') + '.json'; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  say('Exported ' + a.download);
+};
+
+/* ---------- skill tiers ---------- */
+function nameMap(){
+  const m = new Map(); Object.entries(T.cards).forEach(([k, c]) => m.set(k, c.name));
+  document.querySelectorAll('.wrow').forEach(w => { const v = w.f.n.value.trim(); if (v && !m.has(norm(v))) m.set(norm(v), v); });
+  return m;
+}
+function move(key, tier){
+  const nm = nameMap().get(key); if (!nm) return;
+  if (tier === '-') delete T.cards[key]; else T.cards[key] = {name:nm, tier};
+  saveT(); renderTiers(); refreshHot();
+}
+function zone(tier){
+  const z = el('div','zone');
+  z.ondragover = e => { e.preventDefault(); z.classList.add('over'); };
+  z.ondragleave = () => z.classList.remove('over');
+  z.ondrop = e => { e.preventDefault(); z.classList.remove('over'); move(e.dataTransfer.getData('text/plain'), tier); };
+  return z;
+}
+function card(key, name, tier){
+  const c = el('div','card'), s = el('select'); c.draggable = true;
+  c.ondragstart = e => e.dataTransfer.setData('text/plain', key);
+  s.setAttribute('aria-label','Tier for ' + name);
+  [['-','Unrated'], ...TIERS.map(t => [t, t])].forEach(([v, t]) => s.append(new Option(t, v)));
+  s.value = tier || '-'; s.onchange = () => move(key, s.value);
+  c.append(el('span', null, name), s); return c;
+}
+async function loadDefaults(){
+  try {
+    const st = $('#style').value, r = await fetch('/api/skill-weights' + (st ? '?style=' + encodeURIComponent(st) : ''));
+    if (!r.ok) throw new Error(); const list = await r.json();
+    list.forEach(({name, weight}) => {
+      const tier = TIERS.reduce((a, b) => Math.abs(T.w[b] - weight) < Math.abs(T.w[a] - weight) ? b : a);
+      T.cards[norm(name)] = {name, tier};
+    });
+    saveT(); renderTiers(); refreshHot(); say('Loaded ' + list.length + ' default ratings. Move cards to make them yours.');
+  } catch(e){ say('Could not load the default ratings.', true); }
+}
+function renderTiers(){
+  const pane = PANES[PANES.length - 1].pane; pane.replaceChildren();
+  const bar = el('div','tierbar'), use = el('label','inl'), cb = el('input');
+  cb.type = 'checkbox'; cb.checked = T.use; cb.onchange = () => { T.use = cb.checked; saveT(); refreshHot(); };
+  use.append(cb, 'Use my ratings when scoring');
+  const defs = el('button','secondary sm','Load defaults for this style'), rst = el('button','secondary sm','Clear ratings');
+  defs.type = 'button'; rst.type = 'button'; defs.onclick = loadDefaults;
+  rst.onclick = () => { T.cards = {}; saveT(); renderTiers(); refreshHot(); };
+  bar.append(use, defs, rst);
+  pane.append(bar, el('p','muted','Drag a skill onto a tier, or use the menu on its card. Edit a tier weight to change how much it counts: 1 is full value, 0 ignores the skill. Unrated skills keep the default weights.'));
+  TIERS.forEach(t => {
+    const row = el('div','tier'), lab = el('div','tlab'), wi = el('input'), z = zone(t);
+    wi.type = 'number'; wi.min = 0; wi.max = 5; wi.step = 0.05; wi.value = T.w[t]; wi.setAttribute('aria-label', t + ' tier weight');
+    wi.onchange = () => { const v = parseFloat(wi.value); if (v >= 0 && v <= 5){ T.w[t] = v; saveT(); refreshHot(); } else wi.value = T.w[t]; };
+    lab.append(el('b', null, t), wi);
+    Object.entries(T.cards).filter(([, c]) => c.tier === t).forEach(([k, c]) => z.append(card(k, c.name, t)));
+    row.append(lab, z); pane.append(row);
+  });
+  const un = zone('-'); pane.append(el('h4', null, 'Unrated skills from this parent'), un);
+  nameMap().forEach((name, k) => { if (!T.cards[k]) un.append(card(k, name, null)); });
+  const add = el('div','addrow'), inp = el('input'), btn = el('button','secondary sm','Add to tier B');
+  inp.placeholder = 'Add any skill to rate'; inp.setAttribute('aria-label','skill to add'); btn.type = 'button';
+  btn.onclick = () => { const v = inp.value.trim(); if (v){ T.cards[norm(v)] = {name:v, tier:'B'}; saveT(); renderTiers(); refreshHot(); } };
+  add.append(inp, btn); pane.append(add);
+}
+
+/* ---------- results ---------- */
 function bars(cats){
   const wrap = el('div');
   Object.entries(cats).forEach(([k, v]) => {
@@ -225,56 +388,53 @@ function bars(cats){
   });
   return wrap;
 }
-function nextLine(r){
-  return r.next_grade ? 'Next grade ' + r.next_grade.grade + ' at ' + r.next_grade.at + ' (' + r.next_grade.needed + ' to go)' : 'Top grade reached';
-}
+const nextLine = r => r.next_grade ? 'Next grade ' + r.next_grade.grade + ' at ' + r.next_grade.at + ' (' + r.next_grade.needed + ' to go)' : 'Top grade reached';
 function eventCard(r){
-  const d = el('div','event'), h = el('div','ehead');
-  const t = el('h3', null, r.label); const right = el('span'); right.append(el('span','pill', r.grade), ' ', el('b', null, r.score.toFixed(1)));
-  h.append(t, right); d.append(h, bars(r.categories), el('div','muted', nextLine(r)));
+  const d = el('div','event'), h = el('div','ehead'), right = el('span');
+  right.append(el('span','pill', r.grade), ' ', el('b', null, r.score.toFixed(1)));
+  h.append(el('h3', null, r.label), right); d.append(h, bars(r.categories), el('div','muted', nextLine(r)));
   if (r.top_contributors.length){
     const det = el('details'); det.append(el('summary', null, 'Top contributing sparks'));
-    r.top_contributors.forEach(c => det.append(el('div', null, ROLE_SHORT[c.block] + ' \u00b7 ' + c.name + ' ' + '\u2605'.repeat(c.stars) + '  +' + c.points)));
+    r.top_contributors.forEach(c => det.append(el('div', null, ROLE_SHORT[c.block] + ': ' + c.name + ' ' + '\u2605'.repeat(c.stars) + ' +' + c.points)));
     d.append(det);
   }
   return d;
 }
 function checklist(st){
-  const box = el('div','event'); box.append(el('h3', null, st.label + ' skill checklist'));
-  const ms = el('div','chips'); st.milestones.forEach(m => ms.append(el('span','chip ms', m.label + ' ' + m.have + '/' + m.of)));
-  box.append(ms);
+  const box = el('div','event'), ms = el('div','chips'); box.append(el('h3', null, st.label + ' skill checklist'));
+  st.milestones.forEach(m => ms.append(el('span','chip ms', m.label + ' ' + m.have + '/' + m.of))); box.append(ms);
   st.tiers.forEach(t => {
-    box.append(el('h4', null, t.label)); const c = el('div','chips');
+    const c = el('div','chips'); box.append(el('h4', null, t.label), c);
     t.have.forEach(h => c.append(el('span','chip have', h.name + ' ' + Object.entries(h.blocks).map(([k, v]) => ROLE_SHORT[k] + ' ' + v + '\u2605').join(', '))));
     t.missing.forEach(m => c.append(el('span','chip miss', m)));
-    box.append(c);
   });
   return box;
 }
 function render(res){
-  const out = $('#out'); out.replaceChildren();
-  const o = res.overall, hero = el('div','hero'), ro = el('div','rosette'); ro.append(el('b', null, o.grade));
-  const side = el('div'); side.append(el('div','big', o.score.toFixed(1)), el('div','muted', o.label), el('div','muted', nextLine(o)));
+  const out = $('#out'), o = res.overall, hero = el('div','hero'), ro = el('div','rosette'), side = el('div');
+  out.replaceChildren(); ro.append(el('b', null, o.grade));
+  side.append(el('div','big', o.score.toFixed(1)), el('div','muted', o.label), el('div','muted', nextLine(o)));
   hero.append(ro, side); out.append(hero, bars(o.categories));
   if (o.affinity) out.append(el('p','muted', 'Affinity ' + o.affinity.value + (o.affinity.target ? ' with ' + o.affinity.target : '') + ' (entered manually)'));
   res.events.forEach(e => out.append(eventCard(e)));
   if (res.style) out.append(checklist(res.style));
+  important = new Set((res.important || []).map(norm)); refreshHot();
 }
-function showError(msg){ const out = $('#out'); out.replaceChildren(el('p','error', msg)); }
 async function score(){
   try {
-    const r = await fetch('/api/score', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(collect())});
-    if (!r.ok) { const e = await r.json().catch(() => ({})); throw new Error(typeof e.detail === 'string' ? e.detail : 'Check your inputs: every spark needs a name and at least one star.'); }
+    const r = await fetch('/api/score', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(collect(false))});
+    if (!r.ok){ const e = await r.json().catch(() => ({})); throw new Error(typeof e.detail === 'string' ? e.detail : 'Check your inputs: every spark needs a name and at least one star, and tier weights must be between 0 and 5.'); }
     render(await r.json());
-  } catch (e) { showError(e.message || 'Could not reach the scoring service. Try again in a moment.'); }
+  } catch(e){ $('#out').replaceChildren(el('p','error', e.message || 'Could not reach the scoring service. Try again in a moment.')); }
 }
 $('#go').onclick = score;
-$('#clear').onclick = () => { clearAll(); $('#out').innerHTML = '<p class="empty">Enter sparks and press Score parent.</p>'; };
+$('#clear').onclick = () => { clearAll(); $('#out').innerHTML = '<p class="empty">Enter sparks and press Score parent.</p>'; say(''); };
 $('#sample').onclick = async () => {
   try { fill(await (await fetch('/static/inari-one.json')).json()); score(); }
-  catch (e) { showError('Could not load the sample parent.'); }
+  catch(e){ say('Could not load the sample parent.', true); }
 };
-fetch('/api/styles').then(r => r.json()).then(list => list.forEach(s => $('#style').append(new Option(s.label, s.id)))).catch(() => {});
+fetch('/api/styles').then(r => r.json()).then(l => l.forEach(s => $('#style').append(new Option(s.label, s.id)))).catch(() => {});
+show('self');
 </script>
 </body>
 </html>

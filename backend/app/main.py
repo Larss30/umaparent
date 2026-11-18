@@ -8,7 +8,7 @@ from sqlalchemy import create_engine, text
 
 from .schemas import ParentIn
 from .scoring.config import load_profiles, load_styles
-from .scoring.engine import GENERIC_ID, score_all
+from .scoring.engine import GENERIC_ID, default_skill_weights, score_all
 
 DATABASE_URL = os.getenv(
     "DATABASE_URL", "postgresql+psycopg://uma:uma@localhost:5432/umaparent"
@@ -53,6 +53,14 @@ def profiles():
 @app.get("/api/styles")
 def styles():
     return [{"id": s["id"], "label": s["label"]} for s in load_styles().values()]
+
+
+@app.get("/api/skill-weights")
+def skill_weights(style: str | None = None):
+    try:
+        return default_skill_weights(style)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
 
 
 @app.post("/api/score")

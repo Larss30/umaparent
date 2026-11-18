@@ -13,6 +13,11 @@ with affinity from G1 wins. Screenshot upload + manual entry share one editable 
 ## Test / lint
     cd backend && pip install -r requirements-dev.txt && ruff check . && pytest
 
+## Web UI features
+Tabs per parent/grandparent, white sparks in Skills/Races/Scenario columns, gold highlights,
+JSON import/export, and a Skill tiers board (custom weights, stored in the browser, sent as
+`custom_weights` when scoring).
+
 ## Roadmap
 1. Scaffold, Docker Compose, CI  (done)
 2. Scoring engine, YAML profiles, rank ladder  <- you are here
