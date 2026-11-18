@@ -1,8 +1,8 @@
-# Copy to front-runner.yaml / late-surger.yaml / end-closer.yaml and fill in.
-# Files starting with "_" are ignored by the loader.
-id: front-runner
-label: Front Runner
-aptitude: Front Runner
+# Copy to a new style file. Files starting with "_" are ignored. Tiers use the letters in data/tiers.yaml.
+id: example
+label: Example
+aptitude: Example
 white_target: 14
 tiers:
-  - {id: core, label: Core, weight: 1.0, milestone: true, skills: []}
+  S: []
+  A: []

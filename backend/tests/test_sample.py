@@ -1,7 +1,8 @@
 import json
 from pathlib import Path
 
-from app.scoring.engine import score_all
+from app.scoring.config import norm
+from app.scoring.engine import checklists, score_all
 from app.scoring.models import Parent, Spark, SparkBlock
 
 SAMPLE = Path(__file__).resolve().parents[1] / "app" / "static" / "inari-one.json"
@@ -14,10 +15,13 @@ def load_sample(style=None):
     return Parent(d["name"], blocks, d.get("outfit"), style or d.get("style"))
 
 
-def test_inari_one_sample_scores_and_core_three_complete():
-    out = score_all(load_sample())
+def test_inari_one_sample_scores_and_has_every_S_tier_skill():
+    p = load_sample()
+    out = score_all(p)
     assert out["overall"]["score"] > 0
-    assert out["style"]["milestones"][0] == {"label": "Core three", "have": 3, "of": 3}
+    have = {norm(s.name) for b in p.blocks for s in b.sparks}
+    s_tier = checklists("pace-chaser")["generic"]["tiers"]["S"]
+    assert all(norm(n) in have for n in s_tier)
 
 
 def test_inari_one_dirt_pink_hurts_turf_event_but_not_generic():

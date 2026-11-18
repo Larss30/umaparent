@@ -111,6 +111,15 @@ input[type=checkbox]{width:auto}
 .chip.miss{border-style:dashed;color:var(--muted)}
 .ms{font-weight:700}
 details{margin-top:6px;font-size:.85rem;color:var(--muted)}
+.ico3{display:inline-flex;gap:2px}
+.ico{width:18px;height:18px;border-radius:50%;display:inline-grid;place-items:center;font-size:.62rem;font-weight:700;background:var(--paper);color:var(--muted);border:1px solid var(--line)}
+.ico.on{background:var(--turf);border-color:var(--turf);color:#fff}
+.tlab small{font-size:.7rem;min-height:1em}
+.tw{background:#fff;color:#222;border-radius:6px;padding:2px 12px;font-size:.8rem}
+.tier.zero .tlab{background:var(--white);color:#fff}
+.wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:6px 10px;margin:6px 0 12px}
+.wgrid label{display:flex;flex-direction:column;gap:2px;font-size:.78rem;color:var(--muted)}
+input.custom{border-style:dashed}
 footer{max-width:1240px;margin:0 auto;padding:0 20px 28px;color:var(--muted);font-size:.82rem}
 </style>
 </head>
@@ -132,7 +141,7 @@ footer{max-width:1240px;margin:0 auto;padding:0 20px 28px;color:var(--muted);fon
       <p class="muted hint">Type the affinity number you see in game. Calculating it from G1 wins comes later.</p>
     </div>
     <div class="tabs" id="tabs" role="tablist"></div>
-    <p class="muted" id="legend">A gold edge marks a white spark that matters for your style, the events, or your own tiers. Use the &#9873; button to pin one yourself.</p>
+    <p class="muted" id="legend">A gold edge marks a white spark that matters for your style, the events, or your own tiers. Use the &#9873; button to pin one yourself. Can’t find a skill in the list? Just type its name; it shows a dashed border until it is added to the database.</p>
     <div id="panes"></div>
     <div class="actions">
       <button class="primary" id="go" type="button">Score parent</button>
@@ -151,7 +160,7 @@ footer{max-width:1240px;margin:0 auto;padding:0 20px 28px;color:var(--muted);fon
     <div id="out"><p class="empty">Enter sparks and press Score parent, or load the sample to see how it works.</p></div>
   </section>
 </main>
-<footer>Unofficial fan tool. Not affiliated with or endorsed by Cygames. Weights are drafts you can tune in the data files or in the Skill tiers tab.</footer>
+<footer>Unofficial fan tool. Not affiliated with or endorsed by Cygames. Weights are drafts you can tune in the data files or in the Checklist tab.</footer>
 
 <script>
 const $ = s => document.querySelector(s);
@@ -163,13 +172,16 @@ const ROLES = [['self','Parent'],['grandparent_1','Grandparent 1'],['grandparent
 const ROLE_SHORT = {self:'Parent', grandparent_1:'GP 1', grandparent_2:'GP 2'};
 const COLS = [['skill','Skills'],['race','Races'],['scenario','Scenario']];
 const CAT_LABEL = {blue:'Stats', pink:'Aptitude', green:'Unique', white:'Skills', affinity:'Affinity'};
-const TIERS = ['S','A','B','C','D'];
+const TIERS = ['S','A','B','C','D','E','F','Z'];
+const DW = {S:1, A:.8, B:.6, C:.4, D:.2, E:.1, F:.05, Z:0};
 const HOT_MIN = 0.5;
 const store = { get(k){ try { return JSON.parse(localStorage.getItem(k)); } catch(e){ return null; } },
                 set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} } };
 let T = store.get('uma-tiers');
-if (!T || !T.w || !T.cards) T = {w:{S:1, A:.8, B:.5, C:.25, D:.1}, cards:{}, use:true};
-let important = new Set(), imported = [];
+if (!T || !T.w || T.cards) T = {use:true};
+T.w = Object.assign({}, DW, T.w || {}); T.w.Z = 0; T.over = T.over || {}; T.blue = T.blue || {}; T.pink = T.pink || {};
+if (T.green === undefined) T.green = null; if (T.use === undefined) T.use = true;
+let important = new Set(), imported = [], SKILLS = [], SKMAP = new Map();
 const saveT = () => store.set('uma-tiers', T);
 function say(msg, bad){ const m = $('#msg'); m.textContent = msg; m.className = 'muted' + (bad ? ' err' : ''); }
 
@@ -190,12 +202,12 @@ function pickRow(kind, options){
 }
 function greenRow(){
   const row = el('div','srow'), inp = el('input'), stars = Stars();
-  inp.placeholder = 'Unique skill'; inp.setAttribute('aria-label','green spark');
+  inp.placeholder = 'Search or type unique skill'; inp.setAttribute('aria-label','green spark'); inp.setAttribute('list','dl-unique');
   row.append(el('span','dot green'), inp, stars); return {row, inp, stars};
 }
-function wrow(name = '', st = 1, pin = false){
+function wrow(name = '', st = 1, pin = false, cat = 'skill'){
   const w = el('div','wrow'), n = el('input'), s = Stars(st), p = el('button','icon pinbtn','\u2691'), x = el('button','icon','\u00d7');
-  n.placeholder = 'Name'; n.value = name; n.setAttribute('aria-label','white spark name');
+  n.placeholder = 'Search or type'; n.setAttribute('list', 'dl-' + cat); n.value = name; n.setAttribute('aria-label','white spark name');
   p.type = 'button'; x.type = 'button'; p.title = 'Pin as important'; x.title = 'Remove';
   p.setAttribute('aria-label','Pin as important'); x.setAttribute('aria-label','Remove spark');
   w.pin = pin; w.classList.toggle('pin', pin);
@@ -211,12 +223,12 @@ function buildBlock(role){
   const cols = el('div','cols'); b.lists = {};
   COLS.forEach(([cat, title]) => {
     const c = el('div','col'), h = el('div','chead'), add = el('button','ghost','+ Add'), l = el('div','list');
-    add.type = 'button'; add.onclick = () => { const r = wrow(); l.append(r); r.f.n.focus(); changed(); };
+    add.type = 'button'; add.onclick = () => { const r = wrow('', 1, false, cat); l.append(r); r.f.n.focus(); changed(); };
     h.append(el('h4', null, title), add); c.append(h, l); cols.append(c); b.lists[cat] = l;
   });
   b.append(ch, core, cols); return b;
 }
-const PANES = [...ROLES.map(([id, title]) => ({id, title})), {id:'tiers', title:'Skill tiers'}];
+const PANES = [...ROLES.map(([id, title]) => ({id, title})), {id:'tiers', title:'Checklist'}];
 PANES.forEach(p => {
   p.tab = el('button', null, p.title); p.tab.type = 'button'; p.tab.setAttribute('role','tab');
   p.tab.onclick = () => show(p.id);
@@ -234,10 +246,15 @@ function changed(){
   refreshHot();
 }
 function refreshHot(){
+  const eff = new Map();
+  if (T.use) Object.keys(L).forEach(c => effective(c).forEach((v, k) => eff.set(k, Math.max(eff.get(k) ?? -1, T.w[v.tier]))));
+  const unknown = k => !!k && SKILLS.length > 0 && !SKMAP.has(k);
   document.querySelectorAll('.wrow').forEach(w => {
-    const k = norm(w.f.n.value), c = T.use && T.cards[k];
-    w.classList.toggle('hot', !!k && (c ? T.w[c.tier] >= HOT_MIN : important.has(k)));
+    const k = norm(w.f.n.value);
+    w.classList.toggle('hot', !!k && (eff.has(k) ? eff.get(k) >= HOT_MIN : important.has(k)));
+    w.f.n.classList.toggle('custom', unknown(k));
   });
+  document.querySelectorAll('.block').forEach(b => b.green.inp.classList.toggle('custom', unknown(norm(b.green.inp.value))));
 }
 $('#panes').addEventListener('input', changed);
 $('#panes').addEventListener('click', changed);
@@ -264,9 +281,9 @@ function fill(d){
     const b = document.querySelector('.block[data-role="' + blk.role + '"]'); if (!b) return;
     b.querySelector('.char').value = blk.character || '';
     setPick(b.blue, blk.sparks, 'blue'); setPick(b.pink, blk.sparks, 'pink'); setPick(b.green, blk.sparks, 'green');
-    blk.sparks.filter(s => s.kind === 'white').forEach(s => b.lists[b.lists[s.category] ? s.category : 'skill'].append(wrow(s.name, s.stars, !!s.pinned)));
+    blk.sparks.filter(s => s.kind === 'white').forEach(s => { const c = b.lists[s.category] ? s.category : 'skill'; b.lists[c].append(wrow(s.name, s.stars, !!s.pinned, c)); });
   });
-  changed();
+  loadChecklists(); changed();
 }
 function collect(exp){
   const blocks = [...document.querySelectorAll('.block')].map(b => {
@@ -274,14 +291,24 @@ function collect(exp){
     [['blue', b.blue], ['pink', b.pink]].forEach(([k, r]) => { if (r.sel.value && r.stars.v) sparks.push({kind:k, name:r.sel.value, stars:r.stars.v}); });
     if (b.green.inp.value.trim() && b.green.stars.v) sparks.push({kind:'green', name:b.green.inp.value.trim(), stars:b.green.stars.v});
     COLS.forEach(([cat]) => b.lists[cat].querySelectorAll('.wrow').forEach(w => {
-      if (w.f.n.value.trim() && w.f.s.v){ const sp = {kind:'white', name:w.f.n.value.trim(), stars:w.f.s.v, category:cat}; if (exp && w.pin) sp.pinned = true; sparks.push(sp); } }));
+      if (w.f.n.value.trim() && w.f.s.v){ const sp = {kind:'white', name:w.f.n.value.trim(), stars:w.f.s.v, category:cat}; if (exp && w.pin) sp.pinned = true; const e = SKMAP.get(norm(sp.name)); if (exp && e && e.id != null) sp.skill_id = e.id; sparks.push(sp); } }));
     return {role:b.dataset.role, character:b.querySelector('.char').value.trim() || null, sparks};
   });
   const aff = $('#aff').value;
   const d = {name:$('#name').value.trim() || 'Untitled parent', outfit:$('#outfit').value.trim() || null,
     style:$('#style').value || null, affinity: aff === '' ? null : Number(aff),
     affinity_target:$('#afftarget').value.trim() || null, blocks};
-  if (!exp && T.use){ const cw = {}; Object.values(T.cards).forEach(c => { cw[c.name] = T.w[c.tier]; }); if (Object.keys(cw).length) d.custom_weights = cw; }
+  if (!exp && T.use){
+    const ctx = {};
+    Object.keys(L).forEach(c => { const m = {};
+      effective(c).forEach(v => { m[v.name] = T.w[v.tier]; });
+      Object.values(overFor(c)).forEach(v => { if (v.tier === '-') m[v.name] = null; });
+      ctx[c] = m; });
+    if (Object.keys(ctx).length) d.context_weights = ctx;
+    if (Object.keys(T.blue).length) d.custom_blue = T.blue;
+    if (Object.keys(T.pink).length) d.custom_pink = T.pink;
+    if (T.green != null) d.custom_green_default = T.green;
+  }
   return d;
 }
 
@@ -315,67 +342,125 @@ $('#exp').onclick = () => {
   say('Exported ' + a.download);
 };
 
-/* ---------- skill tiers ---------- */
-function nameMap(){
-  const m = new Map(); Object.entries(T.cards).forEach(([k, c]) => m.set(k, c.name));
-  document.querySelectorAll('.wrow').forEach(w => { const v = w.f.n.value.trim(); if (v && !m.has(norm(v))) m.set(norm(v), v); });
+/* ---------- checklist and tiers ---------- */
+let L = {}, CTX = 'generic';
+const sk = () => $('#style').value || '_none';
+const overFor = c => { const st = T.over[sk()] = T.over[sk()] || {}; return st[c] = st[c] || {}; };
+function defTier(c, key){ const d = L[c]; if (!d) return null; return TIERS.find(t => (d.tiers[t] || []).some(n => norm(n) === key)) || null; }
+function effective(c){
+  const m = new Map(), d = L[c];
+  if (d) TIERS.forEach(t => (d.tiers[t] || []).forEach(n => m.set(norm(n), {name:n, tier:t})));
+  Object.entries(overFor(c)).forEach(([k, v]) => { if (v.tier === '-') m.delete(k); else m.set(k, v); });
   return m;
 }
-function move(key, tier){
-  const nm = nameMap().get(key); if (!nm) return;
-  if (tier === '-') delete T.cards[key]; else T.cards[key] = {name:nm, tier};
+function setTier(c, key, name, tier){
+  const o = overFor(c), dt = defTier(c, key);
+  if (tier === dt || (tier === '-' && !dt)) delete o[key]; else o[key] = {name, tier};
   saveT(); renderTiers(); refreshHot();
+}
+function presence(){
+  const m = new Map();
+  const add = (role, name, st) => { name = name.trim(); if (!name || !st) return; const k = norm(name), o = m.get(k) || {name, blocks:{}};
+    o.blocks[role] = Math.max(o.blocks[role] || 0, st); m.set(k, o); };
+  document.querySelectorAll('.block').forEach(b => {
+    Object.values(b.lists).forEach(l => l.querySelectorAll('.wrow').forEach(w => add(b.dataset.role, w.f.n.value, w.f.s.v)));
+    add(b.dataset.role, b.green.inp.value, b.green.stars.v);
+  });
+  return m;
+}
+const ICO = [['self','P','Parent'], ['grandparent_1','1','Grandparent 1'], ['grandparent_2','2','Grandparent 2']];
+function icons(blocks){
+  const w = el('span','ico3');
+  ICO.forEach(([r, lab, full]) => { const on = blocks && blocks[r], i = el('span','ico' + (on ? ' on' : ''), lab);
+    i.title = full + (on ? ': ' + on + (on === 1 ? ' star' : ' stars') : ': does not have it'); w.append(i); });
+  return w;
 }
 function zone(tier){
   const z = el('div','zone');
   z.ondragover = e => { e.preventDefault(); z.classList.add('over'); };
   z.ondragleave = () => z.classList.remove('over');
-  z.ondrop = e => { e.preventDefault(); z.classList.remove('over'); move(e.dataTransfer.getData('text/plain'), tier); };
+  z.ondrop = e => { e.preventDefault(); z.classList.remove('over');
+    try { const [k, n] = JSON.parse(e.dataTransfer.getData('text/plain')); setTier(CTX, k, n, tier); } catch(_) {} };
   return z;
 }
-function card(key, name, tier){
+function card(key, name, tier, p){
   const c = el('div','card'), s = el('select'); c.draggable = true;
-  c.ondragstart = e => e.dataTransfer.setData('text/plain', key);
-  s.setAttribute('aria-label','Tier for ' + name);
-  [['-','Unrated'], ...TIERS.map(t => [t, t])].forEach(([v, t]) => s.append(new Option(t, v)));
-  s.value = tier || '-'; s.onchange = () => move(key, s.value);
-  c.append(el('span', null, name), s); return c;
+  c.ondragstart = e => e.dataTransfer.setData('text/plain', JSON.stringify([key, name]));
+  s.setAttribute('aria-label', 'Tier for ' + name);
+  [['-','Unrated'], ...TIERS.map(t => [t, t === 'Z' ? '0' : t])].forEach(([v, t]) => s.append(new Option(t, v)));
+  s.value = tier || '-'; s.onchange = () => setTier(CTX, key, name, s.value);
+  c.append(el('span', null, name), icons(p && p.blocks), s); return c;
 }
-async function loadDefaults(){
-  try {
-    const st = $('#style').value, r = await fetch('/api/skill-weights' + (st ? '?style=' + encodeURIComponent(st) : ''));
-    if (!r.ok) throw new Error(); const list = await r.json();
-    list.forEach(({name, weight}) => {
-      const tier = TIERS.reduce((a, b) => Math.abs(T.w[b] - weight) < Math.abs(T.w[a] - weight) ? b : a);
-      T.cards[norm(name)] = {name, tier};
-    });
-    saveT(); renderTiers(); refreshHot(); say('Loaded ' + list.length + ' default ratings. Move cards to make them yours.');
-  } catch(e){ say('Could not load the default ratings.', true); }
+function numField(grid, label, get, set){
+  const l = el('label', null, label), i = el('input'); i.type = 'number'; i.min = 0; i.max = 5; i.step = 0.05; i.placeholder = 'default';
+  const v = get(); i.value = v == null ? '' : v;
+  i.onchange = () => { const x = parseFloat(i.value), ok = i.value.trim() !== '' && x >= 0 && x <= 5; if (!ok) i.value = ''; set(ok ? x : null); saveT(); };
+  l.append(i); grid.append(l);
+}
+function weightsSection(){
+  const box = el('div'); box.append(el('h4', null, 'Stat, aptitude and green weights (blank keeps each event\u2019s default)'));
+  const g1 = el('div','wgrid'), g2 = el('div','wgrid'), g3 = el('div','wgrid');
+  BLUES.forEach(n => numField(g1, n, () => T.blue[norm(n)], v => { if (v == null) delete T.blue[norm(n)]; else T.blue[norm(n)] = v; }));
+  PINKS.forEach(n => numField(g2, n, () => T.pink[norm(n)], v => { if (v == null) delete T.pink[norm(n)]; else T.pink[norm(n)] = v; }));
+  numField(g3, 'All green sparks', () => T.green, v => { T.green = v; });
+  box.append(el('h4', null, 'Blue (stats)'), g1, el('h4', null, 'Pink (aptitudes)'), g2, el('h4', null, 'Green (unique skills)'), g3);
+  return box;
 }
 function renderTiers(){
   const pane = PANES[PANES.length - 1].pane; pane.replaceChildren();
-  const bar = el('div','tierbar'), use = el('label','inl'), cb = el('input');
+  const bar = el('div','tierbar'), use = el('label','inl'), cb = el('input'), cs = el('select');
   cb.type = 'checkbox'; cb.checked = T.use; cb.onchange = () => { T.use = cb.checked; saveT(); refreshHot(); };
   use.append(cb, 'Use my ratings when scoring');
-  const defs = el('button','secondary sm','Load defaults for this style'), rst = el('button','secondary sm','Clear ratings');
-  defs.type = 'button'; rst.type = 'button'; defs.onclick = loadDefaults;
-  rst.onclick = () => { T.cards = {}; saveT(); renderTiers(); refreshHot(); };
-  bar.append(use, defs, rst);
-  pane.append(bar, el('p','muted','Drag a skill onto a tier, or use the menu on its card. Edit a tier weight to change how much it counts: 1 is full value, 0 ignores the skill. Unrated skills keep the default weights.'));
+  Object.entries(L).forEach(([id, c]) => cs.append(new Option(c.label, id)));
+  cs.value = L[CTX] ? CTX : 'generic'; CTX = cs.value; cs.setAttribute('aria-label','Checklist for'); cs.onchange = () => { CTX = cs.value; renderTiers(); };
+  const rst = el('button','secondary sm','Reset this checklist'); rst.type = 'button';
+  rst.onclick = () => { delete (T.over[sk()] || {})[CTX]; saveT(); renderTiers(); refreshHot(); };
+  const rw = el('button','secondary sm','Reset tier weights'); rw.type = 'button';
+  rw.onclick = () => { T.w = Object.assign({}, DW); saveT(); renderTiers(); refreshHot(); };
+  bar.append(use, cs, rst, rw);
+  pane.append(bar, el('p','muted','Checklist for the selected event and running style. Circles show who has each skill: P is the parent, 1 and 2 are the grandparents. Drag a card to another tier or use its menu. Tier weights are editable and apply everywhere; the 0 tier counts for nothing.'));
+  const pres = presence(), eff = effective(CTX);
   TIERS.forEach(t => {
-    const row = el('div','tier'), lab = el('div','tlab'), wi = el('input'), z = zone(t);
-    wi.type = 'number'; wi.min = 0; wi.max = 5; wi.step = 0.05; wi.value = T.w[t]; wi.setAttribute('aria-label', t + ' tier weight');
-    wi.onchange = () => { const v = parseFloat(wi.value); if (v >= 0 && v <= 5){ T.w[t] = v; saveT(); refreshHot(); } else wi.value = T.w[t]; };
-    lab.append(el('b', null, t), wi);
-    Object.entries(T.cards).filter(([, c]) => c.tier === t).forEach(([k, c]) => z.append(card(k, c.name, t)));
+    const row = el('div','tier' + (t === 'Z' ? ' zero' : '')), lab = el('div','tlab'), z = zone(t), items = [...eff].filter(([, v]) => v.tier === t);
+    lab.append(el('b', null, t === 'Z' ? '0' : t));
+    if (t === 'Z') lab.append(el('span','tw','weight 0'));
+    else { const wi = el('input'); wi.type = 'number'; wi.min = 0; wi.max = 5; wi.step = 0.05; wi.value = T.w[t]; wi.setAttribute('aria-label', t + ' tier weight');
+      wi.onchange = () => { const v = parseFloat(wi.value); if (v >= 0 && v <= 5){ T.w[t] = v; saveT(); refreshHot(); } else wi.value = T.w[t]; }; lab.append(wi); }
+    lab.append(el('small', null, items.length ? items.filter(([k]) => pres.has(k)).length + '/' + items.length : ''));
+    items.forEach(([k, v]) => z.append(card(k, v.name, t, pres.get(k))));
     row.append(lab, z); pane.append(row);
   });
-  const un = zone('-'); pane.append(el('h4', null, 'Unrated skills from this parent'), un);
-  nameMap().forEach((name, k) => { if (!T.cards[k]) un.append(card(k, name, null)); });
-  const add = el('div','addrow'), inp = el('input'), btn = el('button','secondary sm','Add to tier B');
-  inp.placeholder = 'Add any skill to rate'; inp.setAttribute('aria-label','skill to add'); btn.type = 'button';
-  btn.onclick = () => { const v = inp.value.trim(); if (v){ T.cards[norm(v)] = {name:v, tier:'B'}; saveT(); renderTiers(); refreshHot(); } };
-  add.append(inp, btn); pane.append(add);
+  const un = zone('-'); pane.append(el('h4', null, 'Skills on this parent that are not in the checklist'), un);
+  pres.forEach((p, k) => { if (!eff.has(k)) un.append(card(k, p.name, null, p)); });
+  const add = el('div','addrow'), inp = el('input'), ts = el('select'), btn = el('button','secondary sm','Add');
+  inp.placeholder = 'Search or type a skill to add'; inp.setAttribute('list','dl-all'); inp.setAttribute('aria-label','skill to add');
+  TIERS.forEach(t => ts.append(new Option('Tier ' + (t === 'Z' ? '0' : t), t))); ts.value = 'B'; ts.setAttribute('aria-label','tier');
+  btn.type = 'button'; btn.onclick = () => { const v = inp.value.trim(); if (v) setTier(CTX, norm(v), v, ts.value); };
+  add.append(inp, ts, btn); pane.append(add, weightsSection());
+}
+async function loadChecklists(){
+  try {
+    const st = $('#style').value, r = await fetch('/api/checklists' + (st ? '?style=' + encodeURIComponent(st) : ''));
+    if (!r.ok) throw new Error(); L = await r.json();
+  } catch(e){ L = {}; say('Could not load the checklists.', true); }
+  if (!PANES[PANES.length - 1].pane.hidden) renderTiers();
+  refreshHot();
+}
+function tierChips(ctxId){
+  const pres = presence(), eff = effective(ctxId), wrap = el('div','chips');
+  TIERS.filter(t => t !== 'Z').forEach(t => {
+    const items = [...eff].filter(([, v]) => v.tier === t); if (!items.length) return;
+    const have = items.filter(([k]) => pres.has(k)).length;
+    wrap.append(el('span','chip' + (have === items.length ? ' have' : ''), t + ' ' + have + '/' + items.length));
+  });
+  return wrap;
+}
+function loadSkillLists(list){
+  SKILLS = list; SKMAP = new Map(list.map(x => [norm(x.name), x]));
+  const mk = (id, items) => { let d = document.getElementById(id); if (!d){ d = el('datalist'); d.id = id; document.body.append(d); }
+    d.replaceChildren(); items.forEach(x => d.append(new Option(x.name))); };
+  ['skill','race','scenario','unique'].forEach(t => mk('dl-' + t, list.filter(x => x.type === t)));
+  mk('dl-all', list); changed();
 }
 
 /* ---------- results ---------- */
@@ -392,7 +477,7 @@ const nextLine = r => r.next_grade ? 'Next grade ' + r.next_grade.grade + ' at '
 function eventCard(r){
   const d = el('div','event'), h = el('div','ehead'), right = el('span');
   right.append(el('span','pill', r.grade), ' ', el('b', null, r.score.toFixed(1)));
-  h.append(el('h3', null, r.label), right); d.append(h, bars(r.categories), el('div','muted', nextLine(r)));
+  h.append(el('h3', null, r.label), right); d.append(h, bars(r.categories), tierChips(r.profile.split(':')[0]), el('div','muted', nextLine(r)));
   if (r.top_contributors.length){
     const det = el('details'); det.append(el('summary', null, 'Top contributing sparks'));
     r.top_contributors.forEach(c => det.append(el('div', null, ROLE_SHORT[c.block] + ': ' + c.name + ' ' + '\u2605'.repeat(c.stars) + ' +' + c.points)));
@@ -400,24 +485,13 @@ function eventCard(r){
   }
   return d;
 }
-function checklist(st){
-  const box = el('div','event'), ms = el('div','chips'); box.append(el('h3', null, st.label + ' skill checklist'));
-  st.milestones.forEach(m => ms.append(el('span','chip ms', m.label + ' ' + m.have + '/' + m.of))); box.append(ms);
-  st.tiers.forEach(t => {
-    const c = el('div','chips'); box.append(el('h4', null, t.label), c);
-    t.have.forEach(h => c.append(el('span','chip have', h.name + ' ' + Object.entries(h.blocks).map(([k, v]) => ROLE_SHORT[k] + ' ' + v + '\u2605').join(', '))));
-    t.missing.forEach(m => c.append(el('span','chip miss', m)));
-  });
-  return box;
-}
 function render(res){
   const out = $('#out'), o = res.overall, hero = el('div','hero'), ro = el('div','rosette'), side = el('div');
   out.replaceChildren(); ro.append(el('b', null, o.grade));
   side.append(el('div','big', o.score.toFixed(1)), el('div','muted', o.label), el('div','muted', nextLine(o)));
-  hero.append(ro, side); out.append(hero, bars(o.categories));
+  hero.append(ro, side); out.append(hero, bars(o.categories), tierChips('generic'));
   if (o.affinity) out.append(el('p','muted', 'Affinity ' + o.affinity.value + (o.affinity.target ? ' with ' + o.affinity.target : '') + ' (entered manually)'));
   res.events.forEach(e => out.append(eventCard(e)));
-  if (res.style) out.append(checklist(res.style));
   important = new Set((res.important || []).map(norm)); refreshHot();
 }
 async function score(){
@@ -428,12 +502,16 @@ async function score(){
   } catch(e){ $('#out').replaceChildren(el('p','error', e.message || 'Could not reach the scoring service. Try again in a moment.')); }
 }
 $('#go').onclick = score;
-$('#clear').onclick = () => { clearAll(); $('#out').innerHTML = '<p class="empty">Enter sparks and press Score parent.</p>'; say(''); };
+$('#clear').onclick = () => { clearAll(); loadChecklists(); $('#out').innerHTML = '<p class="empty">Enter sparks and press Score parent.</p>'; say(''); };
 $('#sample').onclick = async () => {
   try { fill(await (await fetch('/static/inari-one.json')).json()); score(); }
   catch(e){ say('Could not load the sample parent.', true); }
 };
 fetch('/api/styles').then(r => r.json()).then(l => l.forEach(s => $('#style').append(new Option(s.label, s.id)))).catch(() => {});
+$('#style').onchange = loadChecklists;
+fetch('/api/skills').then(r => r.json()).then(loadSkillLists).catch(() => {});
+fetch('/api/tiers').then(r => r.json()).then(list => list.forEach(t => { if (!(t.id in T.w)) T.w[t.id] = t.weight; })).catch(() => {});
+loadChecklists();
 show('self');
 </script>
 </body>

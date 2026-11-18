@@ -1,9 +1,12 @@
-# Balanced profile used for the "overall" parent score. DRAFT weights.
+# Overall profile. DRAFT weights. Its skill checklist comes from the chosen running style
+# (see data/styles), so "globally good" skills live there. Add skills under tiers to add
+# ones that matter for every event regardless of style.
 id: generic
 label: Overall
 status: draft
+tiers: {}
 # 'targets' = raw points worth 100 in that category. Scores can go ABOVE 100.
-# affinity is only used when the parent has an affinity value; target 150 is a guess.
+# affinity is only used when the parent has an affinity value; target 150 is close to in-game numbers.
 category_weights: {blue: 0.25, pink: 0.20, green: 0.10, white: 0.45, affinity: 0.15}
 block_weights: {self: 1.0, grandparent_1: 0.5, grandparent_2: 0.5}
 targets: {blue: 6.0, pink: 3.0, green: 2.0, white: 8.0, affinity: 150.0}

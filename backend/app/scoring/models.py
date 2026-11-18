@@ -11,6 +11,7 @@ class Spark:
     name: str
     stars: int         # 1-3
     category: str | None = None  # white only: skill | race | scenario
+    skill_id: int | None = None  # game skill id, when known
 
 
 @dataclass
@@ -29,3 +30,7 @@ class Parent:
     affinity: int | None = None          # manual affinity score (Phase 4 can compute it)
     affinity_target: str | None = None   # trainee the affinity is for
     custom_weights: dict[str, float] | None = None   # user's own white-spark weights
+    custom_blue: dict[str, float] | None = None
+    custom_pink: dict[str, float] | None = None
+    custom_green_default: float | None = None
+    context_weights: dict[str, dict[str, float | None]] | None = None  # per profile id

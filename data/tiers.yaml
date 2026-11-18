@@ -1,0 +1,11 @@
+# Global tier letters and their default weights. Users can edit the weights in the UI.
+# Z is the "weight 0" tier: skills there count for nothing.
+tiers:
+  - {id: S, weight: 1.0}
+  - {id: A, weight: 0.8}
+  - {id: B, weight: 0.6}
+  - {id: C, weight: 0.4}
+  - {id: D, weight: 0.2}
+  - {id: E, weight: 0.1}
+  - {id: F, weight: 0.05}
+  - {id: Z, weight: 0.0}

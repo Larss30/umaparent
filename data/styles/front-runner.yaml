@@ -1,0 +1,8 @@
+# STUB: only the one skill you described so far. Add the rest of this style's tiers.
+id: front-runner
+label: Front Runner
+status: stub
+aptitude: Front Runner
+white_target: 14
+tiers:
+  S: ["Groundwork"]

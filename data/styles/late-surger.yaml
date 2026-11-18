@@ -1,0 +1,8 @@
+# STUB: only the one skill you described so far. Add the rest of this style's tiers.
+id: late-surger
+label: Late Surger
+status: stub
+aptitude: Late Surger
+white_target: 14
+tiers:
+  S: ["Uma Stan"]

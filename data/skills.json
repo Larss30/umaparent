@@ -1,0 +1,237 @@
+[
+ {
+  "id": null,
+  "name": "Arima Kinen",
+  "type": "race"
+ },
+ {
+  "id": null,
+  "name": "Asahi Hai F.S.",
+  "type": "race"
+ },
+ {
+  "id": null,
+  "name": "Champions C.",
+  "type": "race"
+ },
+ {
+  "id": null,
+  "name": "J.D. Derby",
+  "type": "race"
+ },
+ {
+  "id": null,
+  "name": "Japan C.",
+  "type": "race"
+ },
+ {
+  "id": null,
+  "name": "Kikuka Sho",
+  "type": "race"
+ },
+ {
+  "id": null,
+  "name": "Mile Ch.",
+  "type": "race"
+ },
+ {
+  "id": null,
+  "name": "Osaka Hai",
+  "type": "race"
+ },
+ {
+  "id": null,
+  "name": "Queen Elizabeth II Cup",
+  "type": "race"
+ },
+ {
+  "id": null,
+  "name": "Satsuki Sho",
+  "type": "race"
+ },
+ {
+  "id": null,
+  "name": "Takarazuka Kinen",
+  "type": "race"
+ },
+ {
+  "id": null,
+  "name": "Tokyo Daishoten",
+  "type": "race"
+ },
+ {
+  "id": null,
+  "name": "Victoria Mile",
+  "type": "race"
+ },
+ {
+  "id": null,
+  "name": "Ignited Spirit SPD",
+  "type": "scenario"
+ },
+ {
+  "id": null,
+  "name": "Ignited Spirit: Power +",
+  "type": "scenario"
+ },
+ {
+  "id": null,
+  "name": "Ignited Spirit: Speed +",
+  "type": "scenario"
+ },
+ {
+  "id": null,
+  "name": "Ignited Spirit: Wit +",
+  "type": "scenario"
+ },
+ {
+  "id": null,
+  "name": "Racing Spirit: Power",
+  "type": "scenario"
+ },
+ {
+  "id": null,
+  "name": "Racing Spirit: Stamina",
+  "type": "scenario"
+ },
+ {
+  "id": null,
+  "name": "Unity Cup",
+  "type": "scenario"
+ },
+ {
+  "id": null,
+  "name": "Firm Conditions ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Full Throttle",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Groundwork",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Head-on",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Latch On",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Left-Handed ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Maverick ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Medium Corners ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Medium Straightaways ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "My True Strength",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Nakayama Racecourse ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Nimble Navigator",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "On the Attack",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Pace Chaser Corners ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Pace Chaser Straightaways ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Playtime's Over!",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Ramp Up",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Right-Handed ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Risky Business",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Slipstream",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Spring Runner ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Sunny Days ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Tail Held High",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Uma Stan",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "KEEP IT REAL.",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Now We're Cruisin'!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Victoria por plancha ☆",
+  "type": "unique"
+ }
+]

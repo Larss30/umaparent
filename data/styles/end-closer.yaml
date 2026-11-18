@@ -1,0 +1,8 @@
+# STUB: only the one skill you described so far. Add the rest of this style's tiers.
+id: end-closer
+label: End Closer
+status: stub
+aptitude: End Closer
+white_target: 14
+tiers:
+  S: ["Uma Stan"]
