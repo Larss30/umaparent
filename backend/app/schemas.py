@@ -29,6 +29,7 @@ class ParentIn(BaseModel):
     custom_weights: dict[str, float] | None = Field(default=None, max_length=400)
     custom_blue: dict[str, float] | None = Field(default=None, max_length=10)
     custom_pink: dict[str, float] | None = Field(default=None, max_length=20)
+    auto_zero: bool = True
     custom_green_default: float | None = Field(default=None, ge=0, le=5)
     context_weights: dict[str, dict[str, float | None]] | None = Field(default=None, max_length=20)
 
@@ -60,6 +61,7 @@ class ParentIn(BaseModel):
             custom_blue=self.custom_blue,
             custom_pink=self.custom_pink,
             custom_green_default=self.custom_green_default,
+            auto_zero=self.auto_zero,
             context_weights=self.context_weights,
             blocks=[
                 SparkBlock(role=b.role, character=b.character,

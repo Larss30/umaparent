@@ -57,3 +57,11 @@ def test_custom_weights_and_skill_weights_endpoints():
     rows = client.get("/api/skill-weights?style=pace-chaser").json()
     assert any(x["name"] == "Nimble Navigator" for x in rows)
     assert client.get("/api/skill-weights?style=nope").status_code == 400
+
+
+def test_auto_zero_flag_and_checklist_param():
+    body = {"name": "x", "auto_zero": False, "blocks": [{"role": "self", "sparks": [
+        {"kind": "white", "name": "Long Corners \u25cb", "stars": 2, "category": "skill"}]}]}
+    assert client.post("/api/score", json=body).status_code == 200
+    cl = client.get("/api/checklists?auto_zero=false").json()
+    assert cl["aries-cup"]["blocked"] == []

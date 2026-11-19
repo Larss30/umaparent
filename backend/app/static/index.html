@@ -120,6 +120,7 @@ details{margin-top:6px;font-size:.85rem;color:var(--muted)}
 .wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:6px 10px;margin:6px 0 12px}
 .wgrid label{display:flex;flex-direction:column;gap:2px;font-size:.78rem;color:var(--muted)}
 input.custom{border-style:dashed}
+.card.locked{opacity:.55;text-decoration:line-through}
 footer{max-width:1240px;margin:0 auto;padding:0 20px 28px;color:var(--muted);font-size:.82rem}
 </style>
 </head>
@@ -180,7 +181,7 @@ const store = { get(k){ try { return JSON.parse(localStorage.getItem(k)); } catc
 let T = store.get('uma-tiers');
 if (!T || !T.w || T.cards) T = {use:true};
 T.w = Object.assign({}, DW, T.w || {}); T.w.Z = 0; T.over = T.over || {}; T.blue = T.blue || {}; T.pink = T.pink || {};
-if (T.green === undefined) T.green = null; if (T.use === undefined) T.use = true;
+if (T.green === undefined) T.green = null; if (T.use === undefined) T.use = true; if (T.zero === undefined) T.zero = true;
 let important = new Set(), imported = [], SKILLS = [], SKMAP = new Map();
 const saveT = () => store.set('uma-tiers', T);
 function say(msg, bad){ const m = $('#msg'); m.textContent = msg; m.className = 'muted' + (bad ? ' err' : ''); }
@@ -309,6 +310,7 @@ function collect(exp){
     if (Object.keys(T.pink).length) d.custom_pink = T.pink;
     if (T.green != null) d.custom_green_default = T.green;
   }
+  if (!exp) d.auto_zero = T.zero !== false;
   return d;
 }
 
@@ -383,12 +385,13 @@ function zone(tier){
     try { const [k, n] = JSON.parse(e.dataTransfer.getData('text/plain')); setTier(CTX, k, n, tier); } catch(_) {} };
   return z;
 }
-function card(key, name, tier, p){
+function card(key, name, tier, p, why){
   const c = el('div','card'), s = el('select'); c.draggable = true;
   c.ondragstart = e => e.dataTransfer.setData('text/plain', JSON.stringify([key, name]));
   s.setAttribute('aria-label', 'Tier for ' + name);
   [['-','Unrated'], ...TIERS.map(t => [t, t === 'Z' ? '0' : t])].forEach(([v, t]) => s.append(new Option(t, v)));
   s.value = tier || '-'; s.onchange = () => setTier(CTX, key, name, s.value);
+  if (why){ c.classList.add('locked'); c.title = 'Can\u2019t trigger here: ' + why; }
   c.append(el('span', null, name), icons(p && p.blocks), s); return c;
 }
 function numField(grid, label, get, set){
@@ -411,15 +414,18 @@ function renderTiers(){
   const bar = el('div','tierbar'), use = el('label','inl'), cb = el('input'), cs = el('select');
   cb.type = 'checkbox'; cb.checked = T.use; cb.onchange = () => { T.use = cb.checked; saveT(); refreshHot(); };
   use.append(cb, 'Use my ratings when scoring');
+  const zl = el('label','inl'), zc = el('input'); zc.type = 'checkbox'; zc.checked = T.zero !== false;
+  zc.onchange = () => { T.zero = zc.checked; saveT(); loadChecklists(); };
+  zl.append(zc, 'Zero skills that can\u2019t trigger here');
   Object.entries(L).forEach(([id, c]) => cs.append(new Option(c.label, id)));
   cs.value = L[CTX] ? CTX : 'generic'; CTX = cs.value; cs.setAttribute('aria-label','Checklist for'); cs.onchange = () => { CTX = cs.value; renderTiers(); };
   const rst = el('button','secondary sm','Reset this checklist'); rst.type = 'button';
   rst.onclick = () => { delete (T.over[sk()] || {})[CTX]; saveT(); renderTiers(); refreshHot(); };
   const rw = el('button','secondary sm','Reset tier weights'); rw.type = 'button';
   rw.onclick = () => { T.w = Object.assign({}, DW); saveT(); renderTiers(); refreshHot(); };
-  bar.append(use, cs, rst, rw);
+  bar.append(use, zl, cs, rst, rw);
   pane.append(bar, el('p','muted','Checklist for the selected event and running style. Circles show who has each skill: P is the parent, 1 and 2 are the grandparents. Drag a card to another tier or use its menu. Tier weights are editable and apply everywhere; the 0 tier counts for nothing.'));
-  const pres = presence(), eff = effective(CTX);
+  const pres = presence(), eff = effective(CTX), blk = new Map(((L[CTX] || {}).blocked || []).map(b => [norm(b.name), b.reason]));
   TIERS.forEach(t => {
     const row = el('div','tier' + (t === 'Z' ? ' zero' : '')), lab = el('div','tlab'), z = zone(t), items = [...eff].filter(([, v]) => v.tier === t);
     lab.append(el('b', null, t === 'Z' ? '0' : t));
@@ -427,7 +433,7 @@ function renderTiers(){
     else { const wi = el('input'); wi.type = 'number'; wi.min = 0; wi.max = 5; wi.step = 0.05; wi.value = T.w[t]; wi.setAttribute('aria-label', t + ' tier weight');
       wi.onchange = () => { const v = parseFloat(wi.value); if (v >= 0 && v <= 5){ T.w[t] = v; saveT(); refreshHot(); } else wi.value = T.w[t]; }; lab.append(wi); }
     lab.append(el('small', null, items.length ? items.filter(([k]) => pres.has(k)).length + '/' + items.length : ''));
-    items.forEach(([k, v]) => z.append(card(k, v.name, t, pres.get(k))));
+    items.forEach(([k, v]) => z.append(card(k, v.name, t, pres.get(k), blk.get(k))));
     row.append(lab, z); pane.append(row);
   });
   const un = zone('-'); pane.append(el('h4', null, 'Skills on this parent that are not in the checklist'), un);
@@ -440,7 +446,8 @@ function renderTiers(){
 }
 async function loadChecklists(){
   try {
-    const st = $('#style').value, r = await fetch('/api/checklists' + (st ? '?style=' + encodeURIComponent(st) : ''));
+    const st = $('#style').value, q = new URLSearchParams(); if (st) q.set('style', st); if (T.zero === false) q.set('auto_zero', 'false');
+    const r = await fetch('/api/checklists' + (q.toString() ? '?' + q : ''));
     if (!r.ok) throw new Error(); L = await r.json();
   } catch(e){ L = {}; say('Could not load the checklists.', true); }
   if (!PANES[PANES.length - 1].pane.hidden) renderTiers();
@@ -474,6 +481,10 @@ function bars(cats){
   return wrap;
 }
 const nextLine = r => r.next_grade ? 'Next grade ' + r.next_grade.grade + ' at ' + r.next_grade.at + ' (' + r.next_grade.needed + ' to go)' : 'Top grade reached';
+function blockedDetails(list){
+  const d = el('details'); d.append(el('summary', null, 'Skills that can\u2019t trigger here (' + list.length + ')'));
+  list.forEach(x => d.append(el('div', null, x.name + ': ' + x.reason))); return d;
+}
 function eventCard(r){
   const d = el('div','event'), h = el('div','ehead'), right = el('span');
   right.append(el('span','pill', r.grade), ' ', el('b', null, r.score.toFixed(1)));
@@ -483,6 +494,7 @@ function eventCard(r){
     r.top_contributors.forEach(c => det.append(el('div', null, ROLE_SHORT[c.block] + ': ' + c.name + ' ' + '\u2605'.repeat(c.stars) + ' +' + c.points)));
     d.append(det);
   }
+  if (r.blocked && r.blocked.length) d.append(blockedDetails(r.blocked));
   return d;
 }
 function render(res){
@@ -490,6 +502,7 @@ function render(res){
   out.replaceChildren(); ro.append(el('b', null, o.grade));
   side.append(el('div','big', o.score.toFixed(1)), el('div','muted', o.label), el('div','muted', nextLine(o)));
   hero.append(ro, side); out.append(hero, bars(o.categories), tierChips('generic'));
+  if (o.blocked && o.blocked.length) out.append(blockedDetails(o.blocked));
   if (o.affinity) out.append(el('p','muted', 'Affinity ' + o.affinity.value + (o.affinity.target ? ' with ' + o.affinity.target : '') + ' (entered manually)'));
   res.events.forEach(e => out.append(eventCard(e)));
   important = new Set((res.important || []).map(norm)); refreshHot();
