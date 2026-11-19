@@ -75,7 +75,9 @@ def test_each_style_has_its_own_global_skills():
 
 def test_checklists_without_style_only_have_event_skills():
     cl = checklists(None)
-    assert not any(cl["generic"]["tiers"].values())
+    names = {n for tier in cl["generic"]["tiers"].values() for n in tier}
+    assert names <= {"Speed", "Stamina", "Power", "Guts", "Wit", "Turf", "Dirt", "Sprint", "Mile",
+                     "Medium", "Long", "Front Runner", "Pace Chaser", "Late Surger", "End Closer"}
     assert "Medium Corners \u25cb" in cl["aries-cup"]["tiers"]["S"]
 
 

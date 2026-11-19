@@ -55,8 +55,8 @@ def load_profiles() -> dict[str, dict]:
     for f in sorted((data_dir() / "profiles").glob("*.yaml")):
         p = yaml.safe_load(f.read_text(encoding="utf-8"))
         p["base_id"] = p["id"]
-        p["blue"] = _norm_keys(p.get("blue"))
-        p["pink"] = _norm_keys(p.get("pink"))
+        p["blue"] = {**_norm_keys(p.get("blue")), **tier_weights(p.get("blue_tiers"))[0]}
+        p["pink"] = {**_norm_keys(p.get("pink")), **tier_weights(p.get("pink_tiers"))[0]}
         p["green"]["unique"] = _norm_keys(p["green"].get("unique"))
         explicit = p["white"].get("skills") or {}
         tw, tn = tier_weights(p.get("tiers"))

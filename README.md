@@ -15,7 +15,7 @@ with affinity from G1 wins. Screenshot upload + manual entry share one editable 
 
 ## Web UI features
 Searchable skill fields (datalist over data/skills.json), per-event tiered checklists with
-parent/grandparent presence icons, editable tier and spark weights, tabs per parent/grandparent, white sparks in Skills/Races/Scenario columns, gold highlights,
+parent/grandparent presence icons, one tier board for skills, stats, aptitudes and green sparks (renamable tiers), tabs per parent/grandparent, white sparks in Skills/Races/Scenario columns, gold highlights,
 JSON import/export, and a Skill tiers board (custom weights, stored in the browser, sent as
 `custom_weights` when scoring).
 

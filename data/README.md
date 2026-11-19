@@ -17,3 +17,5 @@ A block maps a condition (style, distance, surface, direction, course, season, w
 allowed values. Built from skill names (e.g. "Long Corners") and the description tags GameTora shows
 (e.g. "(Pace/Late)", "(Pace, Long)", "(Dirt)"). Unique skills have no requirements. Conditions the
 event or style doesn't define are treated as unknown and never block a skill.
+
+Profiles tier their blue and pink sparks too (blue_tiers, pink_tiers); weights come from tiers.yaml.
