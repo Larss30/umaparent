@@ -121,6 +121,11 @@ details{margin-top:6px;font-size:.85rem;color:var(--muted)}
 .wgrid label{display:flex;flex-direction:column;gap:2px;font-size:.78rem;color:var(--muted)}
 input.custom{border-style:dashed}
 .card.locked{opacity:.55;text-decoration:line-through}
+.card.k-blue{background:color-mix(in srgb,var(--blue) 30%,var(--card));border-color:var(--blue)}
+.card.k-pink{background:color-mix(in srgb,var(--pink) 30%,var(--card));border-color:var(--pink)}
+.card.k-green{background:color-mix(in srgb,var(--green) 34%,var(--card));border-color:var(--green)}
+.tlab input.tname{font-weight:800;font-size:1.05rem;padding:2px 4px;width:100%}
+.keyline{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 8px}
 footer{max-width:1240px;margin:0 auto;padding:0 20px 28px;color:var(--muted);font-size:.82rem}
 </style>
 </head>
@@ -172,6 +177,7 @@ const PINKS = ['Turf','Dirt','Sprint','Mile','Medium','Long','Front Runner','Pac
 const ROLES = [['self','Parent'],['grandparent_1','Grandparent 1'],['grandparent_2','Grandparent 2']];
 const ROLE_SHORT = {self:'Parent', grandparent_1:'GP 1', grandparent_2:'GP 2'};
 const COLS = [['skill','Skills'],['race','Races'],['scenario','Scenario']];
+const BK = new Set(BLUES.map(norm)), PK = new Set(PINKS.map(norm));
 const CAT_LABEL = {blue:'Stats', pink:'Aptitude', green:'Unique', white:'Skills', affinity:'Affinity'};
 const TIERS = ['S','A','B','C','D','E','F','Z'];
 const DW = {S:1, A:.8, B:.6, C:.4, D:.2, E:.1, F:.05, Z:0};
@@ -180,8 +186,9 @@ const store = { get(k){ try { return JSON.parse(localStorage.getItem(k)); } catc
                 set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} } };
 let T = store.get('uma-tiers');
 if (!T || !T.w || T.cards) T = {use:true};
-T.w = Object.assign({}, DW, T.w || {}); T.w.Z = 0; T.over = T.over || {}; T.blue = T.blue || {}; T.pink = T.pink || {};
-if (T.green === undefined) T.green = null; if (T.use === undefined) T.use = true; if (T.zero === undefined) T.zero = true;
+T.w = Object.assign({}, DW, T.w || {}); T.w.Z = 0; T.over = T.over || {}; T.names = T.names || {};
+if (T.use === undefined) T.use = true; if (T.zero === undefined) T.zero = true;
+const tn = t => T.names[t] || (t === 'Z' ? '0' : t);
 let important = new Set(), imported = [], SKILLS = [], SKMAP = new Map();
 const saveT = () => store.set('uma-tiers', T);
 function say(msg, bad){ const m = $('#msg'); m.textContent = msg; m.className = 'muted' + (bad ? ' err' : ''); }
@@ -306,9 +313,6 @@ function collect(exp){
       Object.values(overFor(c)).forEach(v => { if (v.tier === '-') m[v.name] = null; });
       ctx[c] = m; });
     if (Object.keys(ctx).length) d.context_weights = ctx;
-    if (Object.keys(T.blue).length) d.custom_blue = T.blue;
-    if (Object.keys(T.pink).length) d.custom_pink = T.pink;
-    if (T.green != null) d.custom_green_default = T.green;
   }
   if (!exp) d.auto_zero = T.zero !== false;
   return d;
@@ -362,11 +366,14 @@ function setTier(c, key, name, tier){
 }
 function presence(){
   const m = new Map();
-  const add = (role, name, st) => { name = name.trim(); if (!name || !st) return; const k = norm(name), o = m.get(k) || {name, blocks:{}};
+  const add = (role, name, st, kind) => { name = name.trim(); if (!name || !st) return; const k = norm(name), o = m.get(k) || {name, kind, blocks:{}};
     o.blocks[role] = Math.max(o.blocks[role] || 0, st); m.set(k, o); };
   document.querySelectorAll('.block').forEach(b => {
-    Object.values(b.lists).forEach(l => l.querySelectorAll('.wrow').forEach(w => add(b.dataset.role, w.f.n.value, w.f.s.v)));
-    add(b.dataset.role, b.green.inp.value, b.green.stars.v);
+    const role = b.dataset.role;
+    Object.values(b.lists).forEach(l => l.querySelectorAll('.wrow').forEach(w => add(role, w.f.n.value, w.f.s.v, 'white')));
+    add(role, b.green.inp.value, b.green.stars.v, 'green');
+    add(role, b.blue.sel.value, b.blue.stars.v, 'blue');
+    add(role, b.pink.sel.value, b.pink.stars.v, 'pink');
   });
   return m;
 }
@@ -385,29 +392,19 @@ function zone(tier){
     try { const [k, n] = JSON.parse(e.dataTransfer.getData('text/plain')); setTier(CTX, k, n, tier); } catch(_) {} };
   return z;
 }
+function kindOf(key, p){
+  if (p && p.kind && p.kind !== 'white') return p.kind;
+  if (BK.has(key)) return 'blue'; if (PK.has(key)) return 'pink';
+  const e = SKMAP.get(key); return e && e.type === 'unique' ? 'green' : 'white';
+}
 function card(key, name, tier, p, why){
-  const c = el('div','card'), s = el('select'); c.draggable = true;
+  const c = el('div','card k-' + kindOf(key, p)), s = el('select'); c.draggable = true;
   c.ondragstart = e => e.dataTransfer.setData('text/plain', JSON.stringify([key, name]));
   s.setAttribute('aria-label', 'Tier for ' + name);
-  [['-','Unrated'], ...TIERS.map(t => [t, t === 'Z' ? '0' : t])].forEach(([v, t]) => s.append(new Option(t, v)));
+  [['-','Unrated'], ...TIERS.map(t => [t, tn(t)])].forEach(([v, t]) => s.append(new Option(t, v)));
   s.value = tier || '-'; s.onchange = () => setTier(CTX, key, name, s.value);
   if (why){ c.classList.add('locked'); c.title = 'Can\u2019t trigger here: ' + why; }
   c.append(el('span', null, name), icons(p && p.blocks), s); return c;
-}
-function numField(grid, label, get, set){
-  const l = el('label', null, label), i = el('input'); i.type = 'number'; i.min = 0; i.max = 5; i.step = 0.05; i.placeholder = 'default';
-  const v = get(); i.value = v == null ? '' : v;
-  i.onchange = () => { const x = parseFloat(i.value), ok = i.value.trim() !== '' && x >= 0 && x <= 5; if (!ok) i.value = ''; set(ok ? x : null); saveT(); };
-  l.append(i); grid.append(l);
-}
-function weightsSection(){
-  const box = el('div'); box.append(el('h4', null, 'Stat, aptitude and green weights (blank keeps each event\u2019s default)'));
-  const g1 = el('div','wgrid'), g2 = el('div','wgrid'), g3 = el('div','wgrid');
-  BLUES.forEach(n => numField(g1, n, () => T.blue[norm(n)], v => { if (v == null) delete T.blue[norm(n)]; else T.blue[norm(n)] = v; }));
-  PINKS.forEach(n => numField(g2, n, () => T.pink[norm(n)], v => { if (v == null) delete T.pink[norm(n)]; else T.pink[norm(n)] = v; }));
-  numField(g3, 'All green sparks', () => T.green, v => { T.green = v; });
-  box.append(el('h4', null, 'Blue (stats)'), g1, el('h4', null, 'Pink (aptitudes)'), g2, el('h4', null, 'Green (unique skills)'), g3);
-  return box;
 }
 function renderTiers(){
   const pane = PANES[PANES.length - 1].pane; pane.replaceChildren();
@@ -423,12 +420,16 @@ function renderTiers(){
   rst.onclick = () => { delete (T.over[sk()] || {})[CTX]; saveT(); renderTiers(); refreshHot(); };
   const rw = el('button','secondary sm','Reset tier weights'); rw.type = 'button';
   rw.onclick = () => { T.w = Object.assign({}, DW); saveT(); renderTiers(); refreshHot(); };
-  bar.append(use, zl, cs, rst, rw);
-  pane.append(bar, el('p','muted','Checklist for the selected event and running style. Circles show who has each skill: P is the parent, 1 and 2 are the grandparents. Drag a card to another tier or use its menu. Tier weights are editable and apply everywhere; the 0 tier counts for nothing.'));
+  const cp = el('button','secondary sm','Copy edits to all events'); cp.type = 'button';
+  cp.onclick = () => { const o = overFor(CTX); Object.keys(L).forEach(c => { if (c !== CTX) Object.assign(overFor(c), JSON.parse(JSON.stringify(o))); }); saveT(); say('Copied this checklist\u2019s edits to every event.'); };
+  bar.append(use, zl, cs, rst, cp, rw);
+  pane.append(bar, el('p','muted','One board for skills, stats (blue), aptitudes (pink) and unique skills (green). Circles show who has each one: P is the parent, 1 and 2 are the grandparents. Drag a card to another tier or use its menu. Type in a tier\u2019s name box to rename it, and edit its weight to change how much it counts. Each parent and grandparent\u2019s own green spark can sit in a different tier. The 0 tier counts for nothing.'));
   const pres = presence(), eff = effective(CTX), blk = new Map(((L[CTX] || {}).blocked || []).map(b => [norm(b.name), b.reason]));
   TIERS.forEach(t => {
     const row = el('div','tier' + (t === 'Z' ? ' zero' : '')), lab = el('div','tlab'), z = zone(t), items = [...eff].filter(([, v]) => v.tier === t);
-    lab.append(el('b', null, t === 'Z' ? '0' : t));
+    const ni = el('input','tname'); ni.value = tn(t); ni.maxLength = 10; ni.setAttribute('aria-label', 'Rename tier ' + tn(t));
+    ni.onchange = () => { const v = ni.value.trim(); if (v && v !== (t === 'Z' ? '0' : t)) T.names[t] = v; else delete T.names[t]; saveT(); renderTiers(); refreshHot(); };
+    lab.append(ni);
     if (t === 'Z') lab.append(el('span','tw','weight 0'));
     else { const wi = el('input'); wi.type = 'number'; wi.min = 0; wi.max = 5; wi.step = 0.05; wi.value = T.w[t]; wi.setAttribute('aria-label', t + ' tier weight');
       wi.onchange = () => { const v = parseFloat(wi.value); if (v >= 0 && v <= 5){ T.w[t] = v; saveT(); refreshHot(); } else wi.value = T.w[t]; }; lab.append(wi); }
@@ -436,13 +437,13 @@ function renderTiers(){
     items.forEach(([k, v]) => z.append(card(k, v.name, t, pres.get(k), blk.get(k))));
     row.append(lab, z); pane.append(row);
   });
-  const un = zone('-'); pane.append(el('h4', null, 'Skills on this parent that are not in the checklist'), un);
+  const un = zone('-'); pane.append(el('h4', null, 'On this parent but not on the board yet'), un);
   pres.forEach((p, k) => { if (!eff.has(k)) un.append(card(k, p.name, null, p)); });
   const add = el('div','addrow'), inp = el('input'), ts = el('select'), btn = el('button','secondary sm','Add');
-  inp.placeholder = 'Search or type a skill to add'; inp.setAttribute('list','dl-all'); inp.setAttribute('aria-label','skill to add');
-  TIERS.forEach(t => ts.append(new Option('Tier ' + (t === 'Z' ? '0' : t), t))); ts.value = 'B'; ts.setAttribute('aria-label','tier');
+  inp.placeholder = 'Search or type a skill, stat or unique to add'; inp.setAttribute('list','dl-all'); inp.setAttribute('aria-label','skill to add');
+  TIERS.forEach(t => ts.append(new Option(tn(t), t))); ts.value = 'B'; ts.setAttribute('aria-label','tier');
   btn.type = 'button'; btn.onclick = () => { const v = inp.value.trim(); if (v) setTier(CTX, norm(v), v, ts.value); };
-  add.append(inp, ts, btn); pane.append(add, weightsSection());
+  add.append(inp, ts, btn); pane.append(add);
 }
 async function loadChecklists(){
   try {
@@ -458,7 +459,7 @@ function tierChips(ctxId){
   TIERS.filter(t => t !== 'Z').forEach(t => {
     const items = [...eff].filter(([, v]) => v.tier === t); if (!items.length) return;
     const have = items.filter(([k]) => pres.has(k)).length;
-    wrap.append(el('span','chip' + (have === items.length ? ' have' : ''), t + ' ' + have + '/' + items.length));
+    wrap.append(el('span','chip' + (have === items.length ? ' have' : ''), tn(t) + ' ' + have + '/' + items.length));
   });
   return wrap;
 }

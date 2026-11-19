@@ -96,10 +96,16 @@ def apply_custom(profile: dict, custom: dict) -> dict:
     p = copy.deepcopy(profile)
     for name, w in custom.items():
         k = norm(name)
-        if w is None:
+        group = p["blue"] if k in p["blue"] else p["pink"] if k in p["pink"] else None
+        if group is not None:                       # a stat or aptitude card
+            if w is None:
+                group.pop(k, None)
+            else:
+                group[k] = float(w)
+        elif w is None:
             p["white"]["skills"].pop(k, None)
             p["green"]["unique"].pop(k, None)
-        else:
+        else:                                       # a skill: works for white and green sparks
             p["white"]["skills"][k] = float(w)
             p["green"]["unique"][k] = float(w)
     return p
@@ -134,10 +140,15 @@ def checklists(style_id: str | None = None, auto_zero: bool = True) -> dict:
     for pid in [GENERIC_ID] + [i for i in profiles if i != GENERIC_ID]:
         p = profiles[pid]
         entries: dict[str, tuple[str, str]] = {}
-        for source in ([style["tiers"]] if style else []) + [p.get("tiers") or {}]:
+        sources = ([style["tiers"]] if style else []) + [
+            p.get("tiers") or {}, p.get("blue_tiers") or {}, p.get("pink_tiers") or {}]
+        for source in sources:
             for letter, skills in source.items():
                 for s in skills or []:
                     entries[norm(s)] = (letter, s)
+        if style:                                   # mirror apply_style: only the chosen style's pink counts
+            for n in ("Front Runner", "Pace Chaser", "Late Surger", "End Closer"):
+                entries[norm(n)] = ("S" if norm(n) == norm(style["aptitude"]) else "Z", n)
         grouped: dict[str, list[str]] = {t: [] for t in order}
         blocked, pc = [], {**p, "active_style": style_id}
         for letter, name in entries.values():

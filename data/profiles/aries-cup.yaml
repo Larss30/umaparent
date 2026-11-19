@@ -24,17 +24,15 @@ tiers:
 category_weights: {blue: 0.25, pink: 0.20, green: 0.10, white: 0.45, affinity: 0.15}
 block_weights: {self: 1.0, grandparent_1: 0.5, grandparent_2: 0.5}
 targets: {blue: 6.0, pink: 6.0, green: 2.0, white: 12.0, affinity: 150.0}
-blue: {speed: 1.0, stamina: 1.0, power: 0.7, wit: 0.5, guts: 0.3}
-pink:
-  turf: 1.0
-  dirt: 0.0
-  medium: 1.0
-  sprint: 0.0
-  mile: 0.0
-  long: 0.0
-  front runner: 0.4   # style pinks only help if you run that style; tune per team
-  pace chaser: 0.4
-  late surger: 0.4
-  end closer: 0.4
+# Blue and pink sparks are tiered like skills (weights come from data/tiers.yaml).
+blue_tiers:
+  S: [Speed, Stamina]
+  A: [Power]
+  B: [Wit]
+  C: [Guts]
+pink_tiers:
+  S: [Turf, Medium]
+  C: ["Front Runner", "Pace Chaser", "Late Surger", "End Closer"]   # style pinks only help if you run that style
+  Z: [Dirt, Sprint, Mile, Long]
 green: {default: 0.5, unique: {}}
 white: {skill_default: 0.15, race_default: 0.05, scenario_default: 0.1, skills: {}, races: {}}
