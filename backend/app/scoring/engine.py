@@ -80,6 +80,8 @@ def apply_style(profile: dict, style: dict) -> dict:
     p = copy.deepcopy(profile)
     p["id"] = f"{profile['id']}:{style['id']}"
     p["active_style"] = style["id"]
+    p["base_label"] = profile["label"]
+    p["style_label"] = style["label"]
     p["label"] = f"{profile['label']} \u00b7 {style['label']}"
     for k in STYLE_PINKS:
         p["pink"][k] = 0.0
@@ -218,6 +220,8 @@ def score_parent(parent: Parent, profile: dict, ranks: dict | None = None) -> di
     result = {
         "profile": profile["id"],
         "label": profile["label"],
+        "profile_label": profile.get("base_label", profile["label"]),
+        "style_label": profile.get("style_label"),
         "score": round(total, 1),
         "grade": grade_for(total, ranks),
         "next_grade": next_grade(total, ranks),
