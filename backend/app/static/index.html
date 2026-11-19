@@ -41,9 +41,6 @@ h4{margin:0;font-size:.85rem;color:var(--muted);font-weight:600}
 input,select{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:7px 9px;min-width:0;width:100%}
 input[type=checkbox]{width:auto}
 
-.tabs{display:flex;gap:6px;flex-wrap:wrap;border-bottom:2px solid var(--line);margin-bottom:10px}
-.tabs button{background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:8px 12px;cursor:pointer;color:var(--muted);font-weight:600}
-.tabs button[aria-selected=true]{color:var(--turf);border-color:var(--turf)}
 .core{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:8px 0 12px}
 @media (max-width:720px){.core{grid-template-columns:1fr}}
 .srow{display:grid;grid-template-columns:12px minmax(0,1fr) auto;align-items:center;gap:6px}
@@ -74,10 +71,6 @@ input[type=checkbox]{width:auto}
 
 .tierbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .inl{display:inline-flex;gap:6px;align-items:center}
-.tier{display:grid;grid-template-columns:76px minmax(0,1fr);gap:8px;margin:6px 0}
-.tlab{display:flex;flex-direction:column;align-items:center;gap:3px;background:var(--gold);color:#4a3203;border-radius:10px;padding:6px 4px}
-.tlab b{font-size:1.3rem;line-height:1}
-.tlab input{padding:2px 4px;font-size:.8rem;text-align:center;background:#fff;color:#222}
 .zone{min-height:48px;border:1px dashed var(--line);border-radius:10px;padding:6px;display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start}
 .zone.over{background:var(--gold-tint);border-color:var(--gold)}
 .card{display:inline-flex;gap:6px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:2px 4px 2px 10px;cursor:grab;font-size:.82rem}
@@ -114,9 +107,6 @@ details{margin-top:6px;font-size:.85rem;color:var(--muted)}
 .ico3{display:inline-flex;gap:2px}
 .ico{width:18px;height:18px;border-radius:50%;display:inline-grid;place-items:center;font-size:.62rem;font-weight:700;background:var(--paper);color:var(--muted);border:1px solid var(--line)}
 .ico.on{background:var(--turf);border-color:var(--turf);color:#fff}
-.tlab small{font-size:.7rem;min-height:1em}
-.tw{background:#fff;color:#222;border-radius:6px;padding:2px 12px;font-size:.8rem}
-.tier.zero .tlab{background:var(--white);color:#fff}
 .wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:6px 10px;margin:6px 0 12px}
 .wgrid label{display:flex;flex-direction:column;gap:2px;font-size:.78rem;color:var(--muted)}
 input.custom{border-style:dashed}
@@ -124,8 +114,45 @@ input.custom{border-style:dashed}
 .card.k-blue{background:color-mix(in srgb,var(--blue) 30%,var(--card));border-color:var(--blue)}
 .card.k-pink{background:color-mix(in srgb,var(--pink) 30%,var(--card));border-color:var(--pink)}
 .card.k-green{background:color-mix(in srgb,var(--green) 34%,var(--card));border-color:var(--green)}
-.tlab input.tname{font-weight:800;font-size:1.05rem;padding:2px 4px;width:100%}
 .keyline{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 8px}
+.views{display:flex;gap:8px;max-width:1240px;margin:14px auto 0;padding:0 20px}
+.views button{flex:1;padding:10px 14px;border-radius:14px;border:2px solid var(--turf);background:var(--card);color:var(--turf);font-weight:800;cursor:pointer}
+.views button[aria-selected=true]{background:var(--turf);color:#fff}
+main.single{grid-template-columns:1fr}
+.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:12px}
+.tabcard{display:flex;flex-direction:column;gap:2px;align-items:center;text-align:center;padding:10px 6px;border-radius:14px;border:2px solid var(--line);background:var(--card);cursor:pointer;min-width:0}
+.tabcard[aria-selected=true]{background:var(--turf);border-color:var(--turf-deep);color:#fff;box-shadow:0 4px 0 var(--turf-deep)}
+.tt{font-weight:800}
+.tc{font-size:.78rem;opacity:.85;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.td{display:flex;gap:4px;align-items:center;font-size:.76rem}
+.td .dot{display:inline-block;width:10px;height:10px;opacity:.25}
+.td .dot.on{opacity:1;box-shadow:0 0 0 1.5px #fff}
+.bhead{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px;background:var(--turf);color:#fff;border-radius:12px;padding:8px 12px;margin-bottom:10px;font-size:1.05rem}
+.bhead .sub{font-size:.8rem;opacity:.85}
+.chead{cursor:pointer;list-style:none;gap:8px}
+.chead::-webkit-details-marker,details.tier>summary::-webkit-details-marker{display:none}
+.chead::before,details.tier>summary::before{content:"\25B8";display:inline-block;transition:transform .15s;color:var(--muted)}
+details[open]>.chead::before,details.tier[open]>summary::before{transform:rotate(90deg)}
+.chead .ctitle{font-weight:700;flex:1}
+.ccount{background:var(--card);border-radius:999px;padding:0 8px;font-size:.78rem;border:1px solid var(--line)}
+details.tier{border:1px solid var(--line);border-radius:12px;margin:8px 0;background:var(--paper);color:var(--ink);font-size:inherit}
+details.tier>summary{display:flex;gap:10px;align-items:center;padding:8px 12px;cursor:pointer;list-style:none}
+.tbadge{background:var(--gold);color:#4a3203;border-radius:8px;padding:1px 12px;font-weight:800;min-width:44px;text-align:center}
+details.tier.zero .tbadge{background:var(--white);color:#fff}
+.tcount{flex:1;color:var(--muted);font-size:.85rem}
+.tweight{font-size:.8rem;color:var(--muted)}
+.tbody{padding:0 12px 12px}
+.tctl{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.tctl label{display:flex;gap:6px;align-items:center;font-size:.8rem;color:var(--muted)}
+.tctl input{width:96px}
+.tctl input.tname{font-weight:800}
+.brk{flex-basis:100%;height:0}
+.psel{display:flex;flex-direction:column;gap:3px;font-size:.8rem;color:var(--muted);margin-bottom:10px}
+.psel select{font-size:1rem;font-weight:700}
+.pbanner{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 14px;border-radius:14px;background:var(--turf);color:#fff;margin-bottom:12px}
+.pname{font-size:1.35rem;font-weight:800}
+.spill{background:var(--gold);color:#4a3203;border-radius:999px;padding:2px 14px;font-weight:800}
+.spill.none{background:transparent;border:1px dashed #fff;color:#fff;font-weight:600}
 footer{max-width:1240px;margin:0 auto;padding:0 20px 28px;color:var(--muted);font-size:.82rem}
 </style>
 </head>
@@ -135,7 +162,12 @@ footer{max-width:1240px;margin:0 auto;padding:0 20px 28px;color:var(--muted);fon
   <p>Score a parent and its grandparents from their sparks, for each Champions Meeting and your running style.</p>
 </header>
 
-<main>
+<nav class="views" aria-label="Views">
+  <button id="v-parent" type="button" aria-selected="true">Parent &amp; scores</button>
+  <button id="v-board" type="button" aria-selected="false">Checklist board</button>
+</nav>
+
+<main id="view-parent">
   <section class="panel" aria-labelledby="ptitle">
     <h2 id="ptitle">Parent</h2>
     <div class="basics">
@@ -166,7 +198,15 @@ footer{max-width:1240px;margin:0 auto;padding:0 20px 28px;color:var(--muted);fon
     <div id="out"><p class="empty">Enter sparks and press Score parent, or load the sample to see how it works.</p></div>
   </section>
 </main>
-<footer>Unofficial fan tool. Not affiliated with or endorsed by Cygames. Weights are drafts you can tune in the data files or in the Checklist tab.</footer>
+
+<main id="view-board" class="single" hidden>
+  <section class="panel" aria-labelledby="btitle">
+    <h2 id="btitle">Checklist board</h2>
+    <div id="boardbody"></div>
+    <p class="muted" id="bmsg" role="status"></p>
+  </section>
+</main>
+<footer>Unofficial fan tool. Not affiliated with or endorsed by Cygames. Weights are drafts you can tune in the data files or on the Checklist board.</footer>
 
 <script>
 const $ = s => document.querySelector(s);
@@ -174,7 +214,7 @@ const el = (t, c, txt) => { const e = document.createElement(t); if (c) e.classN
 const norm = s => s.replace(/\u2019/g, "'").replace(/!/g, '').toLowerCase().split(/\s+/).filter(Boolean).join(' ');
 const BLUES = ['Speed','Stamina','Power','Guts','Wit'];
 const PINKS = ['Turf','Dirt','Sprint','Mile','Medium','Long','Front Runner','Pace Chaser','Late Surger','End Closer'];
-const ROLES = [['self','Parent'],['grandparent_1','Grandparent 1'],['grandparent_2','Grandparent 2']];
+const ROLES = [['self','Parent','Their own sparks'],['grandparent_1','Grandparent 1','Legacy origin sparks'],['grandparent_2','Grandparent 2','Legacy origin sparks']];
 const ROLE_SHORT = {self:'Parent', grandparent_1:'GP 1', grandparent_2:'GP 2'};
 const COLS = [['skill','Skills'],['race','Races'],['scenario','Scenario']];
 const BK = new Set(BLUES.map(norm)), PK = new Set(PINKS.map(norm));
@@ -184,6 +224,8 @@ const DW = {S:1, A:.8, B:.6, C:.4, D:.2, E:.1, F:.05, Z:0};
 const HOT_MIN = 0.5;
 const store = { get(k){ try { return JSON.parse(localStorage.getItem(k)); } catch(e){ return null; } },
                 set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} } };
+const mobile = () => window.matchMedia('(max-width: 720px)').matches;
+const OPEN = {};
 let T = store.get('uma-tiers');
 if (!T || !T.w || T.cards) T = {use:true};
 T.w = Object.assign({}, DW, T.w || {}); T.w.Z = 0; T.over = T.over || {}; T.names = T.names || {};
@@ -191,7 +233,7 @@ if (T.use === undefined) T.use = true; if (T.zero === undefined) T.zero = true;
 const tn = t => T.names[t] || (t === 'Z' ? '0' : t);
 let important = new Set(), imported = [], SKILLS = [], SKMAP = new Map();
 const saveT = () => store.set('uma-tiers', T);
-function say(msg, bad){ const m = $('#msg'); m.textContent = msg; m.className = 'muted' + (bad ? ' err' : ''); }
+function say(msg, bad){ ['#msg', '#bmsg'].forEach(id => { const m = $(id); m.textContent = msg; m.className = 'muted' + (bad ? ' err' : ''); }); }
 
 /* ---------- parent form ---------- */
 function Stars(v = 0){
@@ -224,33 +266,43 @@ function wrow(name = '', st = 1, pin = false, cat = 'skill'){
   w.f = {n, s}; w.append(n, s, p, x); return w;
 }
 function buildBlock(role){
+  const [, title, sub] = ROLES.find(r => r[0] === role);
   const b = el('section'); b.className = 'block'; b.dataset.role = role;
+  const hd = el('div','bhead'); hd.append(el('strong', null, title), el('span','sub', sub));
   const ch = el('input','char'); ch.placeholder = 'Character (optional)'; ch.setAttribute('aria-label','character');
   b.blue = pickRow('blue', BLUES); b.pink = pickRow('pink', PINKS); b.green = greenRow();
   const core = el('div','core'); core.append(b.blue.row, b.pink.row, b.green.row);
-  const cols = el('div','cols'); b.lists = {};
-  COLS.forEach(([cat, title]) => {
-    const c = el('div','col'), h = el('div','chead'), add = el('button','ghost','+ Add'), l = el('div','list');
-    add.type = 'button'; add.onclick = () => { const r = wrow('', 1, false, cat); l.append(r); r.f.n.focus(); changed(); };
-    h.append(el('h4', null, title), add); c.append(h, l); cols.append(c); b.lists[cat] = l;
+  const cols = el('div','cols'); b.lists = {}; b.counts = {};
+  COLS.forEach(([cat, ttl]) => {
+    const c = el('details','col'), h = el('summary','chead'), add = el('button','ghost','+ Add'), l = el('div','list'), cnt = el('span','ccount','0');
+    c.open = !mobile() || cat === 'skill';
+    add.type = 'button';
+    add.onclick = e => { e.preventDefault(); e.stopPropagation(); c.open = true; const r = wrow('', 1, false, cat); l.append(r); r.f.n.focus(); changed(); };
+    h.append(el('span','ctitle', ttl), cnt, add); c.append(h, l); cols.append(c); b.lists[cat] = l; b.counts[cat] = cnt;
   });
-  b.append(ch, core, cols); return b;
+  b.append(hd, ch, core, cols); return b;
 }
-const PANES = [...ROLES.map(([id, title]) => ({id, title})), {id:'tiers', title:'Checklist'}];
+const PANES = ROLES.map(([id, title]) => ({id, title}));
 PANES.forEach(p => {
-  p.tab = el('button', null, p.title); p.tab.type = 'button'; p.tab.setAttribute('role','tab');
+  p.tab = el('button','tabcard'); p.tab.type = 'button'; p.tab.setAttribute('role','tab');
+  p.t2 = el('span','tc','No character yet'); p.wc = el('span',null,'0 white');
+  p.dots = ['blue','pink','green'].map(k => el('i','dot ' + k));
+  const dr = el('span','td'); dr.append(...p.dots, p.wc);
+  p.tab.append(el('span','tt', p.title), p.t2, dr);
   p.tab.onclick = () => show(p.id);
-  p.pane = p.id === 'tiers' ? el('div') : buildBlock(p.id);
+  p.pane = buildBlock(p.id);
   $('#tabs').append(p.tab); $('#panes').append(p.pane);
 });
-function show(id){
-  PANES.forEach(p => { p.pane.hidden = p.id !== id; p.tab.setAttribute('aria-selected', p.id === id); });
-  $('#legend').hidden = id === 'tiers'; if (id === 'tiers') renderTiers();
-}
+function show(id){ PANES.forEach(p => { p.pane.hidden = p.id !== id; p.tab.setAttribute('aria-selected', p.id === id); }); }
 function changed(){
-  PANES.forEach(p => { if (p.id === 'tiers') return;
-    const n = Object.values(p.pane.lists).reduce((a, l) => a + [...l.querySelectorAll('.wrow')].filter(w => w.f.n.value.trim()).length, 0);
-    p.tab.textContent = p.title + (n ? ' (' + n + ')' : ''); });
+  PANES.forEach(p => {
+    const b = p.pane; let n = 0;
+    COLS.forEach(([cat]) => { const c = [...b.lists[cat].querySelectorAll('.wrow')].filter(w => w.f.n.value.trim()).length; b.counts[cat].textContent = c; n += c; });
+    p.t2.textContent = b.querySelector('.char').value.trim() || 'No character yet';
+    [[b.blue.sel.value, b.blue.stars.v], [b.pink.sel.value, b.pink.stars.v], [b.green.inp.value.trim(), b.green.stars.v]]
+      .forEach(([v, st], i) => p.dots[i].classList.toggle('on', !!(v && st)));
+    p.wc.textContent = n + ' white';
+  });
   refreshHot();
 }
 function refreshHot(){
@@ -406,39 +458,58 @@ function card(key, name, tier, p, why){
   if (why){ c.classList.add('locked'); c.title = 'Can\u2019t trigger here: ' + why; }
   c.append(el('span', null, name), icons(p && p.blocks), s); return c;
 }
+const KORDER = {blue:0, pink:1, green:2, white:3};
+function fillZone(z, items, pres, blk, tier){
+  const groups = [[], [], [], []];
+  items.forEach(it => groups[KORDER[kindOf(it[0], pres.get(it[0]))]].push(it));
+  groups.forEach(g => { if (!g.length) return; g.forEach(([k, v]) => z.append(card(k, v.name, tier, pres.get(k), blk.get(k)))); z.append(el('span','brk')); });
+}
+function boardBox(id, cls, sumNodes, body){
+  const d = el('details', cls); d.open = OPEN[id] ?? !mobile(); d.ontoggle = () => { OPEN[id] = d.open; };
+  const sm = el('summary'); sm.append(...sumNodes); d.append(sm, body); return d;
+}
 function renderTiers(){
-  const pane = PANES[PANES.length - 1].pane; pane.replaceChildren();
-  const bar = el('div','tierbar'), use = el('label','inl'), cb = el('input'), cs = el('select');
+  const pane = $('#boardbody'); pane.replaceChildren();
+  const bar = el('div','tierbar'), use = el('label','inl'), cb = el('input'), cs = el('select'), ss = el('select');
   cb.type = 'checkbox'; cb.checked = T.use; cb.onchange = () => { T.use = cb.checked; saveT(); refreshHot(); };
   use.append(cb, 'Use my ratings when scoring');
   const zl = el('label','inl'), zc = el('input'); zc.type = 'checkbox'; zc.checked = T.zero !== false;
   zc.onchange = () => { T.zero = zc.checked; saveT(); loadChecklists(); };
   zl.append(zc, 'Zero skills that can\u2019t trigger here');
   Object.entries(L).forEach(([id, c]) => cs.append(new Option(c.label, id)));
-  cs.value = L[CTX] ? CTX : 'generic'; CTX = cs.value; cs.setAttribute('aria-label','Checklist for'); cs.onchange = () => { CTX = cs.value; renderTiers(); };
+  cs.value = L[CTX] ? CTX : 'generic'; CTX = cs.value; cs.setAttribute('aria-label','Event'); cs.onchange = () => { CTX = cs.value; renderTiers(); };
+  [...$('#style').options].forEach(o => ss.append(new Option(o.text, o.value)));
+  ss.value = $('#style').value; ss.setAttribute('aria-label','Running style'); ss.onchange = () => { $('#style').value = ss.value; loadChecklists(); };
   const rst = el('button','secondary sm','Reset this checklist'); rst.type = 'button';
   rst.onclick = () => { delete (T.over[sk()] || {})[CTX]; saveT(); renderTiers(); refreshHot(); };
   const rw = el('button','secondary sm','Reset tier weights'); rw.type = 'button';
   rw.onclick = () => { T.w = Object.assign({}, DW); saveT(); renderTiers(); refreshHot(); };
   const cp = el('button','secondary sm','Copy edits to all events'); cp.type = 'button';
   cp.onclick = () => { const o = overFor(CTX); Object.keys(L).forEach(c => { if (c !== CTX) Object.assign(overFor(c), JSON.parse(JSON.stringify(o))); }); saveT(); say('Copied this checklist\u2019s edits to every event.'); };
-  bar.append(use, zl, cs, rst, cp, rw);
-  pane.append(bar, el('p','muted','One board for skills, stats (blue), aptitudes (pink) and unique skills (green). Circles show who has each one: P is the parent, 1 and 2 are the grandparents. Drag a card to another tier or use its menu. Type in a tier\u2019s name box to rename it, and edit its weight to change how much it counts. Each parent and grandparent\u2019s own green spark can sit in a different tier. The 0 tier counts for nothing.'));
+  const lab = (t, n) => { const l = el('label','inl'); l.append(t + ' ', n); return l; };
+  bar.append(lab('Event', cs), lab('Style', ss), use, zl, rst, cp, rw);
+  pane.append(bar, el('p','muted','One board for skills, stats (blue), aptitudes (pink) and unique skills (green); each tier lists blue, then pink, then green, then the rest. Circles show who has each one: P is the parent, 1 and 2 are the grandparents. Drag a card to another tier or use its menu. Rename a tier or change its weight inside its box. Each parent and grandparent\u2019s own green spark can sit in a different tier. The 0 tier counts for nothing.'));
   const pres = presence(), eff = effective(CTX), blk = new Map(((L[CTX] || {}).blocked || []).map(b => [norm(b.name), b.reason]));
   TIERS.forEach(t => {
-    const row = el('div','tier' + (t === 'Z' ? ' zero' : '')), lab = el('div','tlab'), z = zone(t), items = [...eff].filter(([, v]) => v.tier === t);
+    const items = [...eff].filter(([, v]) => v.tier === t), z = zone(t);
     const ni = el('input','tname'); ni.value = tn(t); ni.maxLength = 10; ni.setAttribute('aria-label', 'Rename tier ' + tn(t));
     ni.onchange = () => { const v = ni.value.trim(); if (v && v !== (t === 'Z' ? '0' : t)) T.names[t] = v; else delete T.names[t]; saveT(); renderTiers(); refreshHot(); };
-    lab.append(ni);
-    if (t === 'Z') lab.append(el('span','tw','weight 0'));
-    else { const wi = el('input'); wi.type = 'number'; wi.min = 0; wi.max = 5; wi.step = 0.05; wi.value = T.w[t]; wi.setAttribute('aria-label', t + ' tier weight');
-      wi.onchange = () => { const v = parseFloat(wi.value); if (v >= 0 && v <= 5){ T.w[t] = v; saveT(); refreshHot(); } else wi.value = T.w[t]; }; lab.append(wi); }
-    lab.append(el('small', null, items.length ? items.filter(([k]) => pres.has(k)).length + '/' + items.length : ''));
-    items.forEach(([k, v]) => z.append(card(k, v.name, t, pres.get(k), blk.get(k))));
-    row.append(lab, z); pane.append(row);
+    const ctl = el('div','tctl'), nl = el('label', null, 'Name '); nl.append(ni); ctl.append(nl);
+    if (t !== 'Z'){
+      const wi = el('input'); wi.type = 'number'; wi.min = 0; wi.max = 5; wi.step = 0.05; wi.value = T.w[t]; wi.setAttribute('aria-label', tn(t) + ' tier weight');
+      wi.onchange = () => { const v = parseFloat(wi.value); if (v >= 0 && v <= 5){ T.w[t] = v; saveT(); renderTiers(); refreshHot(); } else wi.value = T.w[t]; };
+      const wl = el('label', null, 'Weight '); wl.append(wi); ctl.append(wl);
+    }
+    fillZone(z, items, pres, blk, t);
+    const body = el('div','tbody'); body.append(ctl, z);
+    const have = items.filter(([k]) => pres.has(k)).length;
+    pane.append(boardBox(t, 'tier' + (t === 'Z' ? ' zero' : ''), [el('span','tbadge', tn(t)),
+      el('span','tcount', items.length ? have + ' of ' + items.length + ' on this parent' : 'empty'),
+      el('span','tweight', 'weight ' + (t === 'Z' ? '0' : T.w[t]))], body));
   });
-  const un = zone('-'); pane.append(el('h4', null, 'On this parent but not on the board yet'), un);
-  pres.forEach((p, k) => { if (!eff.has(k)) un.append(card(k, p.name, null, p)); });
+  const un = zone('-'), unItems = [...pres].filter(([k]) => !eff.has(k)).map(([k, p]) => [k, {name:p.name}]), ub = el('div','tbody');
+  fillZone(un, unItems, pres, blk, null); ub.append(un);
+  pane.append(boardBox('unrated', 'tier unrated', [el('span','tbadge','\u2026'), el('span','tcount', unItems.length + ' on this parent but not on the board yet')], ub));
   const add = el('div','addrow'), inp = el('input'), ts = el('select'), btn = el('button','secondary sm','Add');
   inp.placeholder = 'Search or type a skill, stat or unique to add'; inp.setAttribute('list','dl-all'); inp.setAttribute('aria-label','skill to add');
   TIERS.forEach(t => ts.append(new Option(tn(t), t))); ts.value = 'B'; ts.setAttribute('aria-label','tier');
@@ -451,7 +522,7 @@ async function loadChecklists(){
     const r = await fetch('/api/checklists' + (q.toString() ? '?' + q : ''));
     if (!r.ok) throw new Error(); L = await r.json();
   } catch(e){ L = {}; say('Could not load the checklists.', true); }
-  if (!PANES[PANES.length - 1].pane.hidden) renderTiers();
+  if (!$('#view-board').hidden) renderTiers();
   refreshHot();
 }
 function tierChips(ctxId){
@@ -486,26 +557,28 @@ function blockedDetails(list){
   const d = el('details'); d.append(el('summary', null, 'Skills that can\u2019t trigger here (' + list.length + ')'));
   list.forEach(x => d.append(el('div', null, x.name + ': ' + x.reason))); return d;
 }
-function eventCard(r){
-  const d = el('div','event'), h = el('div','ehead'), right = el('span');
-  right.append(el('span','pill', r.grade), ' ', el('b', null, r.score.toFixed(1)));
-  h.append(el('h3', null, r.label), right); d.append(h, bars(r.categories), tierChips(r.profile.split(':')[0]), el('div','muted', nextLine(r)));
+let LAST = null, SEL = 'generic';
+const ctxId = r => r.profile.split(':')[0];
+function render(res){
+  LAST = res; const out = $('#out'); out.replaceChildren();
+  const all = [res.overall, ...res.events];
+  if (!all.some(r => ctxId(r) === SEL)) SEL = 'generic';
+  const r = all.find(x => ctxId(x) === SEL);
+  const pick = el('label','psel'), sel = el('select'); sel.id = 'psel'; sel.setAttribute('aria-label','Profile');
+  all.forEach(x => sel.append(new Option(x.profile_label + ' \u2014 ' + x.score.toFixed(1) + ' ' + x.grade, ctxId(x))));
+  sel.value = SEL; sel.onchange = () => { SEL = sel.value; render(LAST); };
+  pick.append(el('span', null, 'Profile'), sel);
+  const ban = el('div','pbanner'); ban.append(el('div','pname', r.profile_label), el('span','spill' + (r.style_label ? '' : ' none'), r.style_label || 'No running style'));
+  const hero = el('div','hero'), ro = el('div','rosette'), side = el('div');
+  ro.append(el('b', null, r.grade)); side.append(el('div','big', r.score.toFixed(1)), el('div','muted', nextLine(r)));
+  hero.append(ro, side); out.append(pick, ban, hero, bars(r.categories), tierChips(SEL));
+  if (r.affinity) out.append(el('p','muted', 'Affinity ' + r.affinity.value + (r.affinity.target ? ' with ' + r.affinity.target : '') + ' (entered manually)'));
   if (r.top_contributors.length){
     const det = el('details'); det.append(el('summary', null, 'Top contributing sparks'));
     r.top_contributors.forEach(c => det.append(el('div', null, ROLE_SHORT[c.block] + ': ' + c.name + ' ' + '\u2605'.repeat(c.stars) + ' +' + c.points)));
-    d.append(det);
+    out.append(det);
   }
-  if (r.blocked && r.blocked.length) d.append(blockedDetails(r.blocked));
-  return d;
-}
-function render(res){
-  const out = $('#out'), o = res.overall, hero = el('div','hero'), ro = el('div','rosette'), side = el('div');
-  out.replaceChildren(); ro.append(el('b', null, o.grade));
-  side.append(el('div','big', o.score.toFixed(1)), el('div','muted', o.label), el('div','muted', nextLine(o)));
-  hero.append(ro, side); out.append(hero, bars(o.categories), tierChips('generic'));
-  if (o.blocked && o.blocked.length) out.append(blockedDetails(o.blocked));
-  if (o.affinity) out.append(el('p','muted', 'Affinity ' + o.affinity.value + (o.affinity.target ? ' with ' + o.affinity.target : '') + ' (entered manually)'));
-  res.events.forEach(e => out.append(eventCard(e)));
+  if (r.blocked && r.blocked.length) out.append(blockedDetails(r.blocked));
   important = new Set((res.important || []).map(norm)); refreshHot();
 }
 async function score(){
@@ -513,6 +586,7 @@ async function score(){
     const r = await fetch('/api/score', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(collect(false))});
     if (!r.ok){ const e = await r.json().catch(() => ({})); throw new Error(typeof e.detail === 'string' ? e.detail : 'Check your inputs: every spark needs a name and at least one star, and tier weights must be between 0 and 5.'); }
     render(await r.json());
+    if (window.matchMedia('(max-width: 960px)').matches) $('#out').scrollIntoView({behavior:'smooth', block:'start'});
   } catch(e){ $('#out').replaceChildren(el('p','error', e.message || 'Could not reach the scoring service. Try again in a moment.')); }
 }
 $('#go').onclick = score;
@@ -526,7 +600,13 @@ $('#style').onchange = loadChecklists;
 fetch('/api/skills').then(r => r.json()).then(loadSkillLists).catch(() => {});
 fetch('/api/tiers').then(r => r.json()).then(list => list.forEach(t => { if (!(t.id in T.w)) T.w[t.id] = t.weight; })).catch(() => {});
 loadChecklists();
-show('self');
+show('self'); changed();
+function view(v){
+  $('#view-parent').hidden = v !== 'parent'; $('#view-board').hidden = v !== 'board';
+  $('#v-parent').setAttribute('aria-selected', v === 'parent'); $('#v-board').setAttribute('aria-selected', v === 'board');
+  if (v === 'board') renderTiers();
+}
+$('#v-parent').onclick = () => view('parent'); $('#v-board').onclick = () => view('board');
 </script>
 </body>
 </html>

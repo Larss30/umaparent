@@ -97,6 +97,9 @@ def test_event_tier_wins_over_style_tier():
 def test_score_all_with_style_adds_label():
     out = score_all(parent(white("Uma Stan"), style="pace-chaser"))
     assert "Pace Chaser" in out["events"][0]["label"]
+    assert out["events"][0]["profile_label"] == "Aries Cup"
+    assert out["events"][0]["style_label"] == "Pace Chaser"
+    assert score_all(parent(white("Uma Stan")))["events"][0]["style_label"] is None
 
 
 def test_unknown_style_raises():
