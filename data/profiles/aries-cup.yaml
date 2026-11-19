@@ -1,5 +1,4 @@
 # Champions Meeting: Aries Cup. DRAFT. Race conditions per a GosuGamers report: Nakayama, Turf,
-# 2000m (Medium), Right/Inner, Spring, Sunny, Firm. Skill names still need checking in Global.
 # TODO: confirm numbering. uma.guide lists this race as CM12 (Global); you called it CM23.
 # 'tiers' = event-specific skills. They are added to the running style's tiers, and where both
 # list a skill the EVENT's tier wins. Tier weights live in data/tiers.yaml.

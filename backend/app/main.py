@@ -66,9 +66,9 @@ def skills():
 
 
 @app.get("/api/checklists")
-def get_checklists(style: str | None = None):
+def get_checklists(style: str | None = None, auto_zero: bool = True):
     try:
-        return checklists(style)
+        return checklists(style, auto_zero)
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
 

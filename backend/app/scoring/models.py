@@ -34,3 +34,4 @@ class Parent:
     custom_pink: dict[str, float] | None = None
     custom_green_default: float | None = None
     context_weights: dict[str, dict[str, float | None]] | None = None  # per profile id
+    auto_zero: bool = True   # zero skills that cannot trigger in this event or style

@@ -33,6 +33,12 @@ def load_skills() -> list[dict]:
     return json.loads(f.read_text(encoding="utf-8")) if f.exists() else []
 
 
+@lru_cache
+def load_requires() -> dict[str, list]:
+    """norm skill name -> list of alternative requirement blocks (any one block can trigger)."""
+    return {norm(s["name"]): s["requires"] for s in load_skills() if s.get("requires")}
+
+
 def tier_weights(tiers: dict | None) -> tuple[dict, dict]:
     """{letter: [skill names]} -> ({norm name: weight}, {norm name: display name})."""
     table, weights, names = load_tiers(), {}, {}

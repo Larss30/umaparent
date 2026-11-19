@@ -101,13 +101,835 @@
  },
  {
   "id": null,
-  "name": "Firm Conditions ○",
+  "name": "1,500,000 CC",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "99 Problems",
   "type": "skill"
  },
  {
   "id": null,
-  "name": "Full Throttle",
+  "name": "A Small Breather",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Acceleration",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "mile"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "After-School Stroll",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "end-closer"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "All I've Got",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "medium"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "All Set",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ],
+    "distance": [
+     "long"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "As a Friend and Rival",
   "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Aspire",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Be Still",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Breakin' Out",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "end-closer"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Calm in a Crowd",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Carnival Bonus",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Chin Up, Derby Umamusume!",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Chukyo Racecourse ○",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "chukyo"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Chukyo Racecourse ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "chukyo"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Cloudy Days ○",
+  "type": "skill",
+  "requires": [
+   {
+    "weather": [
+     "cloudy"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Cloudy Days ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "weather": [
+     "cloudy"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Collaborative Graded Races ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Collaborative Graded Races ◎",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Comeback",
+  "type": "skill",
+  "requires": [
+   {
+    "surface": [
+     "dirt"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Competitive Spirit ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Competitive Spirit ◎",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Corner Acceleration ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Corner Adept ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Corner Recovery ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Countermeasure",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "sprint"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Deep Breaths",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "long"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Defeatist",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Disorient",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Dodging Danger",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "front-runner"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Down in the Dirt ○",
+  "type": "skill",
+  "requires": [
+   {
+    "surface": [
+     "dirt"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Downhill Speedster",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Dust Cloud",
+  "type": "skill",
+  "requires": [
+   {
+    "surface": [
+     "dirt"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Eager",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "medium"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Early Lead",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "front-runner"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Early Start",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "end-closer"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "End Closer Corners ○",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "end-closer"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "End Closer Corners ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "end-closer"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "End Closer Savvy ○",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "end-closer"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "End Closer Savvy ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "end-closer"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "End Closer Straightaways ○",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "end-closer"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "End Closer Straightaways ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "end-closer"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Extra Tank",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "long"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Eyes on the Goal",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Fall Runner ○",
+  "type": "skill",
+  "requires": [
+   {
+    "season": [
+     "fall"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Fall Runner ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "season": [
+     "fall"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Familiar Ground",
+  "type": "skill",
+  "requires": [
+   {
+    "surface": [
+     "dirt"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Fast-Paced",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "front-runner"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Fearless",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Feature Act",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "long"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Fighter",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Fighting Spirit",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "medium"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Final Push",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "front-runner"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Firm Conditions ○",
+  "type": "skill",
+  "requires": [
+   {
+    "ground": [
+     "firm"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Firm Conditions ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "ground": [
+     "firm"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Firm Resolve",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "front-runner"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Flustered End Closers",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Flustered Front Runners",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Flustered Late Surgers",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Flustered Pace Chasers",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Focus",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Forward, March!",
+  "type": "skill",
+  "requires": [
+   {
+    "surface": [
+     "dirt"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Free-Spirited",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "long"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Frenzied End Closers",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Frenzied Front Runners",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Frenzied Late Surgers",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Frenzied Pace Chasers",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Front Runner Corners ○",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "front-runner"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Front Runner Corners ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "front-runner"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Front Runner Savvy ○",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "front-runner"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Front Runner Savvy ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "front-runner"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Front Runner Straightaways ○",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "front-runner"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Front Runner Straightaways ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "front-runner"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Fukushima Racecourse ○",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "fukushima"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Fukushima Racecourse ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "fukushima"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Full Throttle",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Full Tilt",
+  "type": "skill",
+  "requires": [
+   {
+    "surface": [
+     "dirt"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Funabashi Racecourse ○",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "funabashi"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Funabashi Racecourse ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "funabashi"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Gap Closer",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Gatekept",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Glittering Star",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Go with the Flow",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Gonna Be Ur #1 FRFR",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Got the Spirit!",
+  "type": "skill",
+  "requires": [
+   {
+    "surface": [
+     "dirt"
+    ]
+   }
+  ]
  },
  {
   "id": null,
@@ -116,18 +938,551 @@
  },
  {
   "id": null,
+  "name": "Hakodate Racecourse ○",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "hakodate"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Hakodate Racecourse ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "hakodate"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Hanshin Racecourse ○",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "hanshin"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Hanshin Racecourse ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "hanshin"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Hawkeye",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "medium"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
   "name": "Head-on",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Hesitant End Closers",
   "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Hesitant Front Runners",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Hesitant Late Surgers",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Hesitant Pace Chasers",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Highlander",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Hoiya! Have a Good Run!",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Homestretch Haste",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Huge Lead",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "sprint"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Hydrate",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "I Can See Right Through You",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "end-closer"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Ignited Spirit GUTS",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Ignited Spirit WIT",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Inner Post Proficiency ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Inner Post Proficiency ◎",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Inside Scoop",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "long"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Intense Gaze",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "end-closer"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Intimidate",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "sprint"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Kawasaki Racecourse ○",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "kawasaki"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Kawasaki Racecourse ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "kawasaki"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Keeping the Lead",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "long"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Kokura Racecourse ○",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "kokura"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Kokura Racecourse ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "kokura"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Kyoto Racecourse ○",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "kyoto"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Kyoto Racecourse ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "kyoto"
+    ]
+   }
+  ]
  },
  {
   "id": null,
   "name": "Latch On",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger",
+     "pace-chaser"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Late Surger Corners ○",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Late Surger Corners ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Late Surger Savvy ○",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Late Surger Savvy ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Late Surger Straightaways ○",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Late Surger Straightaways ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Lay Low",
   "type": "skill"
  },
  {
   "id": null,
+  "name": "Leader's Pride",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "front-runner"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Leap Forward",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "mile",
+     "sprint"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
   "name": "Left-Handed ○",
+  "type": "skill",
+  "requires": [
+   {
+    "direction": [
+     "left"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Left-Handed ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "direction": [
+     "left"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Levelheaded",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "end-closer"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Light as a Feather",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "sprint"
+    ]
+   },
+   {
+    "style": [
+     "front-runner"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Lone Wolf",
   "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Long Corners ○",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "long"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Long Corners ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "long"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Long Race Enthusiast",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Long Shot ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Long Shot ◎",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Long Straightaways ○",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "long"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Long Straightaways ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "long"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Lucky Seven",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Mad Dash",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "front-runner"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Masterful Gambit",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "end-closer"
+    ]
+   }
+  ]
  },
  {
   "id": null,
@@ -136,23 +1491,264 @@
  },
  {
   "id": null,
+  "name": "Maverick ◎",
+  "type": "skill"
+ },
+ {
+  "id": null,
   "name": "Medium Corners ○",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "medium"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Medium Corners ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "medium"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Medium Race Enthusiast",
   "type": "skill"
  },
  {
   "id": null,
   "name": "Medium Straightaways ○",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "medium"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Medium Straightaways ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "medium"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Meticulous Measures",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "sprint"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Mile Corners ○",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "mile"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Mile Corners ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "mile"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Mile Race Enthusiast",
   "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Mile Straightaways ○",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "mile"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Mile Straightaways ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "mile"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Morioka Racecourse ○",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "morioka"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Morioka Racecourse ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "morioka"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Moxie",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "front-runner"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Muddy ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Muddy ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "surface": [
+     "dirt"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Murmur",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "medium"
+    ]
+   }
+  ]
  },
  {
   "id": null,
   "name": "My True Strength",
-  "type": "skill"
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ],
+    "distance": [
+     "long"
+    ]
+   }
+  ]
  },
  {
   "id": null,
   "name": "Nakayama Racecourse ○",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "nakayama"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Nakayama Racecourse ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "nakayama"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Night Races ○",
   "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Night Races ◎",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Niigata Racecourse ○",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "niigata"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Niigata Racecourse ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "niigata"
+    ]
+   }
+  ]
  },
  {
   "id": null,
@@ -161,22 +1757,341 @@
  },
  {
   "id": null,
-  "name": "On the Attack",
+  "name": "No Looking Back",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "mile"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Non-Standard Distance ○",
   "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Non-Standard Distance ◎",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Oi Racecourse ○",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "oi"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Oi Racecourse ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "oi"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "On the Attack",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "On the Way to Our Dream",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Opening Gambit",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "mile"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Oppression",
+  "type": "skill",
+  "requires": [
+   {
+    "surface": [
+     "dirt"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Outer Post Proficiency ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Outer Post Proficiency ◎",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Outer Swell",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ]
+   }
+  ]
  },
  {
   "id": null,
   "name": "Pace Chaser Corners ○",
-  "type": "skill"
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Pace Chaser Corners ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Pace Chaser Savvy ○",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Pace Chaser Savvy ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ]
+   }
+  ]
  },
  {
   "id": null,
   "name": "Pace Chaser Straightaways ○",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Pace Chaser Straightaways ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Pace Strategy",
   "type": "skill"
  },
  {
   "id": null,
+  "name": "Packphobia",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Passing Pro",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "long"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Pedal to the Metal",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
   "name": "Playtime's Over!",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Position Pilfer",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Preferred Position",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Prepared to Pass",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Pressure",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "long"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Productive Plan",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "mile"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Prudent Positioning",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Pumped",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Racing Spirit: Guts",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Racing Spirit: Mood",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Racing Spirit: Speed",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Racing Spirit: Wit",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Rainy Days ○",
+  "type": "skill",
+  "requires": [
+   {
+    "weather": [
+     "rainy"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Rainy Days ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "weather": [
+     "rainy"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Ramp Revulsion",
   "type": "skill"
  },
  {
@@ -186,7 +2101,77 @@
  },
  {
   "id": null,
+  "name": "Rapid Gain",
+  "type": "skill",
+  "requires": [
+   {
+    "surface": [
+     "dirt"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Rational",
+  "type": "skill",
+  "requires": [
+   {
+    "surface": [
+     "dirt"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Reckless",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Restart",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "front-runner"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Restraint",
+  "type": "skill"
+ },
+ {
+  "id": null,
   "name": "Right-Handed ○",
+  "type": "skill",
+  "requires": [
+   {
+    "direction": [
+     "right"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Right-Handed ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "direction": [
+     "right"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Risk-Taker",
   "type": "skill"
  },
  {
@@ -196,22 +2181,649 @@
  },
  {
   "id": null,
+  "name": "Rosy Outlook",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "medium"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Running Idle",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Sapporo Racecourse ○",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "sapporo"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Sapporo Racecourse ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "sapporo"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Scramble",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ],
+    "distance": [
+     "long"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Second Wind",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "front-runner"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Shake It Out",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Sharp Gaze",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Sharp Steps",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "end-closer"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Sharp Turns ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Sharp Turns ◎",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Shifting Gears",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "mile"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Show Me What Lies Beyond!",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Shrewd Step",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Slick Surge",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
   "name": "Slipstream",
   "type": "skill"
  },
  {
   "id": null,
+  "name": "Smoke Screen",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "long"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Snowy Days ○",
+  "type": "skill",
+  "requires": [
+   {
+    "weather": [
+     "snowy"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Snowy Days ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "weather": [
+     "snowy"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Soft Step",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "medium"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Solid Steps",
+  "type": "skill",
+  "requires": [
+   {
+    "surface": [
+     "dirt"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Speed Eater",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "mile"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
   "name": "Spring Runner ○",
+  "type": "skill",
+  "requires": [
+   {
+    "season": [
+     "spring"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Spring Runner ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "season": [
+     "spring"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Sprint Corners ○",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "sprint"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Sprint Corners ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "sprint"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Sprint Straightaways ○",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "sprint"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Sprint Straightaways ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "sprint"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Sprinting Gear",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "sprint"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Stamina Eater",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "long"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Stamina to Spare",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Standard Distance ○",
   "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Standard Distance ◎",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Standing By",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "end-closer"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Steadfast",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "medium"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Steady Gait",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ],
+    "distance": [
+     "medium"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Stop Right There!",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "sprint"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Straight Descent",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Straightaway Acceleration",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Straightaway Adept",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Straightaway Recovery",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Straightaway Spurt",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "end-closer"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Strategist",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Studious",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "late-surger"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Subdued End Closers",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Subdued Front Runners",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Subdued Late Surgers",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Subdued Pace Chasers",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Summer Runner ○",
+  "type": "skill",
+  "requires": [
+   {
+    "season": [
+     "summer"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Summer Runner ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "season": [
+     "summer"
+    ]
+   }
+  ]
  },
  {
   "id": null,
   "name": "Sunny Days ○",
+  "type": "skill",
+  "requires": [
+   {
+    "weather": [
+     "sunny"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Sunny Days ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "weather": [
+     "sunny"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Sunny Sign",
+  "type": "skill",
+  "requires": [
+   {
+    "surface": [
+     "dirt"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Sympathy",
   "type": "skill"
  },
  {
   "id": null,
+  "name": "Tactical Tweak",
+  "type": "skill",
+  "requires": [
+   {
+    "style": [
+     "pace-chaser"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
   "name": "Tail Held High",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Take the Chance",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "medium"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Target in Sight ○",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Target in Sight ◎",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Tether",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "medium"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Thunderbolt Step",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Tokyo Racecourse ○",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "tokyo"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Tokyo Racecourse ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "course": [
+     "tokyo"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Top Pick",
+  "type": "skill",
+  "requires": [
+   {
+    "surface": [
+     "dirt"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Towards the Scenery I Seek",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Trick (Front)",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Trick (Rear)",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Triple 7s",
   "type": "skill"
  },
  {
@@ -221,7 +2833,507 @@
  },
  {
   "id": null,
+  "name": "Unquenched Thirst",
+  "type": "skill"
+ },
+ {
+  "id": null,
+  "name": "Unyielding Spirit",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "mile"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Up-Tempo",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "medium"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Updrafters",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "mile"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Wait-and-See",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "sprint"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Watchful Eye",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "mile"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Wet Conditions ○",
+  "type": "skill",
+  "requires": [
+   {
+    "ground": [
+     "wet"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Wet Conditions ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "ground": [
+     "wet"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Winter Runner ○",
+  "type": "skill",
+  "requires": [
+   {
+    "season": [
+     "winter"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "Winter Runner ◎",
+  "type": "skill",
+  "requires": [
+   {
+    "season": [
+     "winter"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "With All My Soul",
+  "type": "skill",
+  "requires": [
+   {
+    "distance": [
+     "medium"
+    ]
+   }
+  ]
+ },
+ {
+  "id": null,
+  "name": "#LookatCurren",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "114th Time's the Charm",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "1st Place Kiss☆",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "564 Escapades",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "A Kiss for Courage",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "A Lifelong Dream, A Moment's Flight",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "A Princess Must Seize Victory!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "A Warm Cup for You",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "All Charged! It's Go Time!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Ambition to Surpass the Sakura",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Anchors Aweigh!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Angling and Scheming",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Arrows Whistle, Shadows Disperse",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Barcarole of Blessings",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Behold Thine Emperor's Divine Might",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Best Day Ever",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Blazing Pride",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Blue Rose Closer",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Bountiful Harvest",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Break It Down!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Bring on the Banquet!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Budding Blossom",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Call Me King",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Certain Victory",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Chasing After You",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Class Rep + Speed = Bakushin",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Clear Heart",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Condor's Fury",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Corazón ☆ Ardiente",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Cut and Drive!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Dancing in the Leaves",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Dazzl'n ♪ Diver",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Dreams Donned with Pride!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Empress's Pride",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Eternal Encompassing Shine",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Eternal Moments",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Every Rose Has Its Fangs",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Fairy Tale",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Feel the Burn!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Festive Miracle",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Firelight",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Flashy☆Landing",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Flowery☆Maneuver",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Focused Mind",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Free from the Ashes",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Fresh☆Parlor",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "G00 1st. F∞;",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Genius x Bakushin = Victory",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Give Mummy a Hug 9",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Go, Go, Mun!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Go☆Go☆Goal!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Guten Appetit ♪",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Hands in the Air Like Ya Don't Care!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Hephaestus",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "I Can Win Sometimes, Right?",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "I Never Goof Up!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "I See Victory in My Future!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "I'm Possible!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Into High Gear!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Introduction to Physiology",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Joyful Voyage!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Just a Little Farther!",
+  "type": "unique"
+ },
+ {
+  "id": null,
   "name": "KEEP IT REAL.",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Keep Pushing Ahead",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Laugh at the Odds",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Legacy of the Strong",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Let's Pump Some Iron!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Lightning Flare",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Lights of Vaudeville",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Louder! Tracen Cheer!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Lovely Spring Breeze",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Luck Be with Me!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Luck Runs My Way",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Moving Past, and Beyond",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Nemesis",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Never Say Never",
   "type": "unique"
  },
  {
@@ -231,7 +3343,277 @@
  },
  {
   "id": null,
+  "name": "OMG! (˚∀˚) The Final Sprint! ☆",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "One True Color",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Operation Cacao",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Our Ticket to Win!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Peerless Dance of Flowering Flames",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Pop & Polish",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Presents from X",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Prideful King",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Pure Heart",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Queen's Lumination",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Rain Cloud Bolt",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Raise My Soul's Blade!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Ravissant",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Ready, Go!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Red Ace",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Red Shift/LP1211-M",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Red-Hot Discipline!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Resplendent Red Ace",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Schwarzes Schwert",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Shadow Break",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Shine On, Tomakomai! ☆",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Shooting for Victory!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Shooting Star",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Shooting Star of Dioskouroi",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Silent Letter",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Sky-High Teio Step",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Snow Bright, Snow Flight",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "SPARKLY☆STARDOM",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Spooky, Scary, Happy",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Sunny Breeze",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Super-Duper Climax",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Super-Duper Stoked",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Superior Heal",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "The Duty of Dignity Calls",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "THE MOE AAAA Thanks for My Life",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "The View from the Lead Is Mine!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "This Dance Is for Vittorial",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Ticket to Your Dreams!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "trigger:BEAT",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Triumphant Pulse",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "U=ma2",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "V Is for Victory!",
+  "type": "unique"
+ },
+ {
+  "id": null,
   "name": "Victoria por plancha ☆",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Victory belongs to me—Strelitzia! ☆",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Victory Cheer!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Warning Shot!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Where There's a Will, There's a Way",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Wherever This Wonder Leads",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "White Lightning Comin' Through!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Xceleration",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "You and Me! One-on-One!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "Your Smile Sparkles as the Waves",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "YUMMY☆SPEED!",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "α-star*",
+  "type": "unique"
+ },
+ {
+  "id": null,
+  "name": "∴win Q.E.D.",
   "type": "unique"
  }
 ]

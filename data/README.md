@@ -6,3 +6,14 @@ Still to come: races.yaml (G1 calendar) and affinity/ tables (Phase 4).
 - tiers.yaml   tier letters S..F plus Z (weight 0) and their default weights
 - skills.json  searchable skill list: {"id": <game skill id or null>, "name", "type": skill|race|scenario|unique}.
                IDs are null until imported from a verified Global source; the app uses them once present.
+
+skills.json provenance: built 2026-11-18 from a GameTora skill-list screenshot PDF (read by OCR, symbols
+checked by eye). Normal skills are type skill, rainbow-pill skills are type unique. Gold and
+negative skills are left out on purpose. Races and scenario sparks come from the sample parent
+until the Phase 4 race list. IDs are null. Names with symbols are the most likely to hold typos.
+
+skills.json "requires": optional list of requirement blocks; a skill can trigger if ANY block fits.
+A block maps a condition (style, distance, surface, direction, course, season, weather, ground) to the
+allowed values. Built from skill names (e.g. "Long Corners") and the description tags GameTora shows
+(e.g. "(Pace/Late)", "(Pace, Long)", "(Dirt)"). Unique skills have no requirements. Conditions the
+event or style doesn't define are treated as unknown and never block a skill.
