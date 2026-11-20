@@ -1,0 +1,6770 @@
+[
+  {
+    "skill_id": 10071,
+    "skill_name": "Warning Shot!",
+    "skill_type": "Unique",
+    "character_owner": "[RUN! RUIN! LAUNCHER!] Gold Ship",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 10081,
+    "skill_name": "Xceleration",
+    "skill_type": "Unique",
+    "character_owner": "[Fiery Aqua Vitae] Vodka",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 10091,
+    "skill_name": "Red Ace",
+    "skill_type": "Unique",
+    "character_owner": "[Nuit Étoilée de Scarlet] Daiwa Scarlet",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 10111,
+    "skill_name": "Focused Mind",
+    "skill_type": "Unique",
+    "character_owner": "[Saintly Jade Cleric] Grass Wonder",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 10141,
+    "skill_name": "Corazón ☆ Ardiente",
+    "skill_type": "Unique",
+    "character_owner": "[Kukulkan Warrior] El Condor Pasa",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 10181,
+    "skill_name": "Empress's Pride",
+    "skill_type": "Unique",
+    "character_owner": "[Quercus Civilis] Air Groove",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 10241,
+    "skill_name": "1st Place Kiss☆",
+    "skill_type": "Unique",
+    "character_owner": "[Sunlight Bouquet] Mayano Top Gun",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 10271,
+    "skill_name": "Feel the Burn!",
+    "skill_type": "Unique",
+    "character_owner": "[Marguerite Latte] Mejiro Ryan",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 10321,
+    "skill_name": "Introduction to Physiology",
+    "skill_type": "Unique",
+    "character_owner": "[Lunatic Lab] Agnes Tachyon",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 10351,
+    "skill_name": "V Is for Victory!",
+    "skill_type": "Unique",
+    "character_owner": "[Dream Deliverer] Winning Ticket",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 10411,
+    "skill_name": "Class Rep + Speed = Bakushin",
+    "skill_type": "Unique",
+    "character_owner": "[Red Hot☆Leader] Sakura Bakushin O",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 10451,
+    "skill_name": "Clear Heart",
+    "skill_type": "Unique",
+    "character_owner": "[Chiffon-Wrapped Mummy] Super Creek",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 10521,
+    "skill_name": "Super-Duper Stoked",
+    "skill_type": "Unique",
+    "character_owner": "[New Year ♪ New Urara!] Haru Urara",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 10561,
+    "skill_name": "Luck Be with Me!",
+    "skill_type": "Unique",
+    "character_owner": "[Lucky Tidings] Matikanefukukitaru",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 10601,
+    "skill_name": "I Can Win Sometimes, Right?",
+    "skill_type": "Unique",
+    "character_owner": "[Run & Win] Nice Nature",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 10611,
+    "skill_name": "Call Me King",
+    "skill_type": "Unique",
+    "character_owner": "[Cheerleader in Noble White] King Halo",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 10621,
+    "skill_name": "Ready, Go!",
+    "skill_type": "Unique",
+    "character_owner": "[Blue Turbulence] Matikanetannhauser",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100011,
+    "skill_name": "Shooting Star",
+    "skill_type": "Unique",
+    "character_owner": "[Special Dreamer] Special Week",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100021,
+    "skill_name": "The View from the Lead Is Mine!",
+    "skill_type": "Unique",
+    "character_owner": "[Innocent Silence] Silence Suzuka",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100031,
+    "skill_name": "Sky-High Teio Step",
+    "skill_type": "Unique",
+    "character_owner": "[Peak Joy] Tokai Teio",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100041,
+    "skill_name": "Red Shift/LP1211-M",
+    "skill_type": "Unique",
+    "character_owner": "[Formula R] Maruzensky",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100051,
+    "skill_name": "Lights of Vaudeville",
+    "skill_type": "Unique",
+    "character_owner": "[Shooting Star Revue] Fuji Kiseki",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100061,
+    "skill_name": "Triumphant Pulse",
+    "skill_type": "Unique",
+    "character_owner": "[Starlight Beat] Oguri Cap",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100071,
+    "skill_name": "Anchors Aweigh!",
+    "skill_type": "Unique",
+    "character_owner": "[Red Strife] Gold Ship",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100081,
+    "skill_name": "Cut and Drive!",
+    "skill_type": "Unique",
+    "character_owner": "[Wild Top Gear] Vodka",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100091,
+    "skill_name": "Resplendent Red Ace",
+    "skill_type": "Unique",
+    "character_owner": "[Peak Blue] Daiwa Scarlet",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100101,
+    "skill_name": "Shooting for Victory!",
+    "skill_type": "Unique",
+    "character_owner": "[Wild Frontier] Taiki Shuttle",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100111,
+    "skill_name": "Where There's a Will, There's a Way",
+    "skill_type": "Unique",
+    "character_owner": "[Stone-Piercing Blue] Grass Wonder",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100121,
+    "skill_name": "You and Me! One-on-One!",
+    "skill_type": "Unique",
+    "character_owner": "[Azure Amazon] Hishi Amazon",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100131,
+    "skill_name": "The Duty of Dignity Calls",
+    "skill_type": "Unique",
+    "character_owner": "[Frontline Elegance] Mejiro McQueen",
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100141,
+    "skill_name": "Victoria por plancha ☆",
+    "skill_type": "Unique",
+    "character_owner": "[El☆Número 1] El Condor Pasa",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100151,
+    "skill_name": "This Dance Is for Vittoria!",
+    "skill_type": "Unique",
+    "character_owner": "[O Sole Suo!] T.M. Opera O",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100161,
+    "skill_name": "Shadow Break",
+    "skill_type": "Unique",
+    "character_owner": "[Maverick] Narita Brian",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100171,
+    "skill_name": "Behold Thine Emperor's Divine Might",
+    "skill_type": "Unique",
+    "character_owner": "[Emperor's Path] Symboli Rudolf",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100181,
+    "skill_name": "Blazing Pride",
+    "skill_type": "Unique",
+    "character_owner": "[Empress Road] Air Groove",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100191,
+    "skill_name": "OMG! (ﾟ∀ﾟ)  The Final Sprint! ☆",
+    "skill_type": "Unique",
+    "character_owner": "[Full-Color Fangirling] Agnes Digital",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100201,
+    "skill_name": "Angling and Scheming",
+    "skill_type": "Unique",
+    "character_owner": "[Reeling in the Big One] Seiun Sky",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100211,
+    "skill_name": "White Lightning Comin' Through!",
+    "skill_type": "Unique",
+    "character_owner": "[Fast as Lightning] Tamamo Cross",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100221,
+    "skill_name": "Fairy Tale",
+    "skill_type": "Unique",
+    "character_owner": "[Noble Seamair] Fine Motion",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100231,
+    "skill_name": "∴win Q.E.D.",
+    "skill_type": "Unique",
+    "character_owner": "[pf. Winning Equation...] Biwa Hayahide",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100241,
+    "skill_name": "Flashy☆Landing",
+    "skill_type": "Unique",
+    "character_owner": "[Scramble☆Zone] Mayano Top Gun",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100251,
+    "skill_name": "Chasing After You",
+    "skill_type": "Unique",
+    "character_owner": "[Creeping Shadow] Manhattan Cafe",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100261,
+    "skill_name": "G00 1st. F∞;",
+    "skill_type": "Unique",
+    "character_owner": "[MB-19890425] Mihono Bourbon",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100271,
+    "skill_name": "Let's Pump Some Iron!",
+    "skill_type": "Unique",
+    "character_owner": "[Down the Line] Mejiro Ryan",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100281,
+    "skill_name": "YUMMY☆SPEED!",
+    "skill_type": "Unique",
+    "character_owner": "[Buono ☆ Alla Moda] Hishi Akebono",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100291,
+    "skill_name": "Snow Bright, Snow Flight",
+    "skill_type": "Unique",
+    "character_owner": "[Darl'n Snowflake] Yukino Bijin",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100301,
+    "skill_name": "Blue Rose Closer",
+    "skill_type": "Unique",
+    "character_owner": "[Rosy Dreams] Rice Shower",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100311,
+    "skill_name": "All Charged! It's Go Time!",
+    "skill_type": "Unique",
+    "character_owner": "[Always Electrifying] Ines Fujin",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100321,
+    "skill_name": "U=ma2",
+    "skill_type": "Unique",
+    "character_owner": "[tach-nology] Agnes Tachyon",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100331,
+    "skill_name": "Shooting Star of Dioskouroi",
+    "skill_type": "Unique",
+    "character_owner": "[Starry Nocturne] Admire Vega",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100341,
+    "skill_name": "Now We're Cruisin'!",
+    "skill_type": "Unique",
+    "character_owner": "[Edomurasaki] Inari One",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100351,
+    "skill_name": "Our Ticket to Win!",
+    "skill_type": "Unique",
+    "character_owner": "[Get to Winning!] Winning Ticket",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100361,
+    "skill_name": "trigger:BEAT",
+    "skill_type": "Unique",
+    "character_owner": "[unsigned] Air Shakur",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100371,
+    "skill_name": "Schwarzes Schwert",
+    "skill_type": "Unique",
+    "character_owner": "[Meisterschaft] Eishin Flash",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100381,
+    "skill_name": "#LookatCurren",
+    "skill_type": "Unique",
+    "character_owner": "[Fille Éclair] Curren Chan",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100391,
+    "skill_name": "A Princess Must Seize Victory!",
+    "skill_type": "Unique",
+    "character_owner": "[Princess of Pink] Kawakami Princess",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100401,
+    "skill_name": "KEEP IT REAL.",
+    "skill_type": "Unique",
+    "character_owner": "[Authentic / 1928] Gold City",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100411,
+    "skill_name": "Genius x Bakushin = Victory",
+    "skill_type": "Unique",
+    "character_owner": "[Blossom in Learning] Sakura Bakushin O",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100421,
+    "skill_name": "I'm Possible!",
+    "skill_type": "Unique",
+    "character_owner": "[Rocket☆Star] Seeking the Pearl",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100441,
+    "skill_name": "Victory belongs to me—Strelitzia! ☆",
+    "skill_type": "Unique",
+    "character_owner": "[Platanus Witch] Sweep Tosho",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100451,
+    "skill_name": "Pure Heart",
+    "skill_type": "Unique",
+    "character_owner": "[Murmuring Stream] Super Creek",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100461,
+    "skill_name": "SPARKLY☆STARDOM",
+    "skill_type": "Unique",
+    "character_owner": "[LOVE☆4EVER] Smart Falcon",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100471,
+    "skill_name": "Raise My Soul's Blade!",
+    "skill_type": "Unique",
+    "character_owner": "[Heroic Author] Zenno Rob Roy",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100481,
+    "skill_name": "Pop & Polish",
+    "skill_type": "Unique",
+    "character_owner": "[Jokester ☆ Vibes] Tosen Jordan",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100491,
+    "skill_name": "Laugh at the Odds",
+    "skill_type": "Unique",
+    "character_owner": "[Desperate Measures] Nakayama Festa",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100501,
+    "skill_name": "Nemesis",
+    "skill_type": "Unique",
+    "character_owner": "[Nevertheless] Narita Taishin",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100511,
+    "skill_name": "Budding Blossom",
+    "skill_type": "Unique",
+    "character_owner": "[Layered Petals] Nishino Flower",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100521,
+    "skill_name": "Super-Duper Climax",
+    "skill_type": "Unique",
+    "character_owner": "[Bestest Prize ♪] Haru Urara",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100531,
+    "skill_name": "Red-Hot Discipline!",
+    "skill_type": "Unique",
+    "character_owner": "[Iron Ambition] Bamboo Memory",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100561,
+    "skill_name": "I See Victory in My Future!",
+    "skill_type": "Unique",
+    "character_owner": "[Rising☆Fortune] Matikanefukukitaru",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100581,
+    "skill_name": "I Never Goof Up!",
+    "skill_type": "Unique",
+    "character_owner": "[Turbulent Blue] Meisho Doto",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100591,
+    "skill_name": "Moving Past, and Beyond",
+    "skill_type": "Unique",
+    "character_owner": "[Off the Line] Mejiro Dober",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100601,
+    "skill_name": "Just a Little Farther!",
+    "skill_type": "Unique",
+    "character_owner": "[Poinsettia Ribbon] Nice Nature",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100611,
+    "skill_name": "Prideful King",
+    "skill_type": "Unique",
+    "character_owner": "[King of Emeralds] King Halo",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100621,
+    "skill_name": "Go, Go, Mun!",
+    "skill_type": "Unique",
+    "character_owner": "[Clippety-Tippety-Clop] Matikanetannhauser",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100641,
+    "skill_name": "Keep Pushing Ahead",
+    "skill_type": "Unique",
+    "character_owner": "[Line Breakthrough] Mejiro Palmer",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100651,
+    "skill_name": "Hands in the Air Like Ya Don't Care!",
+    "skill_type": "Unique",
+    "character_owner": "[Fun☆Fun☆Party Night] Daitaku Helios",
+    "race_distance": "Sprint, Mile, Medium, Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100671,
+    "skill_name": "Eternal Encompassing Shine",
+    "skill_type": "Unique",
+    "character_owner": "[Natural Brilliance] Satono Diamond",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100681,
+    "skill_name": "Victory Cheer!",
+    "skill_type": "Unique",
+    "character_owner": "[Gilded Shrine to Glory] Kitasan Black",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100691,
+    "skill_name": "Ambition to Surpass the Sakura",
+    "skill_type": "Unique",
+    "character_owner": "[Strength in Full Bloom] Sakura Chiyono O",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100711,
+    "skill_name": "A Lifelong Dream, A Moment's Flight",
+    "skill_type": "Unique",
+    "character_owner": "[Crystalline] Mejiro Ardan",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100721,
+    "skill_name": "Peerless Dance of Flowering Flames",
+    "skill_type": "Unique",
+    "character_owner": "[Blazed Head, Covered Fists] Yaeno Muteki",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100741,
+    "skill_name": "Lovely Spring Breeze",
+    "skill_type": "Unique",
+    "character_owner": "[Brunissage Line] Mejiro Bright",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100781,
+    "skill_name": "Sunny Breeze",
+    "skill_type": "Unique",
+    "character_owner": "[Fluttertail Spirit] Yamanin Zephyr",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100871,
+    "skill_name": "Silent Letter",
+    "skill_type": "Unique",
+    "character_owner": "[Flare] Aston Machan",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100981,
+    "skill_name": "Luck Runs My Way",
+    "skill_type": "Unique",
+    "character_owner": "[Eightfold☆Fortune] Copano Rickey",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 100991,
+    "skill_name": "Shine On, Tomakomai! ☆",
+    "skill_type": "Unique",
+    "character_owner": "[Starry Lightship] Hokko Tarumae",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 101001,
+    "skill_name": "Never Say Never",
+    "skill_type": "Unique",
+    "character_owner": "[Butterfly Sting] Wonder Acute",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 110011,
+    "skill_name": "Dazzl'n ♪ Diver",
+    "skill_type": "Unique",
+    "character_owner": "[Hopp'n♪Happy Heart] Special Week",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110031,
+    "skill_name": "Certain Victory",
+    "skill_type": "Unique",
+    "character_owner": "[Beyond the Horizon] Tokai Teio",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110041,
+    "skill_name": "A Kiss for Courage",
+    "skill_type": "Unique",
+    "character_owner": "[Hot☆Summer Night] Maruzensky",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110051,
+    "skill_name": "Ravissant",
+    "skill_type": "Unique",
+    "character_owner": "[Succès Étoilé] Fuji Kiseki",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110061,
+    "skill_name": "Festive Miracle",
+    "skill_type": "Unique",
+    "character_owner": "[Ashen Miracle] Oguri Cap",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110071,
+    "skill_name": "564 Escapades",
+    "skill_type": "Unique",
+    "character_owner": "[RUN! RUIN! LAUNCHER!] Gold Ship",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110081,
+    "skill_name": "Into High Gear!",
+    "skill_type": "Unique",
+    "character_owner": "[Fiery Aqua Vitae] Vodka",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110091,
+    "skill_name": "Queen's Lumination",
+    "skill_type": "Unique",
+    "character_owner": "[Nuit Étoilée de Scarlet] Daiwa Scarlet",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110101,
+    "skill_name": "Joyful Voyage!",
+    "skill_type": "Unique",
+    "character_owner": "[Bubblegum☆Memories] Taiki Shuttle",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110111,
+    "skill_name": "Superior Heal",
+    "skill_type": "Unique",
+    "character_owner": "[Saintly Jade Cleric] Grass Wonder",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110131,
+    "skill_name": "Legacy of the Strong",
+    "skill_type": "Unique",
+    "character_owner": "[End of the Skies] Mejiro McQueen",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110141,
+    "skill_name": "Condor's Fury",
+    "skill_type": "Unique",
+    "character_owner": "[Kukulkan Warrior] El Condor Pasa",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110151,
+    "skill_name": "Barcarole of Blessings",
+    "skill_type": "Unique",
+    "character_owner": "[New Year, Same Radiance!] T.M. Opera O",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110161,
+    "skill_name": "Free from the Ashes",
+    "skill_type": "Unique",
+    "character_owner": "[Ravenous Wolf] Narita Brian",
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110171,
+    "skill_name": "Arrows Whistle, Shadows Disperse",
+    "skill_type": "Unique",
+    "character_owner": "[Archer by Moonlight] Symboli Rudolf",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110181,
+    "skill_name": "Eternal Moments",
+    "skill_type": "Unique",
+    "character_owner": "[Quercus Civilis] Air Groove",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110191,
+    "skill_name": "THE MOE AAAA Thanks for My Life",
+    "skill_type": "Unique",
+    "character_owner": "[Fanatic♡Jiangshi] Agnes Digital",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110201,
+    "skill_name": "Break It Down!",
+    "skill_type": "Unique",
+    "character_owner": "[Soirée des Chatons] Seiun Sky",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110211,
+    "skill_name": "Lightning Flare",
+    "skill_type": "Unique",
+    "character_owner": "[Raging Thunder] Tamamo Cross",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110221,
+    "skill_name": "Best Day Ever",
+    "skill_type": "Unique",
+    "character_owner": "[Titania] Fine Motion",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110231,
+    "skill_name": "Presents from X",
+    "skill_type": "Unique",
+    "character_owner": "[Rouge Caroler] Biwa Hayahide",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110241,
+    "skill_name": "Flowery☆Maneuver",
+    "skill_type": "Unique",
+    "character_owner": "[Sunlight Bouquet] Mayano Top Gun",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110261,
+    "skill_name": "Operation Cacao",
+    "skill_type": "Unique",
+    "character_owner": "[CODE: ICING] Mihono Bourbon",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110271,
+    "skill_name": "A Warm Cup for You",
+    "skill_type": "Unique",
+    "character_owner": "[Marguerite Latte] Mejiro Ryan",
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110301,
+    "skill_name": "Every Rose Has Its Fangs",
+    "skill_type": "Unique",
+    "character_owner": "[Vampire Makeover!] Rice Shower",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110311,
+    "skill_name": "Fresh☆Parlor",
+    "skill_type": "Unique",
+    "character_owner": "[Melt Your Heart] Ines Fujin",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110341,
+    "skill_name": "Firelight",
+    "skill_type": "Unique",
+    "character_owner": "[Golden Dream] Inari One",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110351,
+    "skill_name": "Ticket to Your Dreams!",
+    "skill_type": "Unique",
+    "character_owner": "[Dream Deliverer] Winning Ticket",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110371,
+    "skill_name": "Guten Appetit ♪",
+    "skill_type": "Unique",
+    "character_owner": "[Precise Chocolatier] Eishin Flash",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110381,
+    "skill_name": "One True Color",
+    "skill_type": "Unique",
+    "character_owner": "[Ma Chérie of the New Moon] Curren Chan",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110401,
+    "skill_name": "Dancing in the Leaves",
+    "skill_type": "Unique",
+    "character_owner": "[Autumn Cosmos] Gold City",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110451,
+    "skill_name": "Give Mummy a Hug ♡",
+    "skill_type": "Unique",
+    "character_owner": "[Chiffon-Wrapped Mummy] Super Creek",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110461,
+    "skill_name": "α-star*",
+    "skill_type": "Unique",
+    "character_owner": "[Twilight Triumph] Smart Falcon",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 110501,
+    "skill_name": "Hephaestus",
+    "skill_type": "Unique",
+    "character_owner": "[Difference Engineer] Narita Taishin",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110521,
+    "skill_name": "114th Time's the Charm",
+    "skill_type": "Unique",
+    "character_owner": "[New Year ♪ New Urara!] Haru Urara",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110561,
+    "skill_name": "Bountiful Harvest",
+    "skill_type": "Unique",
+    "character_owner": "[Lucky Tidings] Matikanefukukitaru",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110581,
+    "skill_name": "Spooky, Scary, Happy",
+    "skill_type": "Unique",
+    "character_owner": "[Dot-o'-Lantern] Meisho Doto",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110591,
+    "skill_name": "Wherever This Wonder Leads",
+    "skill_type": "Unique",
+    "character_owner": "[Sapphire Sojourn] Mejiro Dober",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110601,
+    "skill_name": "Go☆Go☆Goal!",
+    "skill_type": "Unique",
+    "character_owner": "[Run & Win] Nice Nature",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110611,
+    "skill_name": "Louder! Tracen Cheer!",
+    "skill_type": "Unique",
+    "character_owner": "[Cheerleader in Noble White] King Halo",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110671,
+    "skill_name": "Rain Cloud Bolt",
+    "skill_type": "Unique",
+    "character_owner": "[Jade's Prosperity] Satono Diamond",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 110681,
+    "skill_name": "Bring on the Banquet!",
+    "skill_type": "Unique",
+    "character_owner": "[Crane's Ambition] Kitasan Black",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 120011,
+    "skill_name": "Dreams Donned with Pride!",
+    "skill_type": "Unique",
+    "character_owner": "[Ruler of Japan] Special Week",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 120131,
+    "skill_name": "Your Smile Sparkles as the Waves",
+    "skill_type": "Unique",
+    "character_owner": "[Fair Lady of the Waves] Mejiro McQueen",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200011,
+    "skill_name": "Right-Handed ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200012,
+    "skill_name": "Right-Handed ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200013,
+    "skill_name": "Right-Handed ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200014,
+    "skill_name": "Right-Handed Demon",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200021,
+    "skill_name": "Left-Handed ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200022,
+    "skill_name": "Left-Handed ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200023,
+    "skill_name": "Left-Handed ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200031,
+    "skill_name": "Tokyo Racecourse ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200032,
+    "skill_name": "Tokyo Racecourse ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200033,
+    "skill_name": "Tokyo Racecourse ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200041,
+    "skill_name": "Nakayama Racecourse ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200042,
+    "skill_name": "Nakayama Racecourse ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200043,
+    "skill_name": "Nakayama Racecourse ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200051,
+    "skill_name": "Hanshin Racecourse ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200052,
+    "skill_name": "Hanshin Racecourse ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200053,
+    "skill_name": "Hanshin Racecourse ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200061,
+    "skill_name": "Kyoto Racecourse ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200062,
+    "skill_name": "Kyoto Racecourse ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200063,
+    "skill_name": "Kyoto Racecourse ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200064,
+    "skill_name": "Yodo Invicta",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200071,
+    "skill_name": "Chukyo Racecourse ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200072,
+    "skill_name": "Chukyo Racecourse ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200073,
+    "skill_name": "Chukyo Racecourse ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200081,
+    "skill_name": "Sapporo Racecourse ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200082,
+    "skill_name": "Sapporo Racecourse ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200083,
+    "skill_name": "Sapporo Racecourse ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200091,
+    "skill_name": "Hakodate Racecourse ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200092,
+    "skill_name": "Hakodate Racecourse ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200093,
+    "skill_name": "Hakodate Racecourse ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200101,
+    "skill_name": "Fukushima Racecourse ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200102,
+    "skill_name": "Fukushima Racecourse ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200103,
+    "skill_name": "Fukushima Racecourse ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200111,
+    "skill_name": "Niigata Racecourse ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200112,
+    "skill_name": "Niigata Racecourse ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200113,
+    "skill_name": "Niigata Racecourse ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200121,
+    "skill_name": "Kokura Racecourse ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200122,
+    "skill_name": "Kokura Racecourse ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200123,
+    "skill_name": "Kokura Racecourse ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200131,
+    "skill_name": "Standard Distance ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200132,
+    "skill_name": "Standard Distance ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200133,
+    "skill_name": "Standard Distance ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200141,
+    "skill_name": "Non-Standard Distance ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200142,
+    "skill_name": "Non-Standard Distance ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200143,
+    "skill_name": "Non-Standard Distance ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200151,
+    "skill_name": "Firm Conditions ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200152,
+    "skill_name": "Firm Conditions ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200153,
+    "skill_name": "Firm Conditions ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200154,
+    "skill_name": "Firm Course Menace",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200161,
+    "skill_name": "Wet Conditions ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200162,
+    "skill_name": "Wet Conditions ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200163,
+    "skill_name": "Wet Conditions ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200171,
+    "skill_name": "Spring Runner ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200172,
+    "skill_name": "Spring Runner ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200173,
+    "skill_name": "Spring Runner ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200174,
+    "skill_name": "Spring Spectacle",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200181,
+    "skill_name": "Summer Runner ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200182,
+    "skill_name": "Summer Runner ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200183,
+    "skill_name": "Summer Runner ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200191,
+    "skill_name": "Fall Runner ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200192,
+    "skill_name": "Fall Runner ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200193,
+    "skill_name": "Fall Runner ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200194,
+    "skill_name": "Fall Frenzy",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200201,
+    "skill_name": "Winter Runner ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200202,
+    "skill_name": "Winter Runner ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200203,
+    "skill_name": "Winter Runner ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200211,
+    "skill_name": "Sunny Days ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200212,
+    "skill_name": "Sunny Days ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200221,
+    "skill_name": "Cloudy Days ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200222,
+    "skill_name": "Cloudy Days ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200231,
+    "skill_name": "Rainy Days ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200232,
+    "skill_name": "Rainy Days ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200233,
+    "skill_name": "Rainy Days ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200241,
+    "skill_name": "Snowy Days ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200242,
+    "skill_name": "Snowy Days ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200251,
+    "skill_name": "Inner Post Proficiency ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200252,
+    "skill_name": "Inner Post Proficiency ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200253,
+    "skill_name": "Inner Post Averseness",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200261,
+    "skill_name": "Outer Post Proficiency ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200262,
+    "skill_name": "Outer Post Proficiency ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200263,
+    "skill_name": "Outer Post Averseness",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200271,
+    "skill_name": "Maverick ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200272,
+    "skill_name": "Maverick ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200281,
+    "skill_name": "Competitive Spirit ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200282,
+    "skill_name": "Competitive Spirit ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200283,
+    "skill_name": "Wallflower",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200291,
+    "skill_name": "Target in Sight ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200292,
+    "skill_name": "Target in Sight ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200301,
+    "skill_name": "Long Shot ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200302,
+    "skill_name": "Long Shot ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200311,
+    "skill_name": "G1 Averseness",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200321,
+    "skill_name": "Paddock Fright",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200331,
+    "skill_name": "Professor of Curvature",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200332,
+    "skill_name": "Corner Adept ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200333,
+    "skill_name": "Corner Adept ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200341,
+    "skill_name": "Corner Connoisseur",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200342,
+    "skill_name": "Corner Acceleration ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200343,
+    "skill_name": "Corner Acceleration ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200351,
+    "skill_name": "Swinging Maestro",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200352,
+    "skill_name": "Corner Recovery ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200353,
+    "skill_name": "Corner Recovery ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200361,
+    "skill_name": "Beeline Burst",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200362,
+    "skill_name": "Straightaway Adept",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200371,
+    "skill_name": "Rushing Gale!",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200372,
+    "skill_name": "Straightaway Acceleration",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200381,
+    "skill_name": "Breath of Fresh Air",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200382,
+    "skill_name": "Straightaway Recovery",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200391,
+    "skill_name": "Ramp Revulsion",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200401,
+    "skill_name": "Packphobia",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200411,
+    "skill_name": "Defeatist",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200421,
+    "skill_name": "Reckless",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200431,
+    "skill_name": "Concentration",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200432,
+    "skill_name": "Focus",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200433,
+    "skill_name": "Gatekept",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200441,
+    "skill_name": "Iron Will",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200442,
+    "skill_name": "Lay Low",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200451,
+    "skill_name": "Center Stage",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200452,
+    "skill_name": "Prudent Positioning",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200461,
+    "skill_name": "It's On!",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200462,
+    "skill_name": "Ramp Up",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200471,
+    "skill_name": "Indomitable",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200472,
+    "skill_name": "Pace Strategy",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200481,
+    "skill_name": "Unruffled",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200482,
+    "skill_name": "Calm in a Crowd",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200491,
+    "skill_name": "No Stopping Me!",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200492,
+    "skill_name": "Nimble Navigator",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200501,
+    "skill_name": "Lane Legerdemain",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200502,
+    "skill_name": "Go with the Flow",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200511,
+    "skill_name": "In Body and Mind",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200512,
+    "skill_name": "Homestretch Haste",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200521,
+    "skill_name": "Running Idle",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200531,
+    "skill_name": "Taking the Lead",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200532,
+    "skill_name": "Early Lead",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200541,
+    "skill_name": "Escape Artist",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200542,
+    "skill_name": "Fast-Paced",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200551,
+    "skill_name": "Unrestrained",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200552,
+    "skill_name": "Final Push",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200561,
+    "skill_name": "Calm and Collected",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200562,
+    "skill_name": "Stamina to Spare",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200571,
+    "skill_name": "Race Planner",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200572,
+    "skill_name": "Preferred Position",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200581,
+    "skill_name": "Speed Star",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200582,
+    "skill_name": "Prepared to Pass",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200591,
+    "skill_name": "Fast & Furious",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200592,
+    "skill_name": "Position Pilfer",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200601,
+    "skill_name": "On Your Left!",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200602,
+    "skill_name": "Slick Surge",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200611,
+    "skill_name": "Rising Dragon",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200612,
+    "skill_name": "Outer Swell",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200621,
+    "skill_name": "Sleeping Lion",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200622,
+    "skill_name": "Standing By",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200631,
+    "skill_name": "Sturm und Drang",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200632,
+    "skill_name": "Masterful Gambit",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200641,
+    "skill_name": "Encroaching Shadow",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200642,
+    "skill_name": "Straightaway Spurt",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200651,
+    "skill_name": "Turbo Sprint",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200652,
+    "skill_name": "Sprinting Gear",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200662,
+    "skill_name": "Wait-and-See",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200671,
+    "skill_name": "Blinding Flash",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200672,
+    "skill_name": "Gap Closer",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200681,
+    "skill_name": "Mile Maven",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200682,
+    "skill_name": "Productive Plan",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200691,
+    "skill_name": "Keen Eye",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200692,
+    "skill_name": "Watchful Eye",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200701,
+    "skill_name": "Furious Feat",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200702,
+    "skill_name": "Updrafters",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200711,
+    "skill_name": "Trackblazer",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200712,
+    "skill_name": "Rosy Outlook",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200721,
+    "skill_name": "Killer Tunes",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200722,
+    "skill_name": "Up-Tempo",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200731,
+    "skill_name": "Unyielding",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200732,
+    "skill_name": "Steadfast",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200741,
+    "skill_name": "Cooldown",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200742,
+    "skill_name": "Deep Breaths",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200751,
+    "skill_name": "Innate Experience",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200752,
+    "skill_name": "Inside Scoop",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200761,
+    "skill_name": "Adrenaline Rush",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200762,
+    "skill_name": "Extra Tank",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200771,
+    "skill_name": "Trick (Front)",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200772,
+    "skill_name": "Tantalizing Trick",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200781,
+    "skill_name": "Trick (Rear)",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200791,
+    "skill_name": "Frenzied Front Runners",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200801,
+    "skill_name": "Frenzied Pace Chasers",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200811,
+    "skill_name": "Frenzied Late Surgers",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200821,
+    "skill_name": "Frenzied End Closers",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200831,
+    "skill_name": "Subdued Front Runners",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200841,
+    "skill_name": "Flustered Front Runners",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200851,
+    "skill_name": "Hesitant Front Runners",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200861,
+    "skill_name": "Subdued Pace Chasers",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200871,
+    "skill_name": "Flustered Pace Chasers",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200881,
+    "skill_name": "Hesitant Pace Chasers",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200891,
+    "skill_name": "Subdued Late Surgers",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200901,
+    "skill_name": "Flustered Late Surgers",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200911,
+    "skill_name": "Hesitant Late Surgers",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200921,
+    "skill_name": "Subdued End Closers",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200931,
+    "skill_name": "Flustered End Closers",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200941,
+    "skill_name": "Hesitant End Closers",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200951,
+    "skill_name": "Oi Racecourse ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200952,
+    "skill_name": "Oi Racecourse ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200953,
+    "skill_name": "Oi Racecourse ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200961,
+    "skill_name": "Sprint Straightaways ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200962,
+    "skill_name": "Sprint Straightaways ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200963,
+    "skill_name": "Shocking Flash",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200971,
+    "skill_name": "Sprint Corners ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200972,
+    "skill_name": "Sprint Corners ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200981,
+    "skill_name": "Staggering Lead",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200982,
+    "skill_name": "Huge Lead",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200991,
+    "skill_name": "Plan X",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 200992,
+    "skill_name": "Countermeasure",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201001,
+    "skill_name": "Perfect Prep!",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201002,
+    "skill_name": "Meticulous Measures",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201011,
+    "skill_name": "Adored by All",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201012,
+    "skill_name": "Intimidate",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201021,
+    "skill_name": "You've Got No Shot",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201022,
+    "skill_name": "Stop Right There!",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201031,
+    "skill_name": "Mile Straightaways ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201032,
+    "skill_name": "Mile Straightaways ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201041,
+    "skill_name": "Mile Corners ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201042,
+    "skill_name": "Mile Corners ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201051,
+    "skill_name": "Changing Gears",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201052,
+    "skill_name": "Shifting Gears",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201061,
+    "skill_name": "Step on the Gas!",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201062,
+    "skill_name": "Acceleration",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201071,
+    "skill_name": "Big-Sisterly",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201072,
+    "skill_name": "Unyielding Spirit",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201081,
+    "skill_name": "Greed for Speed",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201082,
+    "skill_name": "Speed Eater",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201091,
+    "skill_name": "Battle Formation",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201092,
+    "skill_name": "Opening Gambit",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201101,
+    "skill_name": "Medium Straightaways ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201102,
+    "skill_name": "Medium Straightaways ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201103,
+    "skill_name": "Flash Forward",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201111,
+    "skill_name": "Medium Corners ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201112,
+    "skill_name": "Medium Corners ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201113,
+    "skill_name": "Refraction Arc",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201121,
+    "skill_name": "Clairvoyance",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201122,
+    "skill_name": "Hawkeye",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201131,
+    "skill_name": "Lightning Step",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201132,
+    "skill_name": "Thunderbolt Step",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201141,
+    "skill_name": "Miraculous Step",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201142,
+    "skill_name": "Soft Step",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201151,
+    "skill_name": "Dominator",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201152,
+    "skill_name": "Tether",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201161,
+    "skill_name": "Mystifying Murmur",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201162,
+    "skill_name": "Murmur",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201171,
+    "skill_name": "Long Straightaways ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201172,
+    "skill_name": "Long Straightaways ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201173,
+    "skill_name": "Blast Forward",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201181,
+    "skill_name": "Long Corners ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201182,
+    "skill_name": "Long Corners ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201191,
+    "skill_name": "Vanguard Spirit",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201192,
+    "skill_name": "Keeping the Lead",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201201,
+    "skill_name": "VIP Pass",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201202,
+    "skill_name": "Passing Pro",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201211,
+    "skill_name": "Overwhelming Pressure",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201212,
+    "skill_name": "Pressure",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201221,
+    "skill_name": "Stamina Siphon",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201222,
+    "skill_name": "Stamina Eater",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201231,
+    "skill_name": "Illusionist",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201232,
+    "skill_name": "Smoke Screen",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201241,
+    "skill_name": "Front Runner Straightaways ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201242,
+    "skill_name": "Front Runner Straightaways ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201251,
+    "skill_name": "Front Runner Corners ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201252,
+    "skill_name": "Front Runner Corners ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201253,
+    "skill_name": "Crescent Gale",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201261,
+    "skill_name": "Sixth Sense",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201262,
+    "skill_name": "Dodging Danger",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201271,
+    "skill_name": "Top Runner",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201272,
+    "skill_name": "Leader's Pride",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201281,
+    "skill_name": "Restless",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201282,
+    "skill_name": "Moxie",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201291,
+    "skill_name": "Reignition",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201292,
+    "skill_name": "Second Wind",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201302,
+    "skill_name": "Restart",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201311,
+    "skill_name": "Pace Chaser Straightaways ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201312,
+    "skill_name": "Pace Chaser Straightaways ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201321,
+    "skill_name": "Pace Chaser Corners ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201322,
+    "skill_name": "Pace Chaser Corners ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201331,
+    "skill_name": "Technician",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201332,
+    "skill_name": "Shrewd Step",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201341,
+    "skill_name": "Determined Descent",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201342,
+    "skill_name": "Straight Descent",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201351,
+    "skill_name": "Gourmand",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201352,
+    "skill_name": "Hydrate",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201361,
+    "skill_name": "Shatterproof",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201362,
+    "skill_name": "Tactical Tweak",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201371,
+    "skill_name": "Dazzling Disorientation",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201372,
+    "skill_name": "Disorient",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201381,
+    "skill_name": "Late Surger Straightaways ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201382,
+    "skill_name": "Late Surger Straightaways ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201383,
+    "skill_name": "Sharp Streak",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201391,
+    "skill_name": "Late Surger Corners ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201392,
+    "skill_name": "Late Surger Corners ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201393,
+    "skill_name": "Sharp Arc",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201401,
+    "skill_name": "Hard Worker",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201402,
+    "skill_name": "Fighter",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201411,
+    "skill_name": "15,000,000 CC",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201412,
+    "skill_name": "1,500,000 CC",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201421,
+    "skill_name": "Relax",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201422,
+    "skill_name": "A Small Breather",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201431,
+    "skill_name": "The Bigger Picture",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201432,
+    "skill_name": "Studious",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201441,
+    "skill_name": "All-Seeing Eyes",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201442,
+    "skill_name": "Sharp Gaze",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201451,
+    "skill_name": "End Closer Straightaways ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201452,
+    "skill_name": "End Closer Straightaways ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201453,
+    "skill_name": "Moonlit Flash",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201461,
+    "skill_name": "End Closer Corners ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201462,
+    "skill_name": "End Closer Corners ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201471,
+    "skill_name": "The Coast Is Clear!",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201472,
+    "skill_name": "I Can See Right Through You",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201481,
+    "skill_name": "Go-Home Specialist",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201482,
+    "skill_name": "After-School Stroll",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201491,
+    "skill_name": "Serenity",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201492,
+    "skill_name": "Levelheaded",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201501,
+    "skill_name": "Crusader",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201502,
+    "skill_name": "Strategist",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201511,
+    "skill_name": "Petrifying Gaze",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201512,
+    "skill_name": "Intense Gaze",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201521,
+    "skill_name": "Front Runner Savvy ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201522,
+    "skill_name": "Front Runner Savvy ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201531,
+    "skill_name": "Pace Chaser Savvy ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201532,
+    "skill_name": "Pace Chaser Savvy ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201541,
+    "skill_name": "Late Surger Savvy ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201542,
+    "skill_name": "Late Surger Savvy ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201551,
+    "skill_name": "End Closer Savvy ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201552,
+    "skill_name": "End Closer Savvy ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201561,
+    "skill_name": "Super Lucky Seven",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201562,
+    "skill_name": "Lucky Seven",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201571,
+    "skill_name": "Triple 7s",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201581,
+    "skill_name": "Highlander",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201591,
+    "skill_name": "Uma Stan",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201592,
+    "skill_name": "Superstan",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201601,
+    "skill_name": "Groundwork",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201611,
+    "skill_name": "Tail Held High",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201612,
+    "skill_name": "Tail Nine",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201621,
+    "skill_name": "Shake It Out",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201631,
+    "skill_name": "Sympathy",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201641,
+    "skill_name": "Lone Wolf",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201651,
+    "skill_name": "Slipstream",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201652,
+    "skill_name": "Perfect Spot!",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201661,
+    "skill_name": "Playtime's Over!",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201662,
+    "skill_name": "See Ya Later!",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201671,
+    "skill_name": "Trending in the Charts!",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 201672,
+    "skill_name": "Top Pick",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 201681,
+    "skill_name": "Lead the Charge!",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 201682,
+    "skill_name": "Forward, March!",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 201691,
+    "skill_name": "Lie in Wait",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201692,
+    "skill_name": "Be Still",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201701,
+    "skill_name": "Come What May",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201702,
+    "skill_name": "All I've Got",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201801,
+    "skill_name": "♡ 3D Nail Art",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201901,
+    "skill_name": "Neck and Neck",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 201902,
+    "skill_name": "Head-On",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202001,
+    "skill_name": "Master of the Sands",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202002,
+    "skill_name": "Familiar Ground",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202011,
+    "skill_name": "Headliner",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202012,
+    "skill_name": "Feature Act",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202021,
+    "skill_name": "Daring Strike",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202022,
+    "skill_name": "Early Start",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202031,
+    "skill_name": "Nothing Ventured",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202032,
+    "skill_name": "Risky Business",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202041,
+    "skill_name": "In High Spirits",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202042,
+    "skill_name": "Light as a Feather",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202051,
+    "skill_name": "Runaway",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202061,
+    "skill_name": "Best in Japan",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202071,
+    "skill_name": "Of Calm Mind",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202072,
+    "skill_name": "Free-Spirited",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202081,
+    "skill_name": "From the Brink",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202082,
+    "skill_name": "Take the Chance",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202091,
+    "skill_name": "Burning Soul",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202092,
+    "skill_name": "Fighting Spirit",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202101,
+    "skill_name": "Elated",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202102,
+    "skill_name": "Eager",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202111,
+    "skill_name": "Full of Vigor",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202112,
+    "skill_name": "Pumped",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202121,
+    "skill_name": "Dauntless",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202122,
+    "skill_name": "Fearless",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202131,
+    "skill_name": "Wild Wind",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202132,
+    "skill_name": "With All My Soul",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202141,
+    "skill_name": "You're Not the Boss of Me!",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202151,
+    "skill_name": "Keep Going!",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202152,
+    "skill_name": "Full Throttle",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202161,
+    "skill_name": "Restraint",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202171,
+    "skill_name": "Master of Declines",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202172,
+    "skill_name": "Downhill Speedster",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202181,
+    "skill_name": "99 Problems",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202191,
+    "skill_name": "Heart All Set",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202192,
+    "skill_name": "All Set",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202201,
+    "skill_name": "Kawasaki Racecourse ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202202,
+    "skill_name": "Kawasaki Racecourse ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202203,
+    "skill_name": "Kawasaki Racecourse ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202211,
+    "skill_name": "Funabashi Racecourse ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202212,
+    "skill_name": "Funabashi Racecourse ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202213,
+    "skill_name": "Funabashi Racecourse ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202221,
+    "skill_name": "Morioka Racecourse ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202222,
+    "skill_name": "Morioka Racecourse ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202223,
+    "skill_name": "Morioka Racecourse ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202231,
+    "skill_name": "Night Races ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202232,
+    "skill_name": "Night Races ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202233,
+    "skill_name": "Night Races ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202241,
+    "skill_name": "Sharp Turns ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202242,
+    "skill_name": "Sharp Turns ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202243,
+    "skill_name": "Sharp Turns ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202251,
+    "skill_name": "Collaborative Graded Races ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202252,
+    "skill_name": "Collaborative Graded Races ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202253,
+    "skill_name": "Collaborative Graded Races ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202261,
+    "skill_name": "Chance of Victory",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202262,
+    "skill_name": "Sunny Sign",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202271,
+    "skill_name": "Can't Keep Me Down",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202272,
+    "skill_name": "Comeback",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202281,
+    "skill_name": "Full Speed!",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202282,
+    "skill_name": "Full Tilt",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202291,
+    "skill_name": "Crystal Clear",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202292,
+    "skill_name": "Rational",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202301,
+    "skill_name": "Dancer in the Dirt",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202302,
+    "skill_name": "Down in the Dirt ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202303,
+    "skill_name": "Down in the Dirt ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202311,
+    "skill_name": "Be the Center!",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202312,
+    "skill_name": "Got the Spirit!",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202321,
+    "skill_name": "Run Like Crazy!",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202322,
+    "skill_name": "Rapid Gain",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202331,
+    "skill_name": "Strong Steps",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202332,
+    "skill_name": "Solid Steps",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202341,
+    "skill_name": "Maestro of the Mud",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202342,
+    "skill_name": "Muddy ◎",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202343,
+    "skill_name": "Muddy ○",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202344,
+    "skill_name": "Muddy ×",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202351,
+    "skill_name": "Dust Cloud Idol",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202352,
+    "skill_name": "Dust Cloud",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202361,
+    "skill_name": "Catch 'Em Off Guard",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202362,
+    "skill_name": "Oppression",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 202371,
+    "skill_name": "Unstoppable",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202372,
+    "skill_name": "On the Attack",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202381,
+    "skill_name": "Breakin' Ahead",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202382,
+    "skill_name": "Breakin' Out",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202391,
+    "skill_name": "Givin' It 1000%",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202392,
+    "skill_name": "Mad Dash",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202401,
+    "skill_name": "Lightning Surge",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Sprint, Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202402,
+    "skill_name": "Leap Forward",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Sprint, Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202411,
+    "skill_name": "Ambitious Breeze",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202412,
+    "skill_name": "Aspire",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202421,
+    "skill_name": "Claw Forward",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202422,
+    "skill_name": "Scramble",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202431,
+    "skill_name": "Solid Strike",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202432,
+    "skill_name": "Steady Gait",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202441,
+    "skill_name": "Risk-Maker",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202442,
+    "skill_name": "Risk-Taker",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202451,
+    "skill_name": "Top Gear",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202452,
+    "skill_name": "Pedal to the Metal",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202461,
+    "skill_name": "Can't Even Catch My Shadow",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202462,
+    "skill_name": "Firm Resolve",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Front Runner",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202471,
+    "skill_name": "Hot Pursuit",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser, Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202472,
+    "skill_name": "Latch On",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Pace Chaser, Late Surger",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202481,
+    "skill_name": "Beast Mode",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202482,
+    "skill_name": "My True Strength",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Pace Chaser",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202491,
+    "skill_name": "Razor-Sharp Steps",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202492,
+    "skill_name": "Sharp Steps",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "End Closer",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202501,
+    "skill_name": "Reckless Charge",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202502,
+    "skill_name": "No Looking Back",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 202511,
+    "skill_name": "Gonna Be Ur #1 FRFR",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210011,
+    "skill_name": "Burning Spirit SPD",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210012,
+    "skill_name": "Ignited Spirit SPD",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210021,
+    "skill_name": "Burning Spirit STA",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210022,
+    "skill_name": "Ignited Spirit STA",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210031,
+    "skill_name": "Burning Spirit PWR",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210032,
+    "skill_name": "Ignited Spirit PWR",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210041,
+    "skill_name": "Burning Spirit GUTS",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210042,
+    "skill_name": "Ignited Spirit GUTS",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210051,
+    "skill_name": "Burning Spirit WIT",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210052,
+    "skill_name": "Ignited Spirit WIT",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210061,
+    "skill_name": "Radiant Star",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210062,
+    "skill_name": "Glittering Star",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210071,
+    "skill_name": "I Wanna Win with You",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210072,
+    "skill_name": "On the Way to Our Dream",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210081,
+    "skill_name": "Past My Limits",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210082,
+    "skill_name": "Eyes on the Goal",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210091,
+    "skill_name": "Racing Spirit: Speed",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210101,
+    "skill_name": "Racing Spirit: Stamina",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210111,
+    "skill_name": "Racing Spirit: Power",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210121,
+    "skill_name": "Racing Spirit: Guts",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210131,
+    "skill_name": "Racing Spirit: Wit",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 210141,
+    "skill_name": "Racing Spirit: Mood",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 300011,
+    "skill_name": "Unquenched Thirst",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 300021,
+    "skill_name": "Unchanging",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 300031,
+    "skill_name": "Towards the Scenery I Seek",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 300041,
+    "skill_name": "Creeping Anxiety",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 300051,
+    "skill_name": "Blatant Fear",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 300061,
+    "skill_name": "Dream Run",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 300071,
+    "skill_name": "Show Me What Lies Beyond!",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 300081,
+    "skill_name": "Hoiya! Have a Good Run!",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 300091,
+    "skill_name": "As a Friend and Rival",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 300101,
+    "skill_name": "Cheers of a Fellow Dreamer",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 300111,
+    "skill_name": "Chin Up, Derby Umamusume!",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 300121,
+    "skill_name": "For the Team",
+    "skill_type": "Gold",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 300131,
+    "skill_name": "Ruler of Japan",
+    "skill_type": "Unique",
+    "character_owner": "[Frontline Elegance] Mejiro McQueen",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 300141,
+    "skill_name": "Indomitable",
+    "skill_type": "Unique",
+    "character_owner": "[El☆Número 1] El Condor Pasa",
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900011,
+    "skill_name": "Shooting Star",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900021,
+    "skill_name": "The View from the Lead Is Mine!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900031,
+    "skill_name": "Sky-High Teio Step",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900041,
+    "skill_name": "Red Shift/LP1211-M",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900051,
+    "skill_name": "Lights of Vaudeville",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900061,
+    "skill_name": "Triumphant Pulse",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900071,
+    "skill_name": "Anchors Aweigh!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900081,
+    "skill_name": "Cut and Drive!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900091,
+    "skill_name": "Resplendent Red Ace",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900101,
+    "skill_name": "Shooting for Victory!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900111,
+    "skill_name": "Where There's a Will, There's a Way",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900121,
+    "skill_name": "You and Me! One-on-One!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900131,
+    "skill_name": "The Duty of Dignity Calls",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900141,
+    "skill_name": "Victoria por plancha ☆",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900151,
+    "skill_name": "This Dance Is for Vittoria!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900161,
+    "skill_name": "Shadow Break",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900171,
+    "skill_name": "Behold Thine Emperor's Divine Might",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900181,
+    "skill_name": "Blazing Pride",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900191,
+    "skill_name": "OMG! (ﾟ∀ﾟ)  The Final Sprint! ☆",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900201,
+    "skill_name": "Angling and Scheming",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900211,
+    "skill_name": "White Lightning Comin' Through!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900221,
+    "skill_name": "Fairy Tale",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900231,
+    "skill_name": "∴win Q.E.D.",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900241,
+    "skill_name": "Flashy☆Landing",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900251,
+    "skill_name": "Chasing After You",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900261,
+    "skill_name": "G00 1st. F∞;",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900271,
+    "skill_name": "Let's Pump Some Iron!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900281,
+    "skill_name": "YUMMY☆SPEED!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900291,
+    "skill_name": "Snow Bright, Snow Flight",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900301,
+    "skill_name": "Blue Rose Closer",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900311,
+    "skill_name": "All Charged! It's Go Time!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900321,
+    "skill_name": "U=ma2",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900331,
+    "skill_name": "Shooting Star of Dioskouroi",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900341,
+    "skill_name": "Now We're Cruisin'!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900351,
+    "skill_name": "Our Ticket to Win!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900361,
+    "skill_name": "trigger:BEAT",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900371,
+    "skill_name": "Schwarzes Schwert",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900381,
+    "skill_name": "#LookatCurren",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900391,
+    "skill_name": "A Princess Must Seize Victory!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900401,
+    "skill_name": "KEEP IT REAL.",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900411,
+    "skill_name": "Genius x Bakushin = Victory",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900421,
+    "skill_name": "I'm Possible!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900441,
+    "skill_name": "Victory belongs to me—Strelitzia! ☆",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900451,
+    "skill_name": "Pure Heart",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900461,
+    "skill_name": "SPARKLY☆STARDOM",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900471,
+    "skill_name": "Raise My Soul's Blade!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900481,
+    "skill_name": "Pop & Polish",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900491,
+    "skill_name": "Laugh at the Odds",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900501,
+    "skill_name": "Nemesis",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900511,
+    "skill_name": "Budding Blossom",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900521,
+    "skill_name": "Super-Duper Climax",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900531,
+    "skill_name": "Red-Hot Discipline!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900561,
+    "skill_name": "I See Victory in My Future!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900581,
+    "skill_name": "I Never Goof Up!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900591,
+    "skill_name": "Moving Past, and Beyond",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900601,
+    "skill_name": "Just a Little Farther!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900611,
+    "skill_name": "Prideful King",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900621,
+    "skill_name": "Go, Go, Mun!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900641,
+    "skill_name": "Keep Pushing Ahead",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900651,
+    "skill_name": "Hands in the Air Like Ya Don't Care!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Sprint, Mile, Medium, Long",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900671,
+    "skill_name": "Eternal Encompassing Shine",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900681,
+    "skill_name": "Victory Cheer!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900691,
+    "skill_name": "Ambition to Surpass the Sakura",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900711,
+    "skill_name": "A Lifelong Dream, A Moment's Flight",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900721,
+    "skill_name": "Peerless Dance of Flowering Flames",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900741,
+    "skill_name": "Lovely Spring Breeze",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900781,
+    "skill_name": "Sunny Breeze",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900871,
+    "skill_name": "Silent Letter",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900981,
+    "skill_name": "Luck Runs My Way",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 900991,
+    "skill_name": "Shine On, Tomakomai! ☆",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 901001,
+    "skill_name": "Never Say Never",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 910011,
+    "skill_name": "Dazzl'n ♪ Diver",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910031,
+    "skill_name": "Certain Victory",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910041,
+    "skill_name": "A Kiss for Courage",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910051,
+    "skill_name": "Ravissant",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910061,
+    "skill_name": "Festive Miracle",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910071,
+    "skill_name": "564 Escapades",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910081,
+    "skill_name": "Into High Gear!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910091,
+    "skill_name": "Queen's Lumination",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910101,
+    "skill_name": "Joyful Voyage!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910111,
+    "skill_name": "Superior Heal",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910131,
+    "skill_name": "Legacy of the Strong",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910141,
+    "skill_name": "Condor's Fury",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910151,
+    "skill_name": "Barcarole of Blessings",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910161,
+    "skill_name": "Free from the Ashes",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910171,
+    "skill_name": "Arrows Whistle, Shadows Disperse",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910181,
+    "skill_name": "Eternal Moments",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910191,
+    "skill_name": "THE MOE AAAA Thanks for My Life",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910201,
+    "skill_name": "Break It Down!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910211,
+    "skill_name": "Lightning Flare",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910221,
+    "skill_name": "Best day ever",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910231,
+    "skill_name": "Presents from X",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910241,
+    "skill_name": "Flowery☆Maneuver",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910261,
+    "skill_name": "Operation Cacao",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910271,
+    "skill_name": "A Warm Cup for You",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910301,
+    "skill_name": "Every Rose Has Its Fangs",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910311,
+    "skill_name": "Fresh☆Parlor",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910341,
+    "skill_name": "Firelight",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910351,
+    "skill_name": "Ticket to Your Dreams!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910371,
+    "skill_name": "Guten Appetit ♪",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910381,
+    "skill_name": "One True Color",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910401,
+    "skill_name": "Dancing in the Leaves",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910451,
+    "skill_name": "Give Mummy a Hug ♡",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910461,
+    "skill_name": "α-star*",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Dirt"
+  },
+  {
+    "skill_id": 910501,
+    "skill_name": "Hephaestus",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910521,
+    "skill_name": "114th Time's the Charm",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910561,
+    "skill_name": "Bountiful Harvest",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910581,
+    "skill_name": "Spooky, Scary, Happy",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910591,
+    "skill_name": "Wherever This Wonder Leads",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910601,
+    "skill_name": "Go☆Go☆Goal!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910611,
+    "skill_name": "Louder! Tracen Cheer!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910671,
+    "skill_name": "Rain Cloud Bolt",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 910681,
+    "skill_name": "Bring on the Banquet!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 920011,
+    "skill_name": "Dreams Donned with Pride!",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 920131,
+    "skill_name": "Your Smile Sparkles as the Waves",
+    "skill_type": "Inherited Unique",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 1000011,
+    "skill_name": "Carnival Bonus",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 1000012,
+    "skill_name": "Carnival Bonus",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 1000013,
+    "skill_name": "Carnival Bonus",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 1100011,
+    "skill_name": "Feelin' a Bit Silly",
+    "skill_type": "Purple",
+    "character_owner": null,
+    "race_distance": "Any",
+    "running_style": "Any",
+    "surface": "Any"
+  },
+  {
+    "skill_id": 1200011,
+    "skill_name": "Medium Race Enthusiast",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Turf"
+  },
+  {
+    "skill_id": 1200021,
+    "skill_name": "Long Race Enthusiast",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Long",
+    "running_style": "Any",
+    "surface": "Turf"
+  },
+  {
+    "skill_id": 1200031,
+    "skill_name": "Mile Race Enthusiast",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Mile",
+    "running_style": "Any",
+    "surface": "Turf"
+  },
+  {
+    "skill_id": 1200041,
+    "skill_name": "Sprint Race Enthusiast",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Sprint",
+    "running_style": "Any",
+    "surface": "Turf"
+  },
+  {
+    "skill_id": 1200051,
+    "skill_name": "Dirt Race Enthusiast",
+    "skill_type": "White",
+    "character_owner": null,
+    "race_distance": "Medium",
+    "running_style": "Any",
+    "surface": "Dirt"
+  }
+]

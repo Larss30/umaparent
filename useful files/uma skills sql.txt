@@ -1,0 +1,78 @@
+SELECT 
+  s.id AS skill_id,
+  t.text AS skill_name,
+  CASE 
+    WHEN s.id BETWEEN 900000 AND 999999 THEN 'Inherited Unique'
+    WHEN s.rarity IN (3, 4, 5) THEN 'Unique'
+    WHEN s.rarity = 6 THEN 'Evolution'
+    WHEN s.rarity = 2 THEN 'Gold'
+    WHEN s.rarity = 1 AND s.grade_value < 0 THEN 'Purple'
+    WHEN s.rarity = 1 THEN 'White'
+    ELSE 'Other'
+  END AS skill_type,
+  CASE 
+    WHEN s.rarity IN (3, 4, 5) THEN COALESCE(
+      c_outfit.text || ' ' || c_name.text,
+      c_name.text,
+      'Unknown'
+    )
+    ELSE NULL
+  END AS character_owner,
+  COALESCE(
+    NULLIF(
+      TRIM(
+        (CASE WHEN (s.condition_1 || '@' || COALESCE(s.condition_2, '')) LIKE '%distance_type==1%' THEN 'Sprint, ' ELSE '' END) ||
+        (CASE WHEN (s.condition_1 || '@' || COALESCE(s.condition_2, '')) LIKE '%distance_type==2%' THEN 'Mile, ' ELSE '' END) ||
+        (CASE WHEN (s.condition_1 || '@' || COALESCE(s.condition_2, '')) LIKE '%distance_type==3%' THEN 'Medium, ' ELSE '' END) ||
+        (CASE WHEN (s.condition_1 || '@' || COALESCE(s.condition_2, '')) LIKE '%distance_type==4%' THEN 'Long, ' ELSE '' END),
+        ', '
+      ),
+      ''
+    ),
+    'Any'
+  ) AS race_distance,
+  COALESCE(
+    NULLIF(
+      TRIM(
+        (CASE WHEN (s.condition_1 || '@' || COALESCE(s.condition_2, '')) LIKE '%running_style==1%' THEN 'Front Runner, ' ELSE '' END) ||
+        (CASE WHEN (s.condition_1 || '@' || COALESCE(s.condition_2, '')) LIKE '%running_style==2%' THEN 'Pace Chaser, ' ELSE '' END) ||
+        (CASE WHEN (s.condition_1 || '@' || COALESCE(s.condition_2, '')) LIKE '%running_style==3%' THEN 'Late Surger, ' ELSE '' END) ||
+        (CASE WHEN (s.condition_1 || '@' || COALESCE(s.condition_2, '')) LIKE '%running_style==4%' THEN 'End Closer, ' ELSE '' END),
+        ', '
+      ),
+      ''
+    ),
+    'Any'
+  ) AS running_style,
+  COALESCE(
+    NULLIF(
+      TRIM(
+        (CASE WHEN (s.condition_1 || '@' || COALESCE(s.condition_2, '')) LIKE '%ground_type==1%' THEN 'Turf, ' ELSE '' END) ||
+        (CASE WHEN (s.condition_1 || '@' || COALESCE(s.condition_2, '')) LIKE '%ground_type==2%' THEN 'Dirt, ' ELSE '' END),
+        ', '
+      ),
+      ''
+    ),
+    'Any'
+  ) AS surface
+FROM skill_data s
+JOIN text_data t 
+  ON s.id = t."index" 
+  AND t.category = 47
+LEFT JOIN text_data c_name 
+  ON c_name.category = 6 
+  AND c_name."index" = (
+    CASE 
+      WHEN s.rarity IN (3, 4, 5) THEN 1000 + ((s.id % 10000) / 10)
+      ELSE NULL
+    END
+  )
+LEFT JOIN text_data c_outfit 
+  ON c_outfit.category = 5 
+  AND c_outfit."index" = (
+    CASE 
+      WHEN s.rarity IN (3, 4, 5) THEN 100000 + ((s.id % 10000) / 10) * 100 + ((s.id / 10000) % 10) + 1
+      ELSE NULL
+    END
+  )
+ORDER BY s.id;
