@@ -153,6 +153,7 @@ details.tier.zero .tbadge{background:var(--white);color:#fff}
 .pname{font-size:1.35rem;font-weight:800}
 .spill{background:var(--gold);color:#4a3203;border-radius:999px;padding:2px 14px;font-weight:800}
 .spill.none{background:transparent;border:1px dashed #fff;color:#fff;font-weight:600}
+.wrow.check,.srow.check{outline:2px dotted var(--gold-deep);outline-offset:1px;border-radius:8px}
 footer{max-width:1240px;margin:0 auto;padding:0 20px 28px;color:var(--muted);font-size:.82rem}
 </style>
 </head>
@@ -183,14 +184,17 @@ footer{max-width:1240px;margin:0 auto;padding:0 20px 28px;color:var(--muted);fon
     <div id="panes"></div>
     <div class="actions">
       <button class="primary" id="go" type="button">Score parent</button>
+      <button class="secondary" id="shots" type="button">Read screenshots</button>
       <button class="secondary" id="sample" type="button">Load sample</button>
       <button class="secondary" id="imp" type="button">Import JSON</button>
       <button class="secondary" id="exp" type="button">Export JSON</button>
       <button class="secondary" id="clear" type="button">Clear</button>
       <select id="plist" hidden aria-label="Imported parents"></select>
       <input type="file" id="file" accept=".json,application/json" hidden>
+      <input type="file" id="shotfile" accept="image/png,image/jpeg,image/webp" multiple hidden>
     </div>
     <p class="muted" id="msg" role="status"></p>
+    <p class="muted">Tip: open the Inspiration tab in game and take screenshots, scrolling down for more. Upload them in order with Read screenshots. They are read and not stored. Amber outlines mark sparks to double-check.</p>
   </section>
 
   <section class="panel results" aria-live="polite" aria-labelledby="rtitle">
@@ -255,12 +259,14 @@ function greenRow(){
   inp.placeholder = 'Search or type unique skill'; inp.setAttribute('aria-label','green spark'); inp.setAttribute('list','dl-unique');
   row.append(el('span','dot green'), inp, stars); return {row, inp, stars};
 }
-function wrow(name = '', st = 1, pin = false, cat = 'skill'){
+function wrow(name = '', st = 1, pin = false, cat = 'skill', check = false){
   const w = el('div','wrow'), n = el('input'), s = Stars(st), p = el('button','icon pinbtn','\u2691'), x = el('button','icon','\u00d7');
   n.placeholder = 'Search or type'; n.setAttribute('list', 'dl-' + cat); n.value = name; n.setAttribute('aria-label','white spark name');
   p.type = 'button'; x.type = 'button'; p.title = 'Pin as important'; x.title = 'Remove';
   p.setAttribute('aria-label','Pin as important'); x.setAttribute('aria-label','Remove spark');
   w.pin = pin; w.classList.toggle('pin', pin);
+  if (check) w.classList.add('check');
+  n.addEventListener('input', () => w.classList.remove('check'));
   p.onclick = () => { w.pin = !w.pin; w.classList.toggle('pin', w.pin); };
   x.onclick = () => { w.remove(); changed(); };
   w.f = {n, s}; w.append(n, s, p, x); return w;
@@ -316,7 +322,7 @@ function refreshHot(){
   });
   document.querySelectorAll('.block').forEach(b => b.green.inp.classList.toggle('custom', unknown(norm(b.green.inp.value))));
 }
-$('#panes').addEventListener('input', changed);
+$('#panes').addEventListener('input', e => { const r = e.target.closest('.srow'); if (r) r.classList.remove('check'); changed(); });
 $('#panes').addEventListener('click', changed);
 
 function clearAll(){
@@ -326,12 +332,13 @@ function clearAll(){
     [b.blue.stars, b.pink.stars, b.green.stars].forEach(s => { s.v = 0; s.draw(); });
     Object.values(b.lists).forEach(l => l.replaceChildren());
   });
+  document.querySelectorAll('.check').forEach(e => e.classList.remove('check'));
   important = new Set(); changed();
 }
 function setPick(row, sparks, kind){
   const s = sparks.find(x => x.kind === kind); if (!s) return;
   if (row.sel) row.sel.value = s.name; else row.inp.value = s.name;
-  row.stars.v = s.stars; row.stars.draw();
+  row.stars.v = s.stars; row.stars.draw(); row.row.classList.toggle('check', !!s.check);
 }
 function fill(d){
   clearAll();
@@ -341,7 +348,7 @@ function fill(d){
     const b = document.querySelector('.block[data-role="' + blk.role + '"]'); if (!b) return;
     b.querySelector('.char').value = blk.character || '';
     setPick(b.blue, blk.sparks, 'blue'); setPick(b.pink, blk.sparks, 'pink'); setPick(b.green, blk.sparks, 'green');
-    blk.sparks.filter(s => s.kind === 'white').forEach(s => { const c = b.lists[s.category] ? s.category : 'skill'; b.lists[c].append(wrow(s.name, s.stars, !!s.pinned, c)); });
+    blk.sparks.filter(s => s.kind === 'white').forEach(s => { const c = b.lists[s.category] ? s.category : 'skill'; b.lists[c].append(wrow(s.name, s.stars, !!s.pinned, c, !!s.check)); });
   });
   loadChecklists(); changed();
 }
@@ -381,6 +388,32 @@ function validParent(d){
   }
   return null;
 }
+function formHasData(){
+  return $('#name').value.trim() !== '' || [...document.querySelectorAll('.block')].some(b =>
+    b.blue.sel.value || b.pink.sel.value || b.green.inp.value.trim() || Object.values(b.lists).some(l => l.children.length));
+}
+$('#shots').onclick = () => $('#shotfile').click();
+$('#shotfile').onchange = async e => {
+  const files = [...e.target.files]; e.target.value = ''; if (!files.length) return;
+  if (files.length > 8) return say('Pick up to 8 screenshots, in scroll order.', true);
+  if (files.some(f => f.size > 8 * 1024 * 1024)) return say('Each screenshot must be under 8 MB.', true);
+  if (formHasData() && !confirm('Replace the parent you have now with the one read from these screenshots?')) return;
+  say('Reading ' + files.length + ' screenshot' + (files.length > 1 ? 's' : '') + '\u2026 this can take a few seconds.');
+  const fd = new FormData(); files.forEach(f => fd.append('files', f));
+  try {
+    const r = await fetch('/api/read-screenshots', {method:'POST', body:fd});
+    const d = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(typeof d.detail === 'string' ? d.detail : 'Could not read those screenshots.');
+    const keep = {style:$('#style').value, aff:$('#aff').value, target:$('#afftarget').value, name:$('#name').value, outfit:$('#outfit').value};
+    fill(d.parent);
+    $('#style').value = keep.style; $('#aff').value = keep.aff; $('#afftarget').value = keep.target;
+    if (!d.parent.name) $('#name').value = keep.name;
+    if (!d.parent.outfit) $('#outfit').value = keep.outfit;
+    loadChecklists();
+    const n = d.parent.blocks.length;
+    say(['Read ' + n + ' block' + (n === 1 ? '' : 's') + '.', ...d.notes].join(' '));
+  } catch(err){ say(err.message || 'Could not read those screenshots.', true); }
+};
 $('#imp').onclick = () => $('#file').click();
 $('#file').onchange = async e => {
   const f = e.target.files[0]; e.target.value = ''; if (!f) return;

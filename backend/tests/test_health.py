@@ -1,3 +1,7 @@
+import shutil
+from pathlib import Path
+
+import pytest
 from fastapi.testclient import TestClient
 
 from app.main import app
@@ -65,3 +69,19 @@ def test_auto_zero_flag_and_checklist_param():
     assert client.post("/api/score", json=body).status_code == 200
     cl = client.get("/api/checklists?auto_zero=false").json()
     assert cl["aries-cup"]["blocked"] == []
+
+
+def test_read_screenshots_rejects_junk_and_too_many_files():
+    junk = ("files", ("x.png", b"not an image", "image/png"))
+    r = client.post("/api/read-screenshots", files=[junk])
+    assert r.status_code == 400 and "readable image" in r.json()["detail"]
+    assert client.post("/api/read-screenshots", files=[junk] * 9).status_code == 400
+
+
+@pytest.mark.skipif(shutil.which("tesseract") is None, reason="tesseract is not installed")
+def test_read_screenshots_endpoint_returns_a_parent():
+    png = (Path(__file__).parent / "fixtures" / "inspiration-top.png").read_bytes()
+    r = client.post("/api/read-screenshots", files=[("files", ("top.png", png, "image/png"))])
+    assert r.status_code == 200
+    block = r.json()["parent"]["blocks"][0]
+    assert block["role"] == "self" and any(s["name"] == "Guts" for s in block["sparks"])

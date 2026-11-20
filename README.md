@@ -19,6 +19,13 @@ parent/grandparent presence icons, one tier board for skills, stats, aptitudes a
 JSON import/export, and a Skill tiers board (custom weights, stored in the browser, sent as
 `custom_weights` when scoring).
 
+## Screenshot reader
+`POST /api/read-screenshots` takes 1-8 Inspiration-tab screenshots in scroll order and returns a parent
+in the same JSON shape as import/export, with `check: true` on sparks it was unsure about. It runs on the
+server with OpenCV and Tesseract (no AI service, no per-image cost). Rows are found by their round icon,
+colour gives the spark type, stars are counted by gold pixels, and names are matched to data/skills.json.
+Screenshots are read in memory and not stored. Code: backend/app/vision/.
+
 ## Roadmap
 1. Scaffold, Docker Compose, CI  (done)
 2. Scoring engine, YAML profiles, rank ladder  <- you are here

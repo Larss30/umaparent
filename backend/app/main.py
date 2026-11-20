@@ -1,12 +1,15 @@
 import os
+import threading
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
+from pytesseract import TesseractNotFoundError
 from sqlalchemy import create_engine, text
 
 from .schemas import ParentIn
+from .vision import ImageError, read_screenshots
 from .scoring.config import load_profiles, load_skills, load_styles, load_tiers
 from .scoring.engine import GENERIC_ID, checklists, default_skill_weights, score_all
 
@@ -87,3 +90,30 @@ def score(parent: ParentIn):
         return score_all(parent.to_domain())
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
+
+
+_READER = threading.BoundedSemaphore(2)      # at most two screenshot reads at once
+MAX_SHOTS, MAX_SHOT_BYTES = 8, 8 * 1024 * 1024
+
+
+@app.post("/api/read-screenshots")
+def read_shots(files: list[UploadFile] = File(...)):
+    """Read Inspiration-tab screenshots (in scroll order) into a parent. Nothing is stored."""
+    if not 1 <= len(files) <= MAX_SHOTS:
+        raise HTTPException(status_code=400, detail=f"Upload between 1 and {MAX_SHOTS} screenshots.")
+    data = []
+    for f in files:
+        raw = f.file.read(MAX_SHOT_BYTES + 1)
+        if len(raw) > MAX_SHOT_BYTES:
+            raise HTTPException(status_code=413, detail=f"{f.filename} is over 8 MB.")
+        data.append((f.filename or "screenshot", raw))
+    if not _READER.acquire(blocking=False):
+        raise HTTPException(status_code=429, detail="The reader is busy. Try again in a moment.")
+    try:
+        return read_screenshots(data)
+    except ImageError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except TesseractNotFoundError:
+        raise HTTPException(status_code=503, detail="The screenshot reader is not available on this server.")
+    finally:
+        _READER.release()
