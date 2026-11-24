@@ -399,7 +399,7 @@ function collect(exp){
 }
 
 /* ---------- G1 wins ---------- */
-const savedWins = () => store.get('uma-saved-wins') || [];
+function savedWins(){ return store.get('uma-saved-wins') || []; }   // a function declaration, so it exists while the blocks are being built
 function raceSlots(year){
   const m = new Map();
   RACES.forEach(r => r.slots.forEach(sl => {
