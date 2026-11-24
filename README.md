@@ -12,6 +12,7 @@ with affinity from G1 wins. Screenshot upload + manual entry share one editable 
 
 ## Test / lint
     cd backend && pip install -r requirements-dev.txt && ruff check . && pytest
+    (the page script is also run by tests/ui_smoke.js when Node is installed)
 
 ## Web UI features
 Searchable skill fields (datalist over data/skills.json), per-event tiered checklists with
