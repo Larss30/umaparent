@@ -7,7 +7,7 @@ GENERIC = load_profiles()["generic"]
 KEYS = {"style": {"front-runner", "pace-chaser", "late-surger", "end-closer"},
         "distance": {"sprint", "mile", "medium", "long"}, "surface": {"dirt", "turf"},
         "direction": {"left", "right"}, "season": {"spring", "summer", "fall", "winter"},
-        "weather": {"sunny", "cloudy", "rainy", "snowy"}, "ground": {"firm", "wet"}, "course": None}
+        "weather": {"sunny", "cloudy", "rainy", "snowy"}, "ground": {"firm", "wet"}, "standard": {"standard", "non-standard"}, "course": None}
 
 
 def skill_named(prefix):
@@ -76,3 +76,9 @@ def test_checklist_moves_blocked_skills_to_the_zero_tier():
     assert any(b["name"] == "Left-Handed \u25cb" for b in cl["blocked"])
     assert "Left-Handed \u25cb" in cl["tiers"]["Z"]
     assert checklists(None, auto_zero=False)["aries-cup"]["blocked"] == []
+
+
+def test_standard_distance_skills_follow_the_race_length():
+    assert white(parent("Standard Distance \u25cb"), ARIES) > 0             # 2000 m is a multiple of 400
+    assert white(parent("Non-Standard Distance \u25cb"), ARIES) == 0
+    assert blocked_reason(GENERIC, "Non-Standard Distance \u25cb") is None   # an unknown length never blocks

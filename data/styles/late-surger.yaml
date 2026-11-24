@@ -1,8 +1,18 @@
-# STUB: only the one skill you described so far. Add the rest of this style's tiers.
+# Late Surger. RESEARCHED DRAFT (Nov 2026). Sources: umareference.com skill ranks for Champions Meeting and its CM guide,
+# uma.guide (CM guides, race mechanics), game8 and games.gg tier lists. Mapping of CM ranks to tiers:
+# essential -> S, ◎ -> A, ◯ -> B, situational -> C, take-only-with-spare-SP -> D, never take -> Z (weight 0).
+# Your decision: Ramp Up and Risky Business stay in B (the sources rate them lower).
+# Skills with a style requirement in data/skills.json only count for that style, so this list is safe to share.
+# Ignited Spirit names assume the in-game "+" spark names match the sheet's PWR / WIT / SPD versions (unconfirmed).
 id: late-surger
 label: Late Surger
-status: stub
+status: researched-draft
 aptitude: Late Surger
-white_target: 14
+white_target: 16
 tiers:
-  S: ["Uma Stan"]
+  S: ["Slick Surge", "Late Surger Corners ○", "Late Surger Straightaways ○"]
+  A: ["Uma Stan", "Nimble Navigator", "Tail Held High", "Slipstream", "Playtime's Over!", "1,500,000 CC", "Sharp Gaze", "Outer Swell", "Corner Recovery ○", "Ignited Spirit: Power +", "Ignited Spirit GUTS", "Racing Spirit: Stamina"]
+  B: ["Ramp Up", "Risky Business", "Position Pilfer", "Be Still", "Late Surger Savvy ○", "Highlander", "Lone Wolf"]
+  C: ["Latch On"]
+  D: ["A Small Breather", "Racing Spirit: Power", "Ignited Spirit SPD"]
+  Z: ["Fighter", "Studious"]

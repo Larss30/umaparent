@@ -17,6 +17,7 @@ class BlockIn(BaseModel):
     role: Literal["self", "grandparent_1", "grandparent_2"]
     character: str | None = None
     sparks: list[SparkIn] = Field(max_length=60)
+    g1_wins: list[str] = Field(default_factory=list, max_length=60)
 
 
 class ParentIn(BaseModel):
@@ -64,7 +65,7 @@ class ParentIn(BaseModel):
             auto_zero=self.auto_zero,
             context_weights=self.context_weights,
             blocks=[
-                SparkBlock(role=b.role, character=b.character,
+                SparkBlock(role=b.role, character=b.character, g1_wins=b.g1_wins,
                            sparks=[Spark(**s.model_dump()) for s in b.sparks])
                 for b in self.blocks
             ],

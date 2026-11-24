@@ -154,6 +154,22 @@ details.tier.zero .tbadge{background:var(--white);color:#fff}
 .spill{background:var(--gold);color:#4a3203;border-radius:999px;padding:2px 14px;font-weight:800}
 .spill.none{background:transparent;border:1px dashed #fff;color:#fff;font-weight:600}
 .wrow.check,.srow.check{outline:2px dotted var(--gold-deep);outline-offset:1px;border-radius:8px}
+.wins{margin-top:10px}
+.wtabs{display:flex;gap:6px;margin:8px 0}
+.wtabs button{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:3px 14px;cursor:pointer;font-weight:600}
+.wtabs button[aria-pressed=true]{background:var(--turf);color:#fff;border-color:var(--turf)}
+.wtools{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.wslot{display:grid;grid-template-columns:70px minmax(0,1fr);gap:8px;align-items:start;padding:6px 0;border-top:1px dashed var(--line)}
+.wlabel{font-size:.78rem;font-weight:700;color:var(--muted);padding-top:6px}
+.wchips{display:flex;flex-wrap:wrap;gap:6px}
+.rchip{display:flex;flex-direction:column;align-items:flex-start;text-align:left;border:1px solid var(--line);border-left:5px solid var(--turf);border-radius:10px;background:var(--card);padding:3px 10px;cursor:pointer;font-size:.82rem}
+.rchip.dirt{border-left-color:#a47a4a}
+.rchip small{color:var(--muted);font-size:.7rem}
+.rchip[aria-pressed=true]{background:var(--gold-tint);border-color:var(--gold-deep);font-weight:700}
+.rchip[aria-pressed=true]::after{content:"\2713 won";font-size:.68rem;color:var(--gold-deep)}
+.wsave{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.wsave input{width:190px}
+.wsave select{width:auto;max-width:190px}
 footer{max-width:1240px;margin:0 auto;padding:0 20px 28px;color:var(--muted);font-size:.82rem}
 </style>
 </head>
@@ -177,7 +193,7 @@ footer{max-width:1240px;margin:0 auto;padding:0 20px 28px;color:var(--muted);fon
       <label>Running style<select id="style"><option value="">Any style</option></select></label>
       <label>Affinity score<input id="aff" type="number" min="0" max="1000" placeholder="Optional"></label>
       <label class="wide">Affinity is for trainee<input id="afftarget" placeholder="Optional, e.g. Oguri Cap"></label>
-      <p class="muted hint">Type the affinity number you see in game. Calculating it from G1 wins comes later.</p>
+      <p class="muted hint">Optional: the affinity number you see in game. G1 wins marked for each Uma below add to it automatically (shared wins with each grandparent). If your number already includes G1 bonuses, leave the wins empty.</p>
     </div>
     <div class="tabs" id="tabs" role="tablist"></div>
     <p class="muted" id="legend">A gold edge marks a white spark that matters for your style, the events, or your own tiers. Use the &#9873; button to pin one yourself. Can’t find a skill in the list? Just type its name; it shows a dashed border until it is added to the database.</p>
@@ -230,6 +246,9 @@ const store = { get(k){ try { return JSON.parse(localStorage.getItem(k)); } catc
                 set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} } };
 const mobile = () => window.matchMedia('(max-width: 720px)').matches;
 const OPEN = {};
+let RACES = [], RACE_MAP = new Map(), RACE_IDS = new Set();
+const YEARS = [['junior','Junior'],['classic','Classic'],['senior','Senior']];
+const MONTHS = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
 let T = store.get('uma-tiers');
 if (!T || !T.w || T.cards) T = {use:true};
 T.w = Object.assign({}, DW, T.w || {}); T.w.Z = 0; T.over = T.over || {}; T.names = T.names || {};
@@ -286,7 +305,7 @@ function buildBlock(role){
     add.onclick = e => { e.preventDefault(); e.stopPropagation(); c.open = true; const r = wrow('', 1, false, cat); l.append(r); r.f.n.focus(); changed(); };
     h.append(el('span','ctitle', ttl), cnt, add); c.append(h, l); cols.append(c); b.lists[cat] = l; b.counts[cat] = cnt;
   });
-  b.append(hd, ch, core, cols); return b;
+  makeWins(b); b.append(hd, ch, core, cols, b.winsBox); return b;
 }
 const PANES = ROLES.map(([id, title]) => ({id, title}));
 PANES.forEach(p => {
@@ -307,7 +326,7 @@ function changed(){
     p.t2.textContent = b.querySelector('.char').value.trim() || 'No character yet';
     [[b.blue.sel.value, b.blue.stars.v], [b.pink.sel.value, b.pink.stars.v], [b.green.inp.value.trim(), b.green.stars.v]]
       .forEach(([v, st], i) => p.dots[i].classList.toggle('on', !!(v && st)));
-    p.wc.textContent = n + ' white';
+    p.wc.textContent = n + ' white \u00b7 ' + b.wins.size + ' G1';
   });
   refreshHot();
 }
@@ -333,6 +352,7 @@ function clearAll(){
     Object.values(b.lists).forEach(l => l.replaceChildren());
   });
   document.querySelectorAll('.check').forEach(e => e.classList.remove('check'));
+  document.querySelectorAll('.block').forEach(b => { b.wins.clear(); drawWins(b); });
   important = new Set(); changed();
 }
 function setPick(row, sparks, kind){
@@ -347,6 +367,7 @@ function fill(d){
   d.blocks.forEach(blk => {
     const b = document.querySelector('.block[data-role="' + blk.role + '"]'); if (!b) return;
     b.querySelector('.char').value = blk.character || '';
+    b.wins = new Set(blk.g1_wins || []); drawWins(b);
     setPick(b.blue, blk.sparks, 'blue'); setPick(b.pink, blk.sparks, 'pink'); setPick(b.green, blk.sparks, 'green');
     blk.sparks.filter(s => s.kind === 'white').forEach(s => { const c = b.lists[s.category] ? s.category : 'skill'; b.lists[c].append(wrow(s.name, s.stars, !!s.pinned, c, !!s.check)); });
   });
@@ -359,7 +380,7 @@ function collect(exp){
     if (b.green.inp.value.trim() && b.green.stars.v) sparks.push({kind:'green', name:b.green.inp.value.trim(), stars:b.green.stars.v});
     COLS.forEach(([cat]) => b.lists[cat].querySelectorAll('.wrow').forEach(w => {
       if (w.f.n.value.trim() && w.f.s.v){ const sp = {kind:'white', name:w.f.n.value.trim(), stars:w.f.s.v, category:cat}; if (exp && w.pin) sp.pinned = true; const e = SKMAP.get(norm(sp.name)); if (exp && e && e.id != null) sp.skill_id = e.id; sparks.push(sp); } }));
-    return {role:b.dataset.role, character:b.querySelector('.char').value.trim() || null, sparks};
+    return {role:b.dataset.role, character:b.querySelector('.char').value.trim() || null, sparks, g1_wins:[...b.wins]};
   });
   const aff = $('#aff').value;
   const d = {name:$('#name').value.trim() || 'Untitled parent', outfit:$('#outfit').value.trim() || null,
@@ -377,11 +398,77 @@ function collect(exp){
   return d;
 }
 
+/* ---------- G1 wins ---------- */
+const savedWins = () => store.get('uma-saved-wins') || [];
+function raceSlots(year){
+  const m = new Map();
+  RACES.forEach(r => r.slots.forEach(sl => {
+    const [y, h, mo] = sl.split('-'); if (y !== year) return;
+    const k = MONTHS.indexOf(mo) * 2 + (h === 'late' ? 1 : 0);
+    if (!m.has(k)) m.set(k, {label:(h === 'early' ? 'Early ' : 'Late ') + mo[0].toUpperCase() + mo.slice(1), races:[]});
+    m.get(k).races.push(r);
+  }));
+  return [...m.entries()].sort((a, b) => a[0] - b[0]).map(e => e[1]);
+}
+function updWins(b){
+  b.wcount.textContent = b.wins.size;
+  if (b.wnote) b.wnote.textContent = b.wins.size + ' unique G1 win' + (b.wins.size === 1 ? '' : 's') + '. A race that runs in both Classic and Senior counts once.';
+}
+function raceChip(b, r){
+  const c = el('button','rchip ' + r.surface); c.type = 'button'; c.setAttribute('aria-pressed', b.wins.has(r.id));
+  c.append(el('span', null, r.name), el('small', null, r.category + ' \u00b7 ' + r.surface));
+  c.onclick = () => { if (b.wins.has(r.id)) b.wins.delete(r.id); else b.wins.add(r.id); c.setAttribute('aria-pressed', b.wins.has(r.id)); updWins(b); changed(); };
+  return c;
+}
+function drawWins(b){
+  const body = b.wdyn; body.replaceChildren();
+  if (!RACES.length){ body.append(el('p','muted','Loading the race list\u2026')); updWins(b); return; }
+  const tabs = el('div','wtabs'), tools = el('div','wtools');
+  YEARS.forEach(([id, label]) => { const t = el('button', null, label); t.type = 'button'; t.setAttribute('aria-pressed', b.winYear === id);
+    t.onclick = () => { b.winYear = id; drawWins(b); }; tabs.append(t); });
+  const fs = el('button','secondary sm','Add from race sparks'), cl = el('button','secondary sm','Clear all'); fs.type = 'button'; cl.type = 'button';
+  fs.onclick = () => { let n = 0; b.lists.race.querySelectorAll('.wrow').forEach(w => { const r = RACE_MAP.get(norm(w.f.n.value)); if (r && !b.wins.has(r.id)){ b.wins.add(r.id); n++; } });
+    say(n ? 'Added ' + n + ' win' + (n === 1 ? '' : 's') + ' from the race sparks.' : 'No new races found in the race sparks.'); drawWins(b); changed(); };
+  cl.onclick = () => { b.wins.clear(); drawWins(b); changed(); };
+  tools.append(fs, cl); body.append(tabs, tools);
+  raceSlots(b.winYear).forEach(sl => { const row = el('div','wslot'), chips = el('div','wchips');
+    sl.races.forEach(r => chips.append(raceChip(b, r))); row.append(el('span','wlabel', sl.label), chips); body.append(row); });
+  b.wnote = el('p','muted',''); body.append(b.wnote); updWins(b);
+}
+function savePanel(b){
+  const box = el('div','wsave'), nm = el('input'), sv = el('button','secondary sm','Save wins for this Uma'), sel = el('select');
+  const ld = el('button','secondary sm','Load'), del = el('button','secondary sm','Delete');
+  [sv, ld, del].forEach(x => { x.type = 'button'; });
+  nm.placeholder = 'Name, e.g. Inari One run 1'; nm.setAttribute('aria-label','Name for the saved wins'); sel.setAttribute('aria-label','Saved Umas');
+  const refill = () => { const keep = sel.value; sel.replaceChildren(new Option('Saved Umas\u2026', '')); savedWins().forEach(x => sel.append(new Option(x.name + ' (' + x.wins.length + ')', x.id))); sel.value = keep; };
+  const refillAll = () => PANES.forEach(p => p.pane.refillSaved && p.pane.refillSaved());
+  sv.onclick = () => {
+    const name = nm.value.trim() || b.querySelector('.char').value.trim() || (b.dataset.role === 'self' ? $('#name').value.trim() : '');
+    if (!name) return say('Give these wins a name first, for example the Uma\u2019s name.', true);
+    if (!b.wins.size) return say('Pick at least one race first.', true);
+    const list = savedWins(), i = list.findIndex(x => x.name.toLowerCase() === name.toLowerCase());
+    const rec = {id: i >= 0 ? list[i].id : 'w' + Date.now().toString(36), name, wins:[...b.wins]};
+    if (i >= 0) list[i] = rec; else list.push(rec);
+    store.set('uma-saved-wins', list); nm.value = name; refillAll(); sel.value = rec.id;
+    say('Saved ' + b.wins.size + ' wins as \u201c' + name + '\u201d. They are kept in this browser for now.');
+  };
+  ld.onclick = () => { const rec = savedWins().find(x => x.id === sel.value); if (!rec) return say('Pick a saved Uma first.', true);
+    b.wins = new Set(rec.wins.filter(id => RACE_IDS.has(id))); nm.value = rec.name; drawWins(b); changed(); say('Loaded \u201c' + rec.name + '\u201d.'); };
+  del.onclick = () => { if (!sel.value) return; store.set('uma-saved-wins', savedWins().filter(x => x.id !== sel.value)); sel.value = ''; refillAll(); };
+  b.refillSaved = refill; refill(); box.append(nm, sv, sel, ld, del); return box;
+}
+function makeWins(b){
+  b.wins = new Set(); b.winYear = 'classic'; b.winsBox = el('details','col wins');
+  const sm = el('summary','chead'); b.wcount = el('span','ccount','0'); b.wdyn = el('div','wbody');
+  sm.append(el('span','ctitle','G1 wins'), b.wcount); b.winsBox.append(sm, b.wdyn, savePanel(b)); drawWins(b);
+}
+
 /* ---------- import / export ---------- */
 function validParent(d){
   if (!d || !Array.isArray(d.blocks)) return 'The file needs a "blocks" list.';
   for (const b of d.blocks){
     if (!ROLES.some(r => r[0] === b.role) || !Array.isArray(b.sparks)) return 'Each block needs a role (self, grandparent_1, grandparent_2) and a sparks list.';
+    if (b.g1_wins !== undefined && !Array.isArray(b.g1_wins)) return 'g1_wins must be a list of race ids.';
     for (const s of b.sparks)
       if (!['blue','pink','green','white'].includes(s.kind) || typeof s.name !== 'string' || !(s.stars >= 1 && s.stars <= 3))
         return 'Spark "' + (s.name || '?') + '" needs a kind, a name, and 1 to 3 stars.';
@@ -605,7 +692,12 @@ function render(res){
   const hero = el('div','hero'), ro = el('div','rosette'), side = el('div');
   ro.append(el('b', null, r.grade)); side.append(el('div','big', r.score.toFixed(1)), el('div','muted', nextLine(r)));
   hero.append(ro, side); out.append(pick, ban, hero, bars(r.categories), tierChips(SEL));
-  if (r.affinity) out.append(el('p','muted', 'Affinity ' + r.affinity.value + (r.affinity.target ? ' with ' + r.affinity.target : '') + ' (entered manually)'));
+  if (r.affinity){
+    const a = r.affinity, n = Object.values(a.shared || {}).reduce((x, y) => x + y, 0), parts = [];
+    if (a.base != null) parts.push(a.base + ' entered');
+    if (a.races || n) parts.push(a.races + ' from ' + n + ' shared G1 win' + (n === 1 ? '' : 's'));
+    out.append(el('p','muted', 'Affinity ' + a.value + (a.target ? ' with ' + a.target : '') + ': ' + parts.join(' + ')));
+  }
   if (r.top_contributors.length){
     const det = el('details'); det.append(el('summary', null, 'Top contributing sparks'));
     r.top_contributors.forEach(c => det.append(el('div', null, ROLE_SHORT[c.block] + ': ' + c.name + ' ' + '\u2605'.repeat(c.stars) + ' +' + c.points)));
@@ -631,6 +723,11 @@ $('#sample').onclick = async () => {
 fetch('/api/styles').then(r => r.json()).then(l => l.forEach(s => $('#style').append(new Option(s.label, s.id)))).catch(() => {});
 $('#style').onchange = loadChecklists;
 fetch('/api/skills').then(r => r.json()).then(loadSkillLists).catch(() => {});
+fetch('/api/races').then(r => r.json()).then(d => {
+  RACES = d.races; RACE_IDS = new Set(RACES.map(r => r.id)); RACE_MAP = new Map();
+  RACES.forEach(r => [r.name, ...(r.aliases || [])].forEach(n => RACE_MAP.set(norm(n), r)));
+  PANES.forEach(p => drawWins(p.pane)); changed();
+}).catch(() => {});
 fetch('/api/tiers').then(r => r.json()).then(list => list.forEach(t => { if (!(t.id in T.w)) T.w[t.id] = t.weight; })).catch(() => {});
 loadChecklists();
 show('self'); changed();

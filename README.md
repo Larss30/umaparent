@@ -26,6 +26,16 @@ server with OpenCV and Tesseract (no AI service, no per-image cost). Rows are fo
 colour gives the spark type, stars are counted by gold pixels, and names are matched to data/skills.json.
 Screenshots are read in memory and not stored. Code: backend/app/vision/.
 
+## G1 wins and race affinity
+Each Uma block has a G1 wins picker (Junior / Classic / Senior tabs, data in data/races.yaml). Wins can be saved
+by name in the browser and loaded into any block later. Race affinity = shared unique G1 wins between the parent
+and each grandparent, 3 points each (data/affinity.yaml, community-sourced), added to the affinity number you enter.
+
+## Skill research (Nov 2026)
+Style lists in data/styles and the Aries Cup event layer were rebuilt from umareference (CM skill ranks and CM guide),
+uma.guide (CM guides, race mechanics), game8 and games.gg. CM ranks map to tiers: essential S, ◎ A, ◯ B, situational C,
+take-only-with-spare-SP D, never-take Z. Sources disagree in places (for example Groundwork), so treat the lists as drafts.
+
 ## Roadmap
 1. Scaffold, Docker Compose, CI  (done)
 2. Scoring engine, YAML profiles, rank ladder  <- you are here

@@ -21,7 +21,8 @@ def test_inari_one_sample_scores_and_has_every_S_tier_skill():
     assert out["overall"]["score"] > 0
     have = {norm(s.name) for b in p.blocks for s in b.sparks}
     s_tier = load_styles()["pace-chaser"]["tiers"]["S"]
-    assert all(norm(n) in have for n in s_tier)
+    core = ["Nimble Navigator", "Uma Stan", "Racing Spirit: Stamina"]
+    assert all(n in s_tier and norm(n) in have for n in core)
 
 
 def test_inari_one_dirt_pink_hurts_turf_event_but_not_generic():

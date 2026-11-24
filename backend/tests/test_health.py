@@ -85,3 +85,13 @@ def test_read_screenshots_endpoint_returns_a_parent():
     assert r.status_code == 200
     block = r.json()["parent"]["blocks"][0]
     assert block["role"] == "self" and any(s["name"] == "Guts" for s in block["sparks"])
+
+
+def test_races_endpoint_and_g1_wins_in_scoring():
+    data = client.get("/api/races").json()
+    assert len(data["races"]) == 34 and data["points_per_shared_g1"] == 3
+    wins = ["arima-kinen", "japan-cup"]
+    body = {"name": "x", "blocks": [{"role": r, "sparks": [], "g1_wins": wins}
+                                    for r in ("self", "grandparent_1", "grandparent_2")]}
+    aff = client.post("/api/score", json=body).json()["overall"]["affinity"]
+    assert aff["races"] == 12 and aff["shared"] == {"grandparent_1": 2, "grandparent_2": 2}

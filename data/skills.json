@@ -1770,12 +1770,26 @@
  {
   "id": null,
   "name": "Non-Standard Distance ○",
-  "type": "skill"
+  "type": "skill",
+  "requires": [
+   {
+    "standard": [
+     "non-standard"
+    ]
+   }
+  ]
  },
  {
   "id": null,
   "name": "Non-Standard Distance ◎",
-  "type": "skill"
+  "type": "skill",
+  "requires": [
+   {
+    "standard": [
+     "non-standard"
+    ]
+   }
+  ]
  },
  {
   "id": null,
@@ -2515,12 +2529,26 @@
  {
   "id": null,
   "name": "Standard Distance ○",
-  "type": "skill"
+  "type": "skill",
+  "requires": [
+   {
+    "standard": [
+     "standard"
+    ]
+   }
+  ]
  },
  {
   "id": null,
   "name": "Standard Distance ◎",
-  "type": "skill"
+  "type": "skill",
+  "requires": [
+   {
+    "standard": [
+     "standard"
+    ]
+   }
+  ]
  },
  {
   "id": null,

@@ -19,6 +19,7 @@ class SparkBlock:
     role: str          # self | grandparent_1 | grandparent_2
     sparks: list[Spark] = field(default_factory=list)
     character: str | None = None
+    g1_wins: list[str] = field(default_factory=list)   # unique G1 race ids this Uma won
 
 
 @dataclass
