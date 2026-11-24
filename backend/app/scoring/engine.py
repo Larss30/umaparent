@@ -1,6 +1,6 @@
 import copy
 
-from .config import load_profiles, load_ranks, load_requires, load_styles, load_tiers, norm
+from .config import load_affinity, load_profiles, load_races, load_ranks, load_requires, load_styles, load_tiers, norm
 from .models import KINDS, Parent, Spark
 from .ranks import grade_for, next_grade
 
@@ -15,6 +15,7 @@ _NEED = {
     "season": lambda a: "needs " + " or ".join(a),
     "weather": lambda a: "needs " + " or ".join(a) + " weather",
     "ground": lambda a: "needs " + " or ".join(a) + " ground",
+    "standard": lambda a: "needs a " + " or ".join(a) + " distance",
 }
 STYLE_PINKS = ("front runner", "pace chaser", "late surger", "end closer")
 
@@ -44,6 +45,7 @@ def context_of(profile: dict) -> dict:
     """What we know about the race and style. Unknown values (None) never block a skill."""
     race = profile.get("race") or {}
     ground = race.get("ground")
+    meters = race.get("distance_m")        # a distance that is a multiple of 400 m is "standard"
     return {
         "style": profile.get("active_style"),
         "distance": race.get("category"),
@@ -53,6 +55,7 @@ def context_of(profile: dict) -> dict:
         "season": race.get("season"),
         "weather": race.get("weather"),
         "ground": None if not ground else ("firm" if ground == "firm" else "wet"),
+        "standard": None if not meters else ("standard" if meters % 400 == 0 else "non-standard"),
     }
 
 
@@ -192,6 +195,17 @@ def default_skill_weights(style_id: str | None = None) -> list[dict]:
     return sorted(rows, key=lambda r: (-r["weight"], r["name"]))
 
 
+def race_affinity(parent: Parent) -> dict | None:
+    """Affinity from shared unique G1 wins between the parent and each grandparent (None if no wins entered)."""
+    known = {r["id"] for r in load_races()}
+    wins = {b.role: set(b.g1_wins) & known for b in parent.blocks}
+    own = wins.get("self", set())
+    if not own or not (wins.get("grandparent_1") or wins.get("grandparent_2")):
+        return None          # needs the parent's wins and at least one grandparent's to mean anything
+    shared = {role: len(own & wins.get(role, set())) for role in ("grandparent_1", "grandparent_2")}
+    return {"points": load_affinity()["points_per_shared_g1"] * sum(shared.values()), "shared": shared}
+
+
 def score_parent(parent: Parent, profile: dict, ranks: dict | None = None) -> dict:
     ranks = ranks or load_ranks()
     raw = {k: 0.0 for k in KINDS}
@@ -212,8 +226,10 @@ def score_parent(parent: Parent, profile: dict, ranks: dict | None = None) -> di
     sub = {k: 100.0 * raw[k] / profile["targets"][k] for k in KINDS}   # uncapped
     cw = profile["category_weights"]
     weights = {k: cw[k] for k in KINDS}
-    if parent.affinity is not None and "affinity" in cw:
-        sub["affinity"] = 100.0 * parent.affinity / profile["targets"]["affinity"]
+    races = race_affinity(parent)
+    aff = None if parent.affinity is None and races is None else (parent.affinity or 0) + (races["points"] if races else 0)
+    if aff is not None and "affinity" in cw:
+        sub["affinity"] = 100.0 * aff / profile["targets"]["affinity"]
         weights["affinity"] = cw["affinity"]
     total = sum(weights[k] * sub[k] for k in sub) / sum(weights.values())
     contributions.sort(key=lambda c: -c["points"])
@@ -230,8 +246,8 @@ def score_parent(parent: Parent, profile: dict, ranks: dict | None = None) -> di
         "blocked": list(blocked.values()),
     }
     if "affinity" in sub:
-        result["affinity"] = {"value": parent.affinity, "target": parent.affinity_target,
-                              "source": "manual"}
+        result["affinity"] = {"value": aff, "base": parent.affinity, "races": races["points"] if races else 0,
+                              "shared": races["shared"] if races else {}, "target": parent.affinity_target}
     return result
 
 

@@ -10,7 +10,7 @@ from sqlalchemy import create_engine, text
 
 from .schemas import ParentIn
 from .vision import ImageError, read_screenshots
-from .scoring.config import load_profiles, load_skills, load_styles, load_tiers
+from .scoring.config import load_affinity, load_profiles, load_races, load_skills, load_styles, load_tiers
 from .scoring.engine import GENERIC_ID, checklists, default_skill_weights, score_all
 
 DATABASE_URL = os.getenv(
@@ -61,6 +61,11 @@ def styles():
 @app.get("/api/tiers")
 def tiers():
     return list(load_tiers().values())
+
+
+@app.get("/api/races")
+def races():
+    return {"races": load_races(), "points_per_shared_g1": load_affinity()["points_per_shared_g1"]}
 
 
 @app.get("/api/skills")

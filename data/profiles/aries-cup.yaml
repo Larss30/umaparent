@@ -1,10 +1,10 @@
-# Champions Meeting: Aries Cup. DRAFT. Race conditions per a GosuGamers report: Nakayama, Turf,
-# TODO: confirm numbering. uma.guide lists this race as CM12 (Global); you called it CM23.
+# Champions Meeting: Aries Cup. DRAFT. Race conditions per a GosuGamers report: Nakayama, Turf, 2000m (Medium),
+# Right/Inner, Spring, Sunny, Firm.
 # 'tiers' = event-specific skills. They are added to the running style's tiers, and where both
 # list a skill the EVENT's tier wins. Tier weights live in data/tiers.yaml.
 id: aries-cup
 label: Aries Cup
-number: null
+number: 23   # uma.guide runs this track as CM12 (Apr 2026) and again at CM23
 status: draft
 race:
   course: Nakayama
@@ -16,20 +16,23 @@ race:
   season: spring
   weather: sunny
   ground: firm
+# Event layer, researched Nov 2026 (uma.guide Aries Cup guide + umareference ranks). The late race starts on Corner 3,
+# so corner accelerations work and final-straight skills do not. Conditional stat skills: Right-Handed, Spring Runner,
+# Racecourse and Standard Distance rank high; ground is decent; weather (Guts) is low. 2000 m is a standard distance.
 tiers:
-  S: ["Right-Handed ○", "Medium Corners ○", "Medium Straightaways ○"]
-  A: ["Firm Conditions ○", "Nakayama Racecourse ○"]
-  B: ["Sunny Days ○", "Spring Runner ○"]
-  Z: ["Left-Handed ○"]      # wrong direction for this race
+  S: ["Medium Corners ○", "Medium Straightaways ○"]
+  A: ["Right-Handed ○", "Spring Runner ○", "Nakayama Racecourse ○", "Standard Distance ○", "Firm Conditions ○"]
+  D: ["Sunny Days ○", "Straightaway Spurt"]      # final straight is heavily delayed on this track
+  Z: ["Left-Handed ○", "Non-Standard Distance ○"]      # wrong direction / wrong length for this race
+blue_tiers:
+  S: [Speed]
+  A: [Stamina, Power]     # the guide says the Stamina requirement is low this time (about 700)
+  B: [Wit]
+  C: [Guts]
 category_weights: {blue: 0.25, pink: 0.20, green: 0.10, white: 0.45, affinity: 0.15}
 block_weights: {self: 1.0, grandparent_1: 0.5, grandparent_2: 0.5}
 targets: {blue: 6.0, pink: 6.0, green: 2.0, white: 12.0, affinity: 150.0}
 # Blue and pink sparks are tiered like skills (weights come from data/tiers.yaml).
-blue_tiers:
-  S: [Speed, Stamina]
-  A: [Power]
-  B: [Wit]
-  C: [Guts]
 pink_tiers:
   S: [Turf, Medium]
   C: ["Front Runner", "Pace Chaser", "Late Surger", "End Closer"]   # style pinks only help if you run that style

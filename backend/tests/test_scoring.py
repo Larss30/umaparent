@@ -75,7 +75,8 @@ def test_affinity_is_optional_and_raises_score():
     with_aff = Parent("t", base.blocks, affinity=200, affinity_target="Oguri Cap")
     r0, r1 = score_parent(base, ARIES), score_parent(with_aff, ARIES)
     assert "affinity" not in r0 and "affinity" not in r0["categories"]
-    assert r1["affinity"] == {"value": 200, "target": "Oguri Cap", "source": "manual"}
+    a = r1["affinity"]
+    assert (a["value"], a["base"], a["races"], a["target"]) == (200, 200, 0, "Oguri Cap")
     assert r1["score"] > r0["score"]
 
 

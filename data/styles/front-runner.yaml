@@ -1,8 +1,18 @@
-# STUB: only the one skill you described so far. Add the rest of this style's tiers.
+# Front Runner. RESEARCHED DRAFT (Nov 2026). Sources: umareference.com skill ranks for Champions Meeting and its CM guide,
+# uma.guide (CM guides, race mechanics), game8 and games.gg tier lists. Mapping of CM ranks to tiers:
+# essential -> S, ◎ -> A, ◯ -> B, situational -> C, take-only-with-spare-SP -> D, never take -> Z (weight 0).
+# Your decision: Ramp Up and Risky Business stay in B (the sources rate them lower).
+# Skills with a style requirement in data/skills.json only count for that style, so this list is safe to share.
+# Ignited Spirit names assume the in-game "+" spark names match the sheet's PWR / WIT / SPD versions (unconfirmed).
 id: front-runner
 label: Front Runner
-status: stub
+status: researched-draft
 aptitude: Front Runner
-white_target: 14
+white_target: 16
 tiers:
-  S: ["Groundwork"]
+  S: ["Groundwork", "Early Lead", "Dodging Danger", "Front Runner Corners ○", "Front Runner Straightaways ○"]
+  A: ["Fast-Paced", "Leader's Pride", "Nimble Navigator", "Tail Held High", "Slipstream", "Playtime's Over!", "Corner Recovery ○", "Ignited Spirit: Power +", "Ignited Spirit GUTS", "Racing Spirit: Stamina"]
+  B: ["Ramp Up", "Risky Business", "Prudent Positioning", "Ignited Spirit WIT", "Ignited Spirit: Wit +", "Moxie", "Front Runner Savvy ○", "Lone Wolf", "Highlander"]
+  C: ["Focus"]
+  D: ["Uma Stan", "Racing Spirit: Power", "Ignited Spirit SPD"]
+  Z: ["Second Wind", "Restart", "Final Push"]

@@ -1,8 +1,17 @@
-# STUB: only the one skill you described so far. Add the rest of this style's tiers.
+# End Closer. RESEARCHED DRAFT (Nov 2026). Sources: umareference.com skill ranks for Champions Meeting and its CM guide,
+# uma.guide (CM guides, race mechanics), game8 and games.gg tier lists. Mapping of CM ranks to tiers:
+# essential -> S, ◎ -> A, ◯ -> B, situational -> C, take-only-with-spare-SP -> D, never take -> Z (weight 0).
+# Your decision: Ramp Up and Risky Business stay in B (the sources rate them lower).
+# Skills with a style requirement in data/skills.json only count for that style, so this list is safe to share.
+# Ignited Spirit names assume the in-game "+" spark names match the sheet's PWR / WIT / SPD versions (unconfirmed).
 id: end-closer
 label: End Closer
-status: stub
+status: researched-draft
 aptitude: End Closer
-white_target: 14
+white_target: 16
 tiers:
-  S: ["Uma Stan"]
+  S: ["End Closer Corners ○", "End Closer Straightaways ○", "Straightaway Spurt"]
+  A: ["Uma Stan", "Nimble Navigator", "Tail Held High", "Slipstream", "Playtime's Over!", "Corner Recovery ○", "Ignited Spirit: Power +", "Ignited Spirit GUTS", "Racing Spirit: Stamina"]
+  B: ["Ramp Up", "Risky Business", "Intense Gaze", "End Closer Savvy ○", "Highlander", "Lone Wolf"]
+  D: ["Levelheaded", "Early Start", "Racing Spirit: Power", "Ignited Spirit SPD"]
+  Z: ["Standing By", "Masterful Gambit", "After-School Stroll"]

@@ -1,13 +1,18 @@
-# Running style: Pace Chaser. DRAFT. These skills count in EVERY event for this style
-# (the Overall profile uses them as its "globally good" list). Tier weights: data/tiers.yaml.
+# Pace Chaser. RESEARCHED DRAFT (Nov 2026). Sources: umareference.com skill ranks for Champions Meeting and its CM guide,
+# uma.guide (CM guides, race mechanics), game8 and games.gg tier lists. Mapping of CM ranks to tiers:
+# essential -> S, ◎ -> A, ◯ -> B, situational -> C, take-only-with-spare-SP -> D, never take -> Z (weight 0).
+# Your decision: Ramp Up and Risky Business stay in B (the sources rate them lower).
+# Skills with a style requirement in data/skills.json only count for that style, so this list is safe to share.
+# Ignited Spirit names assume the in-game "+" spark names match the sheet's PWR / WIT / SPD versions (unconfirmed).
 id: pace-chaser
 label: Pace Chaser
-status: draft
-aptitude: Pace Chaser        # the pink spark that matters for this style
-white_target: 14
+status: researched-draft
+aptitude: Pace Chaser
+white_target: 16
 tiers:
-  S: ["Nimble Navigator", "Uma Stan", "Racing Spirit: Stamina"]
-  A: ["Tail Held High", "Playtime's Over!", "Slipstream"]
-  B: ["Risky Business", "Ramp Up"]
-  C: ["Head-on", "Groundwork"]
-  D: ["Pace Chaser Straightaways ○", "Pace Chaser Corners ○", "On the Attack", "Latch On", "Racing Spirit: Power"]
+  S: ["Nimble Navigator", "Uma Stan", "Racing Spirit: Stamina", "Head-on", "Pace Chaser Corners ○", "Pace Chaser Straightaways ○"]
+  A: ["Tail Held High", "Playtime's Over!", "Slipstream", "Corner Recovery ○", "Ignited Spirit: Power +", "Ignited Spirit GUTS"]
+  B: ["Risky Business", "Ramp Up", "Pace Chaser Savvy ○", "Preferred Position", "Hydrate", "Stamina to Spare", "Straight Descent", "Highlander", "Lone Wolf"]
+  C: ["Groundwork"]
+  D: ["On the Attack", "Latch On", "Racing Spirit: Power", "Prepared to Pass", "Disorient", "Ignited Spirit SPD"]
+  Z: ["Shrewd Step", "Tactical Tweak"]

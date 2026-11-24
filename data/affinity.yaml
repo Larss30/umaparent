@@ -1,0 +1,7 @@
+# Race affinity: shared UNIQUE G1 wins between the parent and EACH of its grandparents.
+# Status: community-sourced, not confirmed by the game. uma.guide (Global Parenting Guide, "Affinity & Racing") says
+# only unique G1 wins count, a race won in both Classic and Senior counts once, and ~33 shared wins = 100 affinity,
+# i.e. about 3 points per shared win. The trainee's own wins do not count. Base affinity (a fixed value for each
+# pair of Umas) is not computed here; enter it as the affinity number if you know it.
+status: community-sourced
+points_per_shared_g1: 3

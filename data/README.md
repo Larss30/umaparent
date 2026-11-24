@@ -19,3 +19,7 @@ allowed values. Built from skill names (e.g. "Long Corners") and the description
 event or style doesn't define are treated as unknown and never block a skill.
 
 Profiles tier their blue and pink sparks too (blue_tiers, pink_tiers); weights come from tiers.yaml.
+- races.yaml     the 34 unique G1 races with year, half-month, surface and distance
+- affinity.yaml  points per shared G1 win (community-sourced; edit if the game differs)
+
+Standard distance: a race length that is a multiple of 400 m. skills.json requires {"standard": [...]} uses it; races without distance_m never block.

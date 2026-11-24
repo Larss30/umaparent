@@ -39,6 +39,16 @@ def load_requires() -> dict[str, list]:
     return {norm(s["name"]): s["requires"] for s in load_skills() if s.get("requires")}
 
 
+@lru_cache
+def load_races() -> list[dict]:
+    return yaml.safe_load((data_dir() / "races.yaml").read_text(encoding="utf-8"))["races"]
+
+
+@lru_cache
+def load_affinity() -> dict:
+    return yaml.safe_load((data_dir() / "affinity.yaml").read_text(encoding="utf-8"))
+
+
 def tier_weights(tiers: dict | None) -> tuple[dict, dict]:
     """{letter: [skill names]} -> ({norm name: weight}, {norm name: display name})."""
     table, weights, names = load_tiers(), {}, {}

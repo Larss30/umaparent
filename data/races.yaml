@@ -1,0 +1,251 @@
+# Unique G1 races in the regular calendar (Global). Source: umamusu.wiki G1 Races Calendar (34 here; the wiki's
+# 35 includes a scenario-specific race). Timing cross-checked against the race-spark table and uma.guide: where the
+# calendar page said Early May for Tenno Sho (Spring) and Early Sep for Sprinters Stakes, we use Late Apr / Late Sep.
+# slots are year-half-month. A race listed in Classic AND Senior counts ONCE for affinity.
+races:
+  - id: asahi-hai-futurity-stakes
+    name: "Asahi Hai Futurity Stakes"
+    track: Hanshin
+    meters: "1600"
+    category: mile
+    surface: turf
+    slots: [junior-early-dec]
+    aliases: ["Asahi Hai F.S."]
+  - id: hanshin-juvenile-fillies
+    name: "Hanshin Juvenile Fillies"
+    track: Hanshin
+    meters: "1600"
+    category: mile
+    surface: turf
+    slots: [junior-early-dec]
+  - id: hopeful-stakes
+    name: "Hopeful Stakes"
+    track: Nakayama
+    meters: "2000"
+    category: medium
+    surface: turf
+    slots: [junior-late-dec]
+  - id: zen-nippon-junior-yushun
+    name: "Zen-Nippon Junior Yushun"
+    track: Kawasaki
+    meters: "1600"
+    category: mile
+    surface: dirt
+    slots: [junior-late-dec]
+  - id: oka-sho
+    name: "Oka Sho"
+    track: Hanshin
+    meters: "1600"
+    category: mile
+    surface: turf
+    slots: [classic-early-apr]
+  - id: satsuki-sho
+    name: "Satsuki Sho"
+    track: Nakayama
+    meters: "2000"
+    category: medium
+    surface: turf
+    slots: [classic-early-apr]
+  - id: nhk-mile-cup
+    name: "NHK Mile Cup"
+    track: Tokyo
+    meters: "1600"
+    category: mile
+    surface: turf
+    slots: [classic-early-may]
+  - id: japanese-oaks
+    name: "Japanese Oaks"
+    track: Tokyo
+    meters: "2400"
+    category: medium
+    surface: turf
+    slots: [classic-late-may]
+  - id: tokyo-yushun-japanese-derby
+    name: "Tokyo Yushun (Japanese Derby)"
+    track: Tokyo
+    meters: "2400"
+    category: medium
+    surface: turf
+    slots: [classic-late-may]
+    aliases: ["Tokyo Yushun", "Japanese Derby"]
+  - id: japan-dirt-derby
+    name: "Japan Dirt Derby"
+    track: Ooi
+    meters: "2000"
+    category: medium
+    surface: dirt
+    slots: [classic-early-jul]
+    aliases: ["J.D. Derby"]
+  - id: kikuka-sho
+    name: "Kikuka Sho"
+    track: Kyoto
+    meters: "3000"
+    category: long
+    surface: turf
+    slots: [classic-late-oct]
+  - id: shuka-sho
+    name: "Shuka Sho"
+    track: Kyoto
+    meters: "2000"
+    category: medium
+    surface: turf
+    slots: [classic-late-oct]
+  - id: yasuda-kinen
+    name: "Yasuda Kinen"
+    track: Tokyo
+    meters: "1600"
+    category: mile
+    surface: turf
+    slots: [classic-early-jun, senior-early-jun]
+  - id: takarazuka-kinen
+    name: "Takarazuka Kinen"
+    track: Hanshin
+    meters: "2200"
+    category: medium
+    surface: turf
+    slots: [classic-late-jun, senior-late-jun]
+  - id: sprinters-stakes
+    name: "Sprinters Stakes"
+    track: Nakayama
+    meters: "1200"
+    category: sprint
+    surface: turf
+    slots: [classic-late-sep, senior-late-sep]
+    aliases: ["Sprinter Stakes"]
+  - id: mile-championship-nambu-hai
+    name: "Mile Championship Nambu Hai"
+    track: Morioka
+    meters: "1600"
+    category: mile
+    surface: dirt
+    slots: [classic-early-oct, senior-early-oct]
+  - id: tenno-sho-autumn
+    name: "Tenno Sho (Autumn)"
+    track: Tokyo
+    meters: "2000"
+    category: medium
+    surface: turf
+    slots: [classic-late-oct, senior-late-oct]
+  - id: jbc-classic
+    name: "JBC Classic"
+    track: Varies
+    meters: "1800-2100"
+    category: medium
+    surface: dirt
+    slots: [classic-early-nov, senior-early-nov]
+  - id: jbc-ladies-classic
+    name: "JBC Ladies Classic"
+    track: Varies
+    meters: "1600-1800"
+    category: mile
+    surface: dirt
+    slots: [classic-early-nov, senior-early-nov]
+  - id: jbc-sprint
+    name: "JBC Sprint"
+    track: Varies
+    meters: "1000-1400"
+    category: sprint
+    surface: dirt
+    slots: [classic-early-nov, senior-early-nov]
+  - id: queen-elizabeth-ii-cup
+    name: "Queen Elizabeth II Cup"
+    track: Kyoto
+    meters: "2200"
+    category: medium
+    surface: turf
+    slots: [classic-early-nov, senior-early-nov]
+    aliases: ["Queen Elizabeth Cup"]
+  - id: japan-cup
+    name: "Japan Cup"
+    track: Tokyo
+    meters: "2400"
+    category: medium
+    surface: turf
+    slots: [classic-late-nov, senior-late-nov]
+    aliases: ["Japan C."]
+  - id: mile-championship
+    name: "Mile Championship"
+    track: Kyoto
+    meters: "1600"
+    category: mile
+    surface: turf
+    slots: [classic-late-nov, senior-late-nov]
+    aliases: ["Mile Ch."]
+  - id: champions-cup
+    name: "Champions Cup"
+    track: Chukyo
+    meters: "1800"
+    category: mile
+    surface: dirt
+    slots: [classic-early-dec, senior-early-dec]
+    aliases: ["Champions C."]
+  - id: arima-kinen
+    name: "Arima Kinen"
+    track: Nakayama
+    meters: "2500"
+    category: long
+    surface: turf
+    slots: [classic-late-dec, senior-late-dec]
+  - id: tokyo-daishoten
+    name: "Tokyo Daishoten"
+    track: Ooi
+    meters: "2000"
+    category: medium
+    surface: dirt
+    slots: [classic-late-dec, senior-late-dec]
+  - id: kawasaki-kinen
+    name: "Kawasaki Kinen"
+    track: Kawasaki
+    meters: "2100"
+    category: medium
+    surface: dirt
+    slots: [senior-early-feb]
+  - id: february-stakes
+    name: "February Stakes"
+    track: Tokyo
+    meters: "1600"
+    category: mile
+    surface: dirt
+    slots: [senior-late-feb]
+  - id: osaka-hai
+    name: "Osaka Hai"
+    track: Hanshin
+    meters: "2000"
+    category: medium
+    surface: turf
+    slots: [senior-late-mar]
+  - id: takamatsunomiya-kinen
+    name: "Takamatsunomiya Kinen"
+    track: Chukyo
+    meters: "1200"
+    category: sprint
+    surface: turf
+    slots: [senior-late-mar]
+  - id: tenno-sho-spring
+    name: "Tenno Sho (Spring)"
+    track: Kyoto
+    meters: "3200"
+    category: long
+    surface: turf
+    slots: [senior-late-apr]
+  - id: kashiwa-kinen
+    name: "Kashiwa Kinen"
+    track: Funabashi
+    meters: "1600"
+    category: mile
+    surface: dirt
+    slots: [senior-early-may]
+  - id: victoria-mile
+    name: "Victoria Mile"
+    track: Tokyo
+    meters: "1600"
+    category: mile
+    surface: turf
+    slots: [senior-early-may]
+  - id: teio-sho
+    name: "Teio Sho"
+    track: Ooi
+    meters: "2000"
+    category: medium
+    surface: dirt
+    slots: [senior-late-jun]
